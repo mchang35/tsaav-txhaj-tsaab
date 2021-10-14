@@ -33,15 +33,15 @@ function sticky_nav() {
     // let list = navbar.classList
     if (window.pageYOffset >= navbar_sticky_Y) {
         // list.add("sticky");
-        navbar.classList.toggle("sticky", true);
+        // navbar.classList.toggle("sticky", true);
         // if (!navbar.classList.contains("sticky")) {
-        //     navbar.classList.add("sticky");
+            navbar.classList.add("sticky");
         // }
     } else {
         // list.remove("sticky");
-        navbar.classList.toggle("sticky", false);
+        // navbar.classList.toggle("sticky", false);
         // if (navbar.classList.contains("sticky")) {
-        //     navbar.classList.remove("sticky");
+            navbar.classList.remove("sticky");
         // }
     }
 }
