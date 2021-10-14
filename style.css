@@ -4,18 +4,18 @@ body {
     background: #f2f6e9;
 }
 .navbar {
-    background:#6ab446;
+    background:#78C5F9;
 }
 .nav-link,
 .navbar-brand {
-    color: #fff;
+    color: black;
     cursor: pointer;
 }
 .nav-link {
     margin-right: 1em !important;
 }
 .nav-link:hover {
-    color: #000;
+    color: white;
 }
 .navbar-collapse {
     justify-content: flex-end;
