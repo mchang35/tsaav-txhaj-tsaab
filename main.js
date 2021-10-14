@@ -25,10 +25,16 @@ window.onscroll = function() {sticky_nav()};
 function sticky_nav() {
     if (window.pageYOffset >= navbar_sticky_Y) {
         // navbar.classList.add("sticky");
-        navbar.classList.toggle("sticky", true);
+        // navbar.classList.toggle("sticky", true);
+        if (!navbar.classList.contains("sticky")) {
+            navbar.classList.add("sticky");
+        }
     } else {
         // navbar.classList.remove("sticky");
-        navbar.classList.toggle("sticky", false);
+        // navbar.classList.toggle("sticky", false);
+        if (navbar.classList.contains("sticky")) {
+            navbar.classList.remove("sticky");
+        }
     }
 }
 
