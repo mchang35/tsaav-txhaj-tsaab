@@ -32,7 +32,7 @@ function sticky_nav() {
     console.log(navbar.classList)
     // let list = navbar.classList
     if (window.pageYOffset >= navbar_sticky_Y) {
-        list.add("sticky");
+        // list.add("sticky");
         navbar.classList.toggle("sticky", true);
         // if (!navbar.classList.contains("sticky")) {
         //     navbar.classList.add("sticky");
