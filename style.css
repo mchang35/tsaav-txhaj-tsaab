@@ -5,7 +5,7 @@ body {
 }
 .navbar {
     background:#78C5F9;
-    display: inline-block;
+    /*display: inline-block;*/
     /*list-style-type: none;*/
     text-align: center;
 }
