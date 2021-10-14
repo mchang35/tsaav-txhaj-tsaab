@@ -62,31 +62,31 @@ form {
 /* Add a color to the active/current link */
 .topnav a.active {
     /*background-color: #04AA6D;*/
-    background-color: #ff6161;
+    background-color: #78C5F9;
     background-image: linear-gradient(to bottom right, #ff6161, #ffb061, #faf441, #b9fc79, #a0ecfa, #bea0fa);
     color: black;
 }
 
 .home {
-    background-color: #ff6161;
+    background-color: #78C5F9;
 }
 
 .son {
-    background-color: #ffb061;
+    background-color: #78C5F9;
 }
 
 .brother {
-    background-color: #faf441;
+    background-color: #78C5F9;
 }
 
 .husband {
-    background-color: #b9fc79;
+    background-color: #78C5F9;
 }
 
 .father {
-    background-color: #a0ecfa;
+    background-color: #78C5F9;
 }
 
 .grandfather {
-    background-color: #bea0fa;
+    background-color: #78C5F9;
 }
