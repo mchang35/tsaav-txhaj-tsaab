@@ -24,7 +24,7 @@ window.onscroll = function() {sticky_nav()};
 // function that makes navigation sticky
 function sticky_nav() {
     if (window.pageYOffset >= navbar_sticky_Y) {
-        navbar.classList.add("sticky")
+        navbar.classList.add("sticky");
     } else {
         navbar.classList.remove("sticky");
     }
