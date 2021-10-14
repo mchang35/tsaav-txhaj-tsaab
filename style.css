@@ -46,7 +46,7 @@ form {
     alignment: center;
     align-self: center;
     float: none;
-    position: absolute;
+    /*position: absolute;*/
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
