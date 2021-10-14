@@ -10,11 +10,11 @@ ready(() => {
 var eng_lang = true; // boolean for whether we are currently in English Language\
 
 var navbar = document.getElementsByClassName("navbar-expand-md");
-// console.log("navbar:");
-// console.log(navbar);
+console.log("navbar:");
+console.log(navbar);
 var navbar_sticky_Y = window.scrollY + window.innerHeight;
-// console.log("sticky Y:");
-// console.log(navbar_sticky_Y);
+console.log("sticky Y:");
+console.log(navbar_sticky_Y);
 
 // define a function for when they click on each button in the navigation
 
