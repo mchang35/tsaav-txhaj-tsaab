@@ -10,11 +10,11 @@ ready(() => {
 var eng_lang = true; // boolean for whether we are currently in English Language\
 
 var navbar = document.getElementsByClassName("navbar-expand-md");
-console.log("navbar:");
-console.log(navbar);
-var navbar_sticky_Y = navbar.offsetTop;
-console.log("sticky Y:");
-console.log(navbar_sticky_Y);
+// console.log("navbar:");
+// console.log(navbar);
+var navbar_sticky_Y = window.scrollY + window.innerHeight;
+// console.log("sticky Y:");
+// console.log(navbar_sticky_Y);
 
 // define a function for when they click on each button in the navigation
 
@@ -29,16 +29,16 @@ window.onscroll = function() {sticky_nav()};
 function sticky_nav() {
     // console.log("Classes of navbar:")
     // console.log(navbar.classList)
-    let list = navbar.classList
+    // let list = navbar.classList
     if (window.pageYOffset >= navbar_sticky_Y) {
         list.add("sticky");
-        // navbar.classList.toggle("sticky", true);
+        navbar.classList.toggle("sticky", true);
         // if (!navbar.classList.contains("sticky")) {
         //     navbar.classList.add("sticky");
         // }
     } else {
-        list.remove("sticky");
-        // navbar.classList.toggle("sticky", false);
+        // list.remove("sticky");
+        navbar.classList.toggle("sticky", false);
         // if (navbar.classList.contains("sticky")) {
         //     navbar.classList.remove("sticky");
         // }
