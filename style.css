@@ -1,105 +1,130 @@
-h1 {
-    text-align: center;
+body {
+    padding: 0;
+    margin: 0;
+    background: #f2f6e9;
+}
+.navbar {
+    background:#6ab446;
+}
+.nav-link,
+.navbar-brand {
+    color: #fff;
+    cursor: pointer;
+}
+.nav-link {
+    margin-right: 1em !important;
+}
+.nav-link:hover {
+    color: #000;
+}
+.navbar-collapse {
+    justify-content: flex-end;
 }
 
-h2 {
-    text-align: center;
-}
 
-h3 {
-    text-align: center;
-}
 
-h4 {
-    text-align: center;
-}
+/*h1 {*/
+/*    text-align: center;*/
+/*}*/
 
-.topnav {
-    text-align: center;
-    overflow: hidden;
-    align-self: center;
-    alignment: center;
-    justify-content: center;
-    align-items: center;
-    child-align: middle;
-    horiz-align: center;
-}
+/*h2 {*/
+/*    text-align: center;*/
+/*}*/
 
-p {
-    text-align: center;
-    width: 300px;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-}
+/*h3 {*/
+/*    text-align: center;*/
+/*}*/
 
-form {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
-    alignment: left;
-}
+/*h4 {*/
+/*    text-align: center;*/
+/*}*/
 
-.topnav {
-    /*margin-left: auto;*/
-    /*margin-right: auto;*/
-    /*alignment: center;*/
-    /*align-self: center;*/
-    /*float: none;*/
-    /*position: absolute;*/
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+/*.topnav {*/
+/*    text-align: center;*/
+/*    overflow: hidden;*/
+/*    align-self: center;*/
+/*    alignment: center;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    child-align: middle;*/
+/*    horiz-align: center;*/
+/*}*/
 
-/*Style the links inside the navigation bar */
-.topnav a {
-    float: left;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
+/*p {*/
+/*    text-align: center;*/
+/*    width: 300px;*/
+/*    align-items: center;*/
+/*    margin-left: auto;*/
+/*    margin-right: auto;*/
+/*}*/
 
-/* Change the color of links on hover */
-.topnav a:hover {
-    background-color: #aeddfc;
-    color: white;
-}
+/*form {*/
+/*    margin-left: auto;*/
+/*    margin-right: auto;*/
+/*    text-align: left;*/
+/*    alignment: left;*/
+/*}*/
 
-/* Add a color to the active/current link */
-.topnav a.active {
-    /*background-color: #04AA6D;*/
-    background-color: #78C5F9;
-    background-image: #78C5F9;
-    color: black;
-}
+/*.topnav {*/
+/*    !*margin-left: auto;*!*/
+/*    !*margin-right: auto;*!*/
+/*    !*alignment: center;*!*/
+/*    !*align-self: center;*!*/
+/*    !*float: none;*!*/
+/*    !*position: absolute;*!*/
+/*    top: 50%;*/
+/*    left: 50%;*/
+/*    transform: translate(-50%, -50%);*/
+/*}*/
 
-.home {
-    background-color: #78C5F9;
-}
+/*!*Style the links inside the navigation bar *!*/
+/*.topnav a {*/
+/*    float: left;*/
+/*    color: black;*/
+/*    text-align: center;*/
+/*    padding: 14px 16px;*/
+/*    text-decoration: none;*/
+/*    font-size: 17px;*/
+/*}*/
 
-.son {
-    background-color: #78C5F9;
-}
+/*!* Change the color of links on hover *!*/
+/*.topnav a:hover {*/
+/*    background-color: #aeddfc;*/
+/*    color: white;*/
+/*}*/
 
-.brother {
-    background-color: #78C5F9;
-}
+/*!* Add a color to the active/current link *!*/
+/*.topnav a.active {*/
+/*    !*background-color: #04AA6D;*!*/
+/*    background-color: #78C5F9;*/
+/*    background-image: #78C5F9;*/
+/*    color: black;*/
+/*}*/
 
-.husband {
-    background-color: #78C5F9;
-}
+/*.home {*/
+/*    background-color: #78C5F9;*/
+/*}*/
 
-.father {
-    background-color: #78C5F9;
-}
+/*.son {*/
+/*    background-color: #78C5F9;*/
+/*}*/
 
-.grandfather {
-    background-color: #78C5F9;
-}
+/*.brother {*/
+/*    background-color: #78C5F9;*/
+/*}*/
 
-.memvideo {
-    background-color: #78c5f9;
-}
+/*.husband {*/
+/*    background-color: #78C5F9;*/
+/*}*/
+
+/*.father {*/
+/*    background-color: #78C5F9;*/
+/*}*/
+
+/*.grandfather {*/
+/*    background-color: #78C5F9;*/
+/*}*/
+
+/*.memvideo {*/
+/*    background-color: #78c5f9;*/
+/*}*/
