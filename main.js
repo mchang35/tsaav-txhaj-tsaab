@@ -13,6 +13,8 @@ var navbar = document.getElementsByClassName("navbar");
 console.log("navbar:");
 console.log(navbar);
 var navbar_sticky_Y = navbar.offsetTop;
+console.log("sticky Y:");
+console.log(navbar_sticky_Y);
 
 // define a function for when they click on each button in the navigation
 
