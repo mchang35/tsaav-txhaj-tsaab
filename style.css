@@ -24,6 +24,10 @@ body {
     justify-content: flex-end;
 }
 
+.btn {
+    padding: 25px;
+}
+
 /*.header {*/
 /*    !*background-image: url('FB_Cover_Photo.jpeg');*!*/
 /*    -webkit-background-size: cover;*/
