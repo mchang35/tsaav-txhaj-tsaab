@@ -5,6 +5,8 @@ body {
 }
 .navbar {
     background:#78C5F9;
+    display: inline-block;
+    list-style-type: none;
 }
 .nav-link,
 .navbar-brand {
