@@ -5,7 +5,6 @@ body {
 }
 .navbar {
     background:#78C5F9;
-    /*display: inline-block;*/
     list-style-type: none;
     text-align: center;
 }
@@ -26,6 +25,10 @@ body {
 
 .btn {
     margin: 10px;
+}
+
+.navlink:active {
+    background-color: #aeddfc;
 }
 
 .content {
