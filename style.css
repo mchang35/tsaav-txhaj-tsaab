@@ -68,92 +68,163 @@ h4 {
     text-align: center;
 }
 
-/*.topnav {*/
+
+/*body {*/
+/*    padding: 0;*/
+/*    margin: 0;*/
+/*    background: white;*/
+/*}*/
+/*.navbar {*/
+/*    background:#78C5F9;*/
+/*    !*display: inline-block;*!*/
+/*    list-style-type: none;*/
 /*    text-align: center;*/
-/*    overflow: hidden;*/
-/*    align-self: center;*/
-/*    alignment: center;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*    child-align: middle;*/
-/*    horiz-align: center;*/
 /*}*/
-
-/*p {*/
-/*    text-align: center;*/
-/*    width: 300px;*/
-/*    align-items: center;*/
-/*    margin-left: auto;*/
-/*    margin-right: auto;*/
-/*}*/
-
-/*form {*/
-/*    margin-left: auto;*/
-/*    margin-right: auto;*/
-/*    text-align: left;*/
-/*    alignment: left;*/
-/*}*/
-
-/*.topnav {*/
-/*    !*margin-left: auto;*!*/
-/*    !*margin-right: auto;*!*/
-/*    !*alignment: center;*!*/
-/*    !*align-self: center;*!*/
-/*    !*float: none;*!*/
-/*    !*position: absolute;*!*/
-/*    top: 50%;*/
-/*    left: 50%;*/
-/*    transform: translate(-50%, -50%);*/
-/*}*/
-
-/*!*Style the links inside the navigation bar *!*/
-/*.topnav a {*/
-/*    float: left;*/
+/*.nav-link,*/
+/*.navbar-brand {*/
 /*    color: black;*/
-/*    text-align: center;*/
-/*    padding: 14px 16px;*/
-/*    text-decoration: none;*/
-/*    font-size: 17px;*/
+/*    cursor: pointer;*/
 /*}*/
-
-/*!* Change the color of links on hover *!*/
-/*.topnav a:hover {*/
-/*    background-color: #aeddfc;*/
+/*.nav-link {*/
+/*    margin-right: 1em !important;*/
+/*}*/
+/*.nav-link:hover {*/
 /*    color: white;*/
 /*}*/
-
-/*!* Add a color to the active/current link *!*/
-/*.topnav a.active {*/
-/*    !*background-color: #04AA6D;*!*/
-/*    background-color: #78C5F9;*/
-/*    background-image: #78C5F9;*/
-/*    color: black;*/
+/*.navbar-collapse {*/
+/*    justify-content: flex-end;*/
 /*}*/
 
-/*.home {*/
-/*    background-color: #78C5F9;*/
+/*.btn {*/
+/*    margin: 10px;*/
 /*}*/
 
-/*.son {*/
-/*    background-color: #78C5F9;*/
+/*.content {*/
+/*    padding: 16px;*/
 /*}*/
 
-/*.brother {*/
-/*    background-color: #78C5F9;*/
+/*.sticky {*/
+/*    position: fixed;*/
+/*    top: 0;*/
+/*    width: 100%;*/
 /*}*/
 
-/*.husband {*/
-/*    background-color: #78C5F9;*/
+/*.sticky + .content {*/
+/*    padding-top: 60px;*/
 /*}*/
 
-/*.father {*/
-/*    background-color: #78C5F9;*/
+/*!*.header {*!*/
+/*!*    !*background-image: url('FB_Cover_Photo.jpeg');*!*!*/
+/*!*    -webkit-background-size: cover;*!*/
+/*!*    -moz-background-size: cover;*!*/
+/*!*    -o-background-size: cover;*!*/
+/*!*    background-size: cover;*!*/
+/*!*    background-position: center;*!*/
+/*!*    position: relative;*!*/
+/*!*}*!*/
+
+/*h1 {*/
+/*    text-align: center;*/
 /*}*/
 
-/*.grandfather {*/
-/*    background-color: #78C5F9;*/
+/*h2 {*/
+/*    text-align: center;*/
 /*}*/
 
-/*.memvideo {*/
-/*    background-color: #78c5f9;*/
+/*h3 {*/
+/*    text-align: center;*/
 /*}*/
+
+/*h4 {*/
+/*    text-align: center;*/
+/*}*/
+
+/*!*.topnav {*!*/
+/*!*    text-align: center;*!*/
+/*!*    overflow: hidden;*!*/
+/*!*    align-self: center;*!*/
+/*!*    alignment: center;*!*/
+/*!*    justify-content: center;*!*/
+/*!*    align-items: center;*!*/
+/*!*    child-align: middle;*!*/
+/*!*    horiz-align: center;*!*/
+/*!*}*!*/
+
+/*!*p {*!*/
+/*!*    text-align: center;*!*/
+/*!*    width: 300px;*!*/
+/*!*    align-items: center;*!*/
+/*!*    margin-left: auto;*!*/
+/*!*    margin-right: auto;*!*/
+/*!*}*!*/
+
+/*!*form {*!*/
+/*!*    margin-left: auto;*!*/
+/*!*    margin-right: auto;*!*/
+/*!*    text-align: left;*!*/
+/*!*    alignment: left;*!*/
+/*!*}*!*/
+
+/*!*.topnav {*!*/
+/*!*    !*margin-left: auto;*!*!*/
+/*!*    !*margin-right: auto;*!*!*/
+/*!*    !*alignment: center;*!*!*/
+/*!*    !*align-self: center;*!*!*/
+/*!*    !*float: none;*!*!*/
+/*!*    !*position: absolute;*!*!*/
+/*!*    top: 50%;*!*/
+/*!*    left: 50%;*!*/
+/*!*    transform: translate(-50%, -50%);*!*/
+/*!*}*!*/
+
+/*!*!*Style the links inside the navigation bar *!*!*/
+/*!*.topnav a {*!*/
+/*!*    float: left;*!*/
+/*!*    color: black;*!*/
+/*!*    text-align: center;*!*/
+/*!*    padding: 14px 16px;*!*/
+/*!*    text-decoration: none;*!*/
+/*!*    font-size: 17px;*!*/
+/*!*}*!*/
+
+/*!*!* Change the color of links on hover *!*!*/
+/*!*.topnav a:hover {*!*/
+/*!*    background-color: #aeddfc;*!*/
+/*!*    color: white;*!*/
+/*!*}*!*/
+
+/*!*!* Add a color to the active/current link *!*!*/
+/*!*.topnav a.active {*!*/
+/*!*    !*background-color: #04AA6D;*!*!*/
+/*!*    background-color: #78C5F9;*!*/
+/*!*    background-image: #78C5F9;*!*/
+/*!*    color: black;*!*/
+/*!*}*!*/
+
+/*!*.home {*!*/
+/*!*    background-color: #78C5F9;*!*/
+/*!*}*!*/
+
+/*!*.son {*!*/
+/*!*    background-color: #78C5F9;*!*/
+/*!*}*!*/
+
+/*!*.brother {*!*/
+/*!*    background-color: #78C5F9;*!*/
+/*!*}*!*/
+
+/*!*.husband {*!*/
+/*!*    background-color: #78C5F9;*!*/
+/*!*}*!*/
+
+/*!*.father {*!*/
+/*!*    background-color: #78C5F9;*!*/
+/*!*}*!*/
+
+/*!*.grandfather {*!*/
+/*!*    background-color: #78C5F9;*!*/
+/*!*}*!*/
+
+/*!*.memvideo {*!*/
+/*!*    background-color: #78c5f9;*!*/
+/*!*}*!*/
