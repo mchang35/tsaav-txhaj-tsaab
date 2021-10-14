@@ -25,7 +25,7 @@ body {
 }
 
 .header {
-    background-image: url('FB_Cover_Photo.jpeg') no-repeat center center fixed;
+    background-image: url('FB_Cover_Photo.jpeg');
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
