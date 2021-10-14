@@ -25,18 +25,19 @@ window.onscroll = function() {sticky_nav()};
 function sticky_nav() {
     console.log("Classes of navbar:")
     console.log(navbar.classList)
+    let list = navbar.classList
     if (window.pageYOffset >= navbar_sticky_Y) {
-        // navbar.classList.add("sticky");
+        list.add("sticky");
         // navbar.classList.toggle("sticky", true);
-        if (!navbar.classList.contains("sticky")) {
-            navbar.classList.add("sticky");
-        }
+        // if (!navbar.classList.contains("sticky")) {
+        //     navbar.classList.add("sticky");
+        // }
     } else {
-        // navbar.classList.remove("sticky");
+        list.remove("sticky");
         // navbar.classList.toggle("sticky", false);
-        if (navbar.classList.contains("sticky")) {
-            navbar.classList.remove("sticky");
-        }
+        // if (navbar.classList.contains("sticky")) {
+        //     navbar.classList.remove("sticky");
+        // }
     }
 }
 
