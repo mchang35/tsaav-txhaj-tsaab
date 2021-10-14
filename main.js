@@ -1,7 +1,9 @@
+console.log('start');
 var ready = (callback) => {
     if (document.readyState != "loading") callback();
     else document.addEventListener("DOMContentLoaded", callback);
 }
+console.log('we got here');
 ready(() => {
     document.querySelector(".header").style.height = window.innerHeight + "px";
 })
