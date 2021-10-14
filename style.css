@@ -1,12 +1,13 @@
 body {
     padding: 0;
     margin: 0;
-    background: #f2f6e9;
+    background: white;
 }
 .navbar {
     background:#78C5F9;
     display: inline-block;
-    list-style-type: none;
+    /*list-style-type: none;*/
+    text-align: center;
 }
 .nav-link,
 .navbar-brand {
