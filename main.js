@@ -9,7 +9,7 @@ ready(() => {
 // define a function for when they click on Hmong vs English
 var eng_lang = true; // boolean for whether we are currently in English Language\
 
-var navbar = document.getElementsByClassName("navbar-expand-md");
+var navbar = document.getElementsByClassName("navbar-expand-md")[0];
 console.log("navbar:");
 console.log(navbar);
 var navbar_sticky_Y = window.scrollY + window.innerHeight;
