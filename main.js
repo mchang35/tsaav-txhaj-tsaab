@@ -27,8 +27,8 @@ window.onscroll = function() {sticky_nav()};
 
 // function that makes navigation sticky
 function sticky_nav() {
-    // console.log("Classes of navbar:")
-    // console.log(navbar.classList)
+    console.log("Classes of navbar:")
+    console.log(navbar.classList)
     // let list = navbar.classList
     if (window.pageYOffset >= navbar_sticky_Y) {
         list.add("sticky");
