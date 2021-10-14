@@ -5,3 +5,10 @@ var ready = (callback) => {
 ready(() => {
     document.querySelector(".header").style.height = window.innerHeight + "px";
 })
+
+// define a function for when they click on Hmong vs English
+var eng_lang = true;
+
+function switch_language() {
+
+}
