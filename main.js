@@ -7,10 +7,31 @@ ready(() => {
 })
 
 // define a function for when they click on Hmong vs English
-var eng_lang = true;
+var eng_lang = true; // boolean for whether we are currently in English Language\
 
+var navbar = document.getElementById("navbar");
+var navbar_sticky_Y = navbar.offsetTop;
+
+// define a function for when they click on each button in the navigation
+
+// when users scroll on the window, make sure that the navigation is sticky
+window.onscroll = function() {sticky_nav()};
+
+
+
+// define a function for hovering over the family tree
+
+// function that makes navigation sticky
+function sticky_nav() {
+    if (window.pageYOffset >= navbar_sticky_Y) {
+        navbar.classList.add("sticky")
+    } else {
+        navbar.classList.remove("sticky");
+    }
+}
+
+// function that switches whole website to Hmong
 function switch_to_hmong() {
-    console.log("trying to switch to Hmong");
     if (eng_lang == true) {
         document.getElementById("top").text = "Hmong for Top"; // translate "Top"
         document.getElementById("son").text = "Hmong for As a Son"; // translate "As a Son"
@@ -24,8 +45,8 @@ function switch_to_hmong() {
     eng_lang = false;
 }
 
+// function that switches whole website to English
 function switch_to_english() {
-    console.log("trying to switch to English");
     if (eng_lang == false) {
         document.getElementById("top").text = "Top"; // translate "Top"
         document.getElementById("son").text = "As a Son"; // translate "As a Son"
@@ -38,9 +59,3 @@ function switch_to_english() {
     }
     eng_lang = true;
 }
-
-// define a function for when they click on each button in the navigation
-
-// define a function for scrolling
-
-// define a function for hovering over the family tree
