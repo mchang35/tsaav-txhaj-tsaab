@@ -9,7 +9,7 @@ ready(() => {
 // define a function for when they click on Hmong vs English
 var eng_lang = true; // boolean for whether we are currently in English Language\
 
-var navbar = document.getElementById("navbar");
+var navbar = document.getElementsByClassName("navbar");
 var navbar_sticky_Y = navbar.offsetTop;
 
 // define a function for when they click on each button in the navigation
