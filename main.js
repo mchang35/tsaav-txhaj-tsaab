@@ -10,6 +10,8 @@ ready(() => {
 var eng_lang = true; // boolean for whether we are currently in English Language\
 
 var navbar = document.getElementsByClassName("navbar");
+console.log("navbar:");
+console.log(navbar);
 var navbar_sticky_Y = navbar.offsetTop;
 
 // define a function for when they click on each button in the navigation
@@ -23,8 +25,8 @@ window.onscroll = function() {sticky_nav()};
 
 // function that makes navigation sticky
 function sticky_nav() {
-    console.log("Classes of navbar:")
-    console.log(navbar.classList)
+    // console.log("Classes of navbar:")
+    // console.log(navbar.classList)
     let list = navbar.classList
     if (window.pageYOffset >= navbar_sticky_Y) {
         list.add("sticky");
