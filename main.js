@@ -10,6 +10,7 @@ ready(() => {
 var eng_lang = true;
 
 function switch_to_hmong() {
+    console.log("trying to switch to Hmong");
     if (eng_lang == true) {
         document.getElementById("top").text = "Hmong for Top"; // translate "Top"
         document.getElementById("son").text = "Hmong for As a Son"; // translate "As a Son"
@@ -20,10 +21,11 @@ function switch_to_hmong() {
         document.getElementById("family").text = "Hmong for Family Tree and Memories"; // translate "Family Tree and Memories"
         document.getElementById("memvideo").text = "Hmong for Memorial Video"; // translate "Memorial Video"
     }
-    eng_lang == false;
+    eng_lang = false;
 }
 
 function switch_to_english() {
+    console.log("trying to switch to English");
     if (eng_lang == false) {
         document.getElementById("top").text = "Top"; // translate "Top"
         document.getElementById("son").text = "As a Son"; // translate "As a Son"
@@ -34,7 +36,7 @@ function switch_to_english() {
         document.getElementById("family").text = "Family Tree and Memories"; // translate "Family Tree and Memories"
         document.getElementById("memvideo").text = "Memorial Video"; // translate "Memorial Video"
     }
-    eng_lang == true;
+    eng_lang = true;
 }
 
 // define a function for when they click on each button in the navigation
