@@ -76,14 +76,16 @@ window.onscroll = function() {sticky_nav()};
 // define a function that goes to diff days when user scrolls LEFT or RIGHT
 
 function get_events_and_times(day) {
-    program_day = day;
     console.log("we are in the function that we're supposed to be");
-    let day_events = events[program_day];
-    let day_times = times[program_day];
-    console.log(day_events);
-    console.log(day_times);
-    // get rid of everything that's currently in there
-    // add everything new
+    if (day != program_day) {
+        program_day = day;
+        let day_events = events[program_day];
+        let day_times = times[program_day];
+        console.log(day_events);
+        console.log(day_times);
+        // get rid of everything that's currently in there
+        // add everything new
+    }
 }
 // define a function that goes to diff days when the user presses LEFT or RIGHT
 function switch_program_day(dir) {
@@ -156,6 +158,7 @@ function memvideo() {
 // function that switches whole website to Hmong
 function switch_to_hmong() {
     if (eng_lang == true) {
+        document.getElementById("celebration-of-life").innerHTML = "Kev Ua Koob Tsheej Ntawm Lub Neej"; // translate "A Celebration of Life"
         document.getElementById("top").text = "Hmong for Top"; // translate "Top"
         document.getElementById("program").text = "Hmong for Funeral Program"; // translate "Funeral Program"
         document.getElementById("son").text = "Hmong for As a Son"; // translate "As a Son"
@@ -172,6 +175,7 @@ function switch_to_hmong() {
 // function that switches whole website to English
 function switch_to_english() {
     if (eng_lang == false) {
+        document.getElementById("celebration-of-life").innerHTML = "A Celebration of Life"; // translate "A Celebration of Life"
         document.getElementById("top").text = "Top"; // translate "Top"
         document.getElementById("program").text = "Funeral Program"; // translate "Funeral Program"
         document.getElementById("son").text = "As a Son"; // translate "As a Son"
