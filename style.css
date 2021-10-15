@@ -24,10 +24,6 @@ body {
     justify-content: flex-end;
 }
 
-.btn {
-    margin: 10px;
-}
-
 .content {
     padding: 16px;
 }
@@ -40,6 +36,10 @@ body {
 
 .sticky + .content {
     padding-top: 60px;
+}
+
+.btn {
+    margin: 10px;
 }
 
 /*.header {*/
