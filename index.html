@@ -41,28 +41,28 @@
     <div class="collapse navbar-collapse" id="main-navigation">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" id="program" href="#" onclick="son()">Funeral Program</a>
+                <a class="nav-link" id="program" href="#funeralprogram" onclick="program()">Funeral Program</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="son" href="#" onclick="son()">As a Son</a>
+                <a class="nav-link" id="son" href="#son" onclick="son()">As a Son</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="brother" href="#" onclick="brother()">As a Brother</a>
+                <a class="nav-link" id="brother" href="#brother" onclick="brother()">As a Brother</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="husband" href="#" onclick="husband()">As a Husband</a>
+                <a class="nav-link" id="husband" href="#husband" onclick="husband()">As a Husband</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="father" href="#" onclick="father()">As a Father</a>
+                <a class="nav-link" id="father" href="#father" onclick="father()">As a Father</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="grandfather" href="#" onclick="grandfather()">As a Grandfather</a>
+                <a class="nav-link" id="grandfather" href="#grandfather" onclick="grandfather()">As a Grandfather</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="family" href="#" onclick="family()">Family Tree and Memories</a>
+                <a class="nav-link" id="family" href="#family" onclick="family()">Family Tree and Memories</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="memvideo" href="#" onclick="memvideo()">Memorial Video</a>
+                <a class="nav-link" id="memvideo" href="#memorialvideo" onclick="memvideo()">Memorial Video</a>
             </li>
         </ul>
     </div>
@@ -70,250 +70,187 @@
 
 <div class="content">
 
-    <div class="program_content">
-<!--        have a toggle for the day-->
+    <div class="program_content center">
+        <h1 class="text-uppercase text-black font-weight-bold">Program</h1>
+        <br>
+<!--        people can swipe left and right to look at different days-->
+        <h2 class="program_day_label">Saturday, November 13, 2021</h2>
+        <br>
+        <div class="container program_arrows center">
+            <div class="row">
+                <div class="col" id=left-arrow" onclick="switch_program_day(-1)">
+                    <
+                </div>
+                <div class="col-8">
+                    <div class="container program_day center">
+                        <div class="row program_item">
+                            <div class="col program_item_name center">Event 1</div>
+                            <div class="col program_item_time center">Time for Event 1</div>
+                        </div>
+                        <div class="row program_item">
+                            <div class="col program_item_name">Event 2</div>
+                            <div class="col program_item_time">Time for Event 2</div>
+                        </div>
+                        <div class="row program_item">
+                            <div class="col program_item_name">Event 3</div>
+                            <div class="col program_item_time">Time for Event 3</div>
+                        </div>
+                        <div class="row program_item">
+                            <div class="col program_item_name">Event 4</div>
+                            <div class="col program_item_time">Time for Event 4</div>
+                        </div>
+                        <div class="row program_item">
+                            <div class="col program_item_name">Event 5</div>
+                            <div class="col program_item_time">Time for Event 5</div>
+                        </div>
+                        <div class="row program_item">
+                            <div class="col program_item_name">Event 6</div>
+                            <div class="col program_item_time">Time for Event 6</div>
+                        </div>
+                        <div class="row program_item">
+                            <div class="col program_item_name">Event 7</div>
+                            <div class="col program_item_time">Time for Event 7</div>
+                        </div>
+                        <div class="row program_item">
+                            <div class="col program_item_name">Event 8</div>
+                            <div class="col program_item_time">Time for Event 8</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" id=right-arrow" onclick="switch_program_day(1)">
+                    >
+                </div>
+            </div>
+
+        </div>
+
 
     </div>
 
-    <p>
-        asdjfkal sa whole bunch of random crap Document.getElementById()
-        The Document method getElementById() returns an Element object representing the
-        element whose id property matches the specified string. Since element IDs are
-        required to be unique if specified, they're a useful way to get access to a
-        specific element quickly.
-        If you need to get access to an element which doesn't have an ID, you can use
-        querySelector() to find the element using any selector.
-        Syntax var element = document.getElementById(id); Copy to Clipboard Parameters id
-        The ID of the element to locate. The ID is case-sensitive string which is
-        unique within the document; only one element may have any given ID. Return value
-        An Element object describing the DOM element object matching the specified ID,
-        or null if no matching element was found in the document. Example HTML Copy to
-        Clipboard JavaScript
-        function changeColor(newColor) { var elem = document.getElementById('para');
-        elem.style.color = newColor; } Copy to Clipboard Result Usage notes
-        The capitalization of "Id" in the name of this method must be correct for the code
-        to function; getElementByID() is not valid and will not work, however natural it
-        may seem.
-        Unlike some other element-lookup methods such as Document.querySelector() and
-        Document.querySelectorAll(), getElementById() is only available as a method of
-        the global document object, and not available as a method on all element objects
-        in the DOM. Because ID values must be unique throughout the entire document, there
-        is no need for "local" versions of the function Example Copy to Clipboard
-        If there is no element with the given id, this function returns null. Note that the
-        id parameter is case-sensitive, so document.getElementById("Main") will return null
-        instead of the element  because "M" and "m" are different for the purposes of this
-        method.
-        Elements not in the document are not searched by getElementById(). When creating
-        an element and assigning it an ID, you have to insert the element into the document
-        tree with Node.insertBefore() or a similar method before you can access it with
-        getElementById():
-        var element = document.createElement('div'); element.id = 'testqq';
-        var el = document.getElementById('testqq'); // el will be null! Copy to Clipboard
-        Non-HTML documents. The DOM implementation must have information that says which
-        attributes are of type ID. Attributes with the name "id" are not of type ID
-        unless so defined in the document's DTD. The id attribute is defined to be of ID
-        type in the common cases of XHTML, XUL, and other. Implementations that do not
-        know whether attributes are of type ID or not are expected to return null.
-        Specifications Specification DOM Standard (DOM)
-        # ref-for-dom-nonelementparentnode-getelementbyid② Browser compatibility
-        Report problems with this compatibility data on GitHub desktop	mobile
-        Chrome	Edge	Firefox	Internet Explorer	Opera	Safari	WebView Android
-        Chrome Android	Firefox for Android	Opera Android	Safari on iOS	Samsung Internet
-        getElementById
-        Full support1	Full support12	Full support1	Full support5.5	Full support7
-        Full support1	Full support1	Full support18	Full support4	Full support10.1
-        Full support1	Full support1.0
-        Legend Full supportFull support See also
-        Document reference for other methods and properties you can use to get references
-        to elements in the document.
-        Document.querySelector() for selectors via queries like 'div.myclass'
-        xml:id - has a utility method for allowing getElementById() to obtain
-        'xml:id' in XML documents (such as returned by Ajax calls) Found a problem with
-        this page?
-        Edit on GitHub Source on GitHub Report a problem with this content on GitHub
-        Want to fix the problem yourself? See our Contribution guide.
-        Last modified: Sep 14, 2021, by MDN contributors
-        Change your language Select your preferred language
-        English (US) Change language Skip to content Search or jump to… Pull requests
-        Issues Marketplace Explore @mchang35 mchang35 / tsaav-txhaj-tsaab Public 1 00
-        Code Issues Pull requests Actions Projects Wiki Security Insights Settings
-        1 branch 0 tags Latest commit @mchang35 mchang35 debugging eee2d30 2 minutes ago
-        Git stats 41 commits Files Type Name Latest commit message Commit time
-        bootstrap-4.5.3-dist Adding the bootstrap file (copied from desktop) 2 hours ago
-        FB_Cover_Photo.jpeg Added a photo 1 hour ago README.md Initial commit
-        3 hours ago index.html
-        trying to fix the text changing of the buttons 5 minutes ago main.js
-        debugging 2 minutes ago
-        style.css decreased margin for buttons 25 minutes ago README.md tsaav-txhaj-tsaab
-        A Celebration of Life: Tsaav Txhaj Tsaab (Sia Chang) - Memorial Website
-        About
-        A Celebration of Life: Tsaav Txhaj Tsaab (Sia Chang) - Memorial Website
-        Topics Resources Readme Releases No releases published
-        Create a new release Packages No packages published Publish your first package
-        Environments 1 github-pages Active Languages JavaScript 96.7% HTML 2.2% CSS
-        1.1% © 2021 GitHub, Inc. Terms Privacy Security Status Docs Contact GitHub
-        Pricing API Training Blog About
-    </p>
+    <br><br><br>
 
-    <p>
-        asdjfkal sa whole bunch of random crap Document.getElementById()
-        The Document method getElementById() returns an Element object representing the
-        element whose id property matches the specified string. Since element IDs are
-        required to be unique if specified, they're a useful way to get access to a
-        specific element quickly.
-        If you need to get access to an element which doesn't have an ID, you can use
-        querySelector() to find the element using any selector.
-        Syntax var element = document.getElementById(id); Copy to Clipboard Parameters id
-        The ID of the element to locate. The ID is case-sensitive string which is
-        unique within the document; only one element may have any given ID. Return value
-        An Element object describing the DOM element object matching the specified ID,
-        or null if no matching element was found in the document. Example HTML Copy to
-        Clipboard JavaScript
-        function changeColor(newColor) { var elem = document.getElementById('para');
-        elem.style.color = newColor; } Copy to Clipboard Result Usage notes
-        The capitalization of "Id" in the name of this method must be correct for the code
-        to function; getElementByID() is not valid and will not work, however natural it
-        may seem.
-        Unlike some other element-lookup methods such as Document.querySelector() and
-        Document.querySelectorAll(), getElementById() is only available as a method of
-        the global document object, and not available as a method on all element objects
-        in the DOM. Because ID values must be unique throughout the entire document, there
-        is no need for "local" versions of the function Example Copy to Clipboard
-        If there is no element with the given id, this function returns null. Note that the
-        id parameter is case-sensitive, so document.getElementById("Main") will return null
-        instead of the element  because "M" and "m" are different for the purposes of this
-        method.
-        Elements not in the document are not searched by getElementById(). When creating
-        an element and assigning it an ID, you have to insert the element into the document
-        tree with Node.insertBefore() or a similar method before you can access it with
-        getElementById():
-        var element = document.createElement('div'); element.id = 'testqq';
-        var el = document.getElementById('testqq'); // el will be null! Copy to Clipboard
-        Non-HTML documents. The DOM implementation must have information that says which
-        attributes are of type ID. Attributes with the name "id" are not of type ID
-        unless so defined in the document's DTD. The id attribute is defined to be of ID
-        type in the common cases of XHTML, XUL, and other. Implementations that do not
-        know whether attributes are of type ID or not are expected to return null.
-        Specifications Specification DOM Standard (DOM)
-        # ref-for-dom-nonelementparentnode-getelementbyid② Browser compatibility
-        Report problems with this compatibility data on GitHub desktop	mobile
-        Chrome	Edge	Firefox	Internet Explorer	Opera	Safari	WebView Android
-        Chrome Android	Firefox for Android	Opera Android	Safari on iOS	Samsung Internet
-        getElementById
-        Full support1	Full support12	Full support1	Full support5.5	Full support7
-        Full support1	Full support1	Full support18	Full support4	Full support10.1
-        Full support1	Full support1.0
-        Legend Full supportFull support See also
-        Document reference for other methods and properties you can use to get references
-        to elements in the document.
-        Document.querySelector() for selectors via queries like 'div.myclass'
-        xml:id - has a utility method for allowing getElementById() to obtain
-        'xml:id' in XML documents (such as returned by Ajax calls) Found a problem with
-        this page?
-        Edit on GitHub Source on GitHub Report a problem with this content on GitHub
-        Want to fix the problem yourself? See our Contribution guide.
-        Last modified: Sep 14, 2021, by MDN contributors
-        Change your language Select your preferred language
-        English (US) Change language Skip to content Search or jump to… Pull requests
-        Issues Marketplace Explore @mchang35 mchang35 / tsaav-txhaj-tsaab Public 1 00
-        Code Issues Pull requests Actions Projects Wiki Security Insights Settings
-        1 branch 0 tags Latest commit @mchang35 mchang35 debugging eee2d30 2 minutes ago
-        Git stats 41 commits Files Type Name Latest commit message Commit time
-        bootstrap-4.5.3-dist Adding the bootstrap file (copied from desktop) 2 hours ago
-        FB_Cover_Photo.jpeg Added a photo 1 hour ago README.md Initial commit
-        3 hours ago index.html
-        trying to fix the text changing of the buttons 5 minutes ago main.js
-        debugging 2 minutes ago
-        style.css decreased margin for buttons 25 minutes ago README.md tsaav-txhaj-tsaab
-        A Celebration of Life: Tsaav Txhaj Tsaab (Sia Chang) - Memorial Website
-        About
-        A Celebration of Life: Tsaav Txhaj Tsaab (Sia Chang) - Memorial Website
-        Topics Resources Readme Releases No releases published
-        Create a new release Packages No packages published Publish your first package
-        Environments 1 github-pages Active Languages JavaScript 96.7% HTML 2.2% CSS
-        1.1% © 2021 GitHub, Inc. Terms Privacy Security Status Docs Contact GitHub
-        Pricing API Training Blog About
-    </p>
+    <div class="son_content center">
 
-    <p>
-        asdjfkal sa whole bunch of random crap Document.getElementById()
-        The Document method getElementById() returns an Element object representing the
-        element whose id property matches the specified string. Since element IDs are
-        required to be unique if specified, they're a useful way to get access to a
-        specific element quickly.
-        If you need to get access to an element which doesn't have an ID, you can use
-        querySelector() to find the element using any selector.
-        Syntax var element = document.getElementById(id); Copy to Clipboard Parameters id
-        The ID of the element to locate. The ID is case-sensitive string which is
-        unique within the document; only one element may have any given ID. Return value
-        An Element object describing the DOM element object matching the specified ID,
-        or null if no matching element was found in the document. Example HTML Copy to
-        Clipboard JavaScript
-        function changeColor(newColor) { var elem = document.getElementById('para');
-        elem.style.color = newColor; } Copy to Clipboard Result Usage notes
-        The capitalization of "Id" in the name of this method must be correct for the code
-        to function; getElementByID() is not valid and will not work, however natural it
-        may seem.
-        Unlike some other element-lookup methods such as Document.querySelector() and
-        Document.querySelectorAll(), getElementById() is only available as a method of
-        the global document object, and not available as a method on all element objects
-        in the DOM. Because ID values must be unique throughout the entire document, there
-        is no need for "local" versions of the function Example Copy to Clipboard
-        If there is no element with the given id, this function returns null. Note that the
-        id parameter is case-sensitive, so document.getElementById("Main") will return null
-        instead of the element  because "M" and "m" are different for the purposes of this
-        method.
-        Elements not in the document are not searched by getElementById(). When creating
-        an element and assigning it an ID, you have to insert the element into the document
-        tree with Node.insertBefore() or a similar method before you can access it with
-        getElementById():
-        var element = document.createElement('div'); element.id = 'testqq';
-        var el = document.getElementById('testqq'); // el will be null! Copy to Clipboard
-        Non-HTML documents. The DOM implementation must have information that says which
-        attributes are of type ID. Attributes with the name "id" are not of type ID
-        unless so defined in the document's DTD. The id attribute is defined to be of ID
-        type in the common cases of XHTML, XUL, and other. Implementations that do not
-        know whether attributes are of type ID or not are expected to return null.
-        Specifications Specification DOM Standard (DOM)
-        # ref-for-dom-nonelementparentnode-getelementbyid② Browser compatibility
-        Report problems with this compatibility data on GitHub desktop	mobile
-        Chrome	Edge	Firefox	Internet Explorer	Opera	Safari	WebView Android
-        Chrome Android	Firefox for Android	Opera Android	Safari on iOS	Samsung Internet
-        getElementById
-        Full support1	Full support12	Full support1	Full support5.5	Full support7
-        Full support1	Full support1	Full support18	Full support4	Full support10.1
-        Full support1	Full support1.0
-        Legend Full supportFull support See also
-        Document reference for other methods and properties you can use to get references
-        to elements in the document.
-        Document.querySelector() for selectors via queries like 'div.myclass'
-        xml:id - has a utility method for allowing getElementById() to obtain
-        'xml:id' in XML documents (such as returned by Ajax calls) Found a problem with
-        this page?
-        Edit on GitHub Source on GitHub Report a problem with this content on GitHub
-        Want to fix the problem yourself? See our Contribution guide.
-        Last modified: Sep 14, 2021, by MDN contributors
-        Change your language Select your preferred language
-        English (US) Change language Skip to content Search or jump to… Pull requests
-        Issues Marketplace Explore @mchang35 mchang35 / tsaav-txhaj-tsaab Public 1 00
-        Code Issues Pull requests Actions Projects Wiki Security Insights Settings
-        1 branch 0 tags Latest commit @mchang35 mchang35 debugging eee2d30 2 minutes ago
-        Git stats 41 commits Files Type Name Latest commit message Commit time
-        bootstrap-4.5.3-dist Adding the bootstrap file (copied from desktop) 2 hours ago
-        FB_Cover_Photo.jpeg Added a photo 1 hour ago README.md Initial commit
-        3 hours ago index.html
-        trying to fix the text changing of the buttons 5 minutes ago main.js
-        debugging 2 minutes ago
-        style.css decreased margin for buttons 25 minutes ago README.md tsaav-txhaj-tsaab
-        A Celebration of Life: Tsaav Txhaj Tsaab (Sia Chang) - Memorial Website
-        About
-        A Celebration of Life: Tsaav Txhaj Tsaab (Sia Chang) - Memorial Website
-        Topics Resources Readme Releases No releases published
-        Create a new release Packages No packages published Publish your first package
-        Environments 1 github-pages Active Languages JavaScript 96.7% HTML 2.2% CSS
-        1.1% © 2021 GitHub, Inc. Terms Privacy Security Status Docs Contact GitHub
-        Pricing API Training Blog About
-    </p>
+        <br>
+        <div class="container">
+            <div class="row center">
+                <div class="col center">
+                    <h1 class="text-uppercase text-black font-weight-bold">As a Son</h1>
+                    <img src="Ex_Horizontal.png" alt="ex-h" class="responsive">
+<!--    maybe have a set of images that people can look through here-->
+                </div>
+                <div class="col-8 center">
+                    <p id="son-info">
+                        information about Uncle Sia's birth, parents, where he lived
+                        and grew up
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br>
+
+    <div class="brother_content center">
+
+        <br>
+        <div class="container">
+            <div class="row center">
+                <div class="col center">
+                    <h1 class="text-uppercase text-black font-weight-bold">As a Brother</h1>
+                    <img src="Ex_Vertical.png" alt="ex-v" class="responsive">
+                    <!--maybe have a set of images that people can look through here-->
+                </div>
+                <div class="col-8 center">
+                    <p id="brother-info">
+                        information about Uncle Sia's siblings
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br>
+
+    <div class="husband_content center">
+
+        <br>
+        <div class="container">
+            <div class="row center">
+                <div class="col center">
+                    <h1 class="text-uppercase text-black font-weight-bold">As a Husband</h1>
+                    <img src="Ex_Horizontal.png" alt="ex-h" class="responsive">
+                    <!-- maybe have a set of images that people can look through here-->
+                </div>
+                <div class="col-8 center">
+                    <p id="husband-info">
+                        information about Uncle Sia and Auntie Mai's meeting and
+                        how they got married
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br>
+
+    <div class="father_content center">
+
+        <br>
+        <div class="container">
+            <div class="row center">
+                <div class="col center">
+                    <h1 class="text-uppercase text-black font-weight-bold">As a Father</h1>
+                    <img src="Ex_Vertical.png" alt="ex-h" class="responsive">
+                    <!-- maybe have a set of images that people can look through here-->
+                </div>
+                <div class="col-8 center">
+                    <p id="father-info">
+                        information about Uncle Sia's kids, when they were born,
+                        etc
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br>
+
+    <div class="grandfather_content center">
+
+        <br>
+        <div class="container">
+            <div class="row center">
+                <div class="col center">
+                    <h1 class="text-uppercase text-black font-weight-bold">As a Grandfather</h1>
+                    <img src="Ex_Horizontal.png" alt="ex-h" class="responsive">
+                    <!-- maybe have a set of images that people can look through here-->
+                </div>
+                <div class="col-8 center">
+                    <p id="grandfather-info">
+                        information about Uncle Sia's grandkids
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br>
+
+    <div class="family_content center">
+        <h1 class="text-uppercase text-black font-weight-bold">Family Tree and Memories</h1>
+        <!--        have the full family tree here-->
+    </div>
+
+    <br><br><br>
+
+    <div class="memvideo_content center">
+        <h1 class="text-uppercase text-black font-weight-bold">Memorial Video</h1>
+        <h3 class="text-uppercase text-black font-weight-bold">Created by Chase Chang</h3>
+<!--        insert video here-->
+    </div>
+
+    <br><br><br>
 </div>
 
 
@@ -326,123 +263,3 @@
 </body>
 
 </html>
-
-<!--asdjfkal sa whole bunch of random crap Document.getElementById()-->
-<!--The Document method getElementById() returns an Element object representing the -->
-<!--element whose id property matches the specified string. Since element IDs are -->
-<!--required to be unique if specified, they're a useful way to get access to a -->
-<!--specific element quickly.-->
-<!--If you need to get access to an element which doesn't have an ID, you can use -->
-<!--querySelector() to find the element using any selector.-->
-<!--Syntax var element = document.getElementById(id); Copy to Clipboard Parameters id-->
-<!--The ID of the element to locate. The ID is case-sensitive string which is -->
-<!--unique within the document; only one element may have any given ID. Return value-->
-<!--An Element object describing the DOM element object matching the specified ID, -->
-<!--or null if no matching element was found in the document. Example HTML Copy to -->
-<!--Clipboard JavaScript-->
-<!--function changeColor(newColor) { var elem = document.getElementById('para');-->
-<!--elem.style.color = newColor; } Copy to Clipboard Result Usage notes-->
-<!--The capitalization of "Id" in the name of this method must be correct for the code -->
-<!--to function; getElementByID() is not valid and will not work, however natural it -->
-<!--may seem.-->
-<!--Unlike some other element-lookup methods such as Document.querySelector() and -->
-<!--Document.querySelectorAll(), getElementById() is only available as a method of -->
-<!--the global document object, and not available as a method on all element objects -->
-<!--in the DOM. Because ID values must be unique throughout the entire document, there -->
-<!--is no need for "local" versions of the function Example Copy to Clipboard-->
-<!--If there is no element with the given id, this function returns null. Note that the -->
-<!--id parameter is case-sensitive, so document.getElementById("Main") will return null -->
-<!--instead of the element  because "M" and "m" are different for the purposes of this -->
-<!--method.-->
-<!--Elements not in the document are not searched by getElementById(). When creating -->
-<!--an element and assigning it an ID, you have to insert the element into the document-->
-<!--tree with Node.insertBefore() or a similar method before you can access it with -->
-<!--getElementById():-->
-<!--var element = document.createElement('div'); element.id = 'testqq';-->
-<!--var el = document.getElementById('testqq'); // el will be null! Copy to Clipboard-->
-<!--Non-HTML documents. The DOM implementation must have information that says which -->
-<!--attributes are of type ID. Attributes with the name "id" are not of type ID -->
-<!--unless so defined in the document's DTD. The id attribute is defined to be of ID -->
-<!--type in the common cases of XHTML, XUL, and other. Implementations that do not -->
-<!--know whether attributes are of type ID or not are expected to return null.-->
-<!--Specifications Specification DOM Standard (DOM)-->
-<!--# ref-for-dom-nonelementparentnode-getelementbyid② Browser compatibility-->
-<!--Report problems with this compatibility data on GitHub desktop	mobile-->
-<!--Chrome	Edge	Firefox	Internet Explorer	Opera	Safari	WebView Android	-->
-<!--Chrome Android	Firefox for Android	Opera Android	Safari on iOS	Samsung Internet-->
-<!--getElementById-->
-<!--Full support1	Full support12	Full support1	Full support5.5	Full support7	-->
-<!--Full support1	Full support1	Full support18	Full support4	Full support10.1	-->
-<!--Full support1	Full support1.0-->
-<!--Legend Full supportFull support See also-->
-<!--Document reference for other methods and properties you can use to get references -->
-<!--to elements in the document.-->
-<!--Document.querySelector() for selectors via queries like 'div.myclass'-->
-<!--xml:id - has a utility method for allowing getElementById() to obtain -->
-<!--'xml:id' in XML documents (such as returned by Ajax calls) Found a problem with -->
-<!--this page?-->
-<!--Edit on GitHub Source on GitHub Report a problem with this content on GitHub-->
-<!--Want to fix the problem yourself? See our Contribution guide.-->
-<!--Last modified: Sep 14, 2021, by MDN contributors-->
-<!--Change your language Select your preferred language-->
-<!--English (US) Change language Skip to content Search or jump to… Pull requests-->
-<!--Issues Marketplace Explore @mchang35 mchang35 / tsaav-txhaj-tsaab Public 1 00-->
-<!--Code Issues Pull requests Actions Projects Wiki Security Insights Settings-->
-<!--1 branch 0 tags Latest commit @mchang35 mchang35 debugging eee2d30 2 minutes ago-->
-<!--Git stats 41 commits Files Type Name Latest commit message Commit time-->
-<!--bootstrap-4.5.3-dist Adding the bootstrap file (copied from desktop) 2 hours ago-->
-<!--FB_Cover_Photo.jpeg Added a photo 1 hour ago README.md Initial commit-->
-<!--3 hours ago index.html-->
-<!--trying to fix the text changing of the buttons 5 minutes ago main.js -->
-<!--debugging 2 minutes ago-->
-<!--style.css decreased margin for buttons 25 minutes ago README.md tsaav-txhaj-tsaab-->
-<!--A Celebration of Life: Tsaav Txhaj Tsaab (Sia Chang) - Memorial Website-->
-<!--About-->
-<!--A Celebration of Life: Tsaav Txhaj Tsaab (Sia Chang) - Memorial Website-->
-<!--Topics Resources Readme Releases No releases published-->
-<!--Create a new release Packages No packages published Publish your first package -->
-<!--Environments 1 github-pages Active Languages JavaScript 96.7% HTML 2.2% CSS -->
-<!--1.1% © 2021 GitHub, Inc. Terms Privacy Security Status Docs Contact GitHub -->
-<!--Pricing API Training Blog About-->
-
-<!--<div class="son">-->
-<!--    <br>-->
-<!--    <h2>As a Son</h2>-->
-<!--    <p>information about Uncle Sia's birth, childhood, father, mother, stuff like that</p>-->
-<!--    <br>-->
-<!--</div>-->
-
-<!--<br>-->
-
-<!--<div class="brother">-->
-<!--    <br>-->
-<!--    <h2>As a Brother</h2>-->
-<!--    <br>-->
-<!--</div>-->
-
-<!--<br>-->
-
-<!--<div class="husband">-->
-<!--    <br>-->
-<!--    <h2>As a Husband</h2>-->
-<!--    <br>-->
-<!--</div>-->
-
-<!--<br>-->
-
-<!--<div class="father">-->
-<!--    <br>-->
-<!--    <h2>As a Father</h2>-->
-<!--    <br>-->
-<!--</div>-->
-
-<!--<br>-->
-
-<!--<div class="grandfather">-->
-<!--    <br>-->
-<!--    <h2>As a Grandfather</h2>-->
-<!--    <p>list his grandchildren</p>-->
-<!--    <br>-->
-<!--    <br><br><br>-->
-<!--</div>-->
-<!--</html>-->
