@@ -20,6 +20,7 @@ body {
 }
 .nav-link:hover {
     color: white;
+    background-color: #aeddfc;
 }
 .navbar-collapse {
     justify-content: flex-end;
@@ -47,6 +48,32 @@ body {
 
 .center {
     text-align: center;
+}
+
+/*.program_days {*/
+/*    !*width: 300%;*!*/
+/*    overflow: auto;*/
+/*    white-space: nowrap;*/
+/*}*/
+
+/*.program_days .saturday {*/
+/*    width: 100%;*/
+/*    float: left;*/
+/*}*/
+
+/*.program_days .sunday {*/
+/*    width: 100%;*/
+/*    margin-left: 100%;*/
+/*}*/
+
+/*.program_days .monday {*/
+/*    width: 100%;*/
+    margin-left: 200%;
+}
+
+.program_arrows .row {
+    overflow: auto;
+    white-space: nowrap;
 }
 
 .program_item_name {

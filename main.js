@@ -75,7 +75,9 @@ window.onscroll = function() {sticky_nav()};
 
 // define a function that goes to diff days when user scrolls LEFT or RIGHT
 
-function get_events_and_times(program_day) {
+function get_events_and_times(day) {
+    program_day = day;
+    console.log("we are in the function that we're supposed to be");
     let day_events = events[program_day];
     let day_times = times[program_day];
     console.log(day_events);

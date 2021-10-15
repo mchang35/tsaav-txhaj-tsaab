@@ -68,20 +68,148 @@
     </div>
 </nav>
 
-<div class="content">
+<div class="content container-fluid">
 
     <div class="program_content center">
         <h1 class="text-uppercase text-black font-weight-bold">Program</h1>
         <br>
 <!--        people can swipe left and right to look at different days-->
-        <h2 class="program_day_label">Saturday, November 13, 2021</h2>
+        <div class="center day_buttons">
+            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#saturdayprogram" onclick="console.log('is anything working?');">Saturday</a>
+            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#sundayprogram" onclick="get_events_and_times(1)">Sunday</a>
+            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#mondayprogram" onclick="get_events_and_times(2)">Monday</a>
+        </div>
+
         <br>
+
+<!--        <div class="program_days">-->
+<!--            <div class="saturday">-->
+<!--                <h2 class="program_day_label">Saturday, November 13, 2021</h2>-->
+<!--                <br>-->
+<!--                <div class="container program_day center">-->
+<!--                    <div class="row program_item">-->
+<!--                        <div class="col program_item_name center">Event 1</div>-->
+<!--                        <div class="col program_item_time center">Time for Event 1</div>-->
+<!--                    </div>-->
+<!--                    <div class="row program_item">-->
+<!--                        <div class="col program_item_name">Event 2</div>-->
+<!--                        <div class="col program_item_time">Time for Event 2</div>-->
+<!--                    </div>-->
+<!--                    <div class="row program_item">-->
+<!--                        <div class="col program_item_name">Event 3</div>-->
+<!--                        <div class="col program_item_time">Time for Event 3</div>-->
+<!--                    </div>-->
+<!--                    <div class="row program_item">-->
+<!--                        <div class="col program_item_name">Event 4</div>-->
+<!--                        <div class="col program_item_time">Time for Event 4</div>-->
+<!--                    </div>-->
+<!--                    <div class="row program_item">-->
+<!--                        <div class="col program_item_name">Event 5</div>-->
+<!--                        <div class="col program_item_time">Time for Event 5</div>-->
+<!--                    </div>-->
+<!--                    <div class="row program_item">-->
+<!--                        <div class="col program_item_name">Event 6</div>-->
+<!--                        <div class="col program_item_time">Time for Event 6</div>-->
+<!--                    </div>-->
+<!--                    <div class="row program_item">-->
+<!--                        <div class="col program_item_name">Event 7</div>-->
+<!--                        <div class="col program_item_time">Time for Event 7</div>-->
+<!--                    </div>-->
+<!--                    <div class="row program_item">-->
+<!--                        <div class="col program_item_name">Event 8</div>-->
+<!--                        <div class="col program_item_time">Time for Event 8</div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div class="sunday">-->
+<!--                <h2 class="program_day_label">Sunday, November 14, 2021</h2>-->
+<!--                <br>-->
+<!--                <div class="container program_day center">-->
+<!--                    <div class="row program_item">-->
+<!--                        <div class="col program_item_name center">Event 1</div>-->
+<!--                        <div class="col program_item_time center">Time for Event 1</div>-->
+<!--                    </div>-->
+<!--                    <div class="row program_item">-->
+<!--                        <div class="col program_item_name">Event 2</div>-->
+<!--                        <div class="col program_item_time">Time for Event 2</div>-->
+<!--                    </div>-->
+<!--                    <div class="row program_item">-->
+<!--                        <div class="col program_item_name">Event 3</div>-->
+<!--                        <div class="col program_item_time">Time for Event 3</div>-->
+<!--                    </div>-->
+<!--                    <div class="row program_item">-->
+<!--                        <div class="col program_item_name">Event 4</div>-->
+<!--                        <div class="col program_item_time">Time for Event 4</div>-->
+<!--                    </div>-->
+<!--                    <div class="row program_item">-->
+<!--                        <div class="col program_item_name">Event 5</div>-->
+<!--                        <div class="col program_item_time">Time for Event 5</div>-->
+<!--                    </div>-->
+<!--                    <div class="row program_item">-->
+<!--                        <div class="col program_item_name">Event 6</div>-->
+<!--                        <div class="col program_item_time">Time for Event 6</div>-->
+<!--                    </div>-->
+<!--                    <div class="row program_item">-->
+<!--                        <div class="col program_item_name">Event 7</div>-->
+<!--                        <div class="col program_item_time">Time for Event 7</div>-->
+<!--                    </div>-->
+<!--                    <div class="row program_item">-->
+<!--                        <div class="col program_item_name">Event 8</div>-->
+<!--                        <div class="col program_item_time">Time for Event 8</div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div class="monday">-->
+<!--                <h2 class="program_day_label">Monday, November 15, 2021</h2>-->
+<!--                <br>-->
+<!--                <div class="container program_day center">-->
+<!--                    <div class="row program_item">-->
+<!--                        <div class="col program_item_name center">Event 1</div>-->
+<!--                        <div class="col program_item_time center">Time for Event 1</div>-->
+<!--                    </div>-->
+<!--                    <div class="row program_item">-->
+<!--                        <div class="col program_item_name">Event 2</div>-->
+<!--                        <div class="col program_item_time">Time for Event 2</div>-->
+<!--                    </div>-->
+<!--                    <div class="row program_item">-->
+<!--                        <div class="col program_item_name">Event 3</div>-->
+<!--                        <div class="col program_item_time">Time for Event 3</div>-->
+<!--                    </div>-->
+<!--                    <div class="row program_item">-->
+<!--                        <div class="col program_item_name">Event 4</div>-->
+<!--                        <div class="col program_item_time">Time for Event 4</div>-->
+<!--                    </div>-->
+<!--                    <div class="row program_item">-->
+<!--                        <div class="col program_item_name">Event 5</div>-->
+<!--                        <div class="col program_item_time">Time for Event 5</div>-->
+<!--                    </div>-->
+<!--                    <div class="row program_item">-->
+<!--                        <div class="col program_item_name">Event 6</div>-->
+<!--                        <div class="col program_item_time">Time for Event 6</div>-->
+<!--                    </div>-->
+<!--                    <div class="row program_item">-->
+<!--                        <div class="col program_item_name">Event 7</div>-->
+<!--                        <div class="col program_item_time">Time for Event 7</div>-->
+<!--                    </div>-->
+<!--                    <div class="row program_item">-->
+<!--                        <div class="col program_item_name">Event 8</div>-->
+<!--                        <div class="col program_item_time">Time for Event 8</div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--        </div>-->
+
         <div class="container program_arrows center">
             <div class="row">
-                <div class="col" id=left-arrow" onclick="switch_program_day(-1)">
-                    <
-                </div>
-                <div class="col-8">
+<!--                <div class="col" id=left-arrow" onclick="switch_program_day(-1)">-->
+<!--                    <-->
+<!--                </div>-->
+                <div class="col">
+                    <h2 class="program_day_label">Saturday, November 13, 2021</h2>
+                    <br>
                     <div class="container program_day center">
                         <div class="row program_item">
                             <div class="col program_item_name center">Event 1</div>
@@ -117,9 +245,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col" id=right-arrow" onclick="switch_program_day(1)">
-                    >
-                </div>
+<!--                <div class="col btn" id=right-arrow" onclick="switch_program_day(1)">-->
+<!--                    >-->
+<!--                </div>-->
+
             </div>
 
         </div>
