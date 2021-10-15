@@ -1,10 +1,10 @@
-// var ready = (callback) => {
-//     if (document.readyState != "loading") callback();
-//     else document.addEventListener("DOMContentLoaded", callback);
-// }
-// ready(() => {
-//     document.querySelector(".header").style.height = window.innerHeight + "px";
-// })
+var ready = (callback) => {
+    if (document.readyState != "loading") callback();
+    else document.addEventListener("DOMContentLoaded", callback);
+}
+ready(() => {
+    document.querySelector(".header").style.height = window.innerHeight + "px";
+})
 
 // define a function for when they click on Hmong vs English
 var eng_lang = true; // boolean for whether we are currently in English Language\
@@ -22,44 +22,44 @@ window.onscroll = function() {sticky_nav()};
 // function that makes navigation sticky
 function sticky_nav() {
     if (window.pageYOffset >= navbar_sticky_Y) {
-            navbar.classList.add("sticky");
+        navbar.classList.add("sticky");
     } else {
-            navbar.classList.remove("sticky");
+        navbar.classList.remove("sticky");
     }
 }
 
 // define a function for when they click on each button in the navigation
-function top() {
-
-}
-
-function son() {
-
-}
-
-function brother() {
-
-}
-
-function husband() {
-
-}
-
-function father() {
-
-}
-
-function grandfather() {
-
-}
-
-function family() {
-
-}
-
-function memvideo() {
-
-}
+// function top() {
+//
+// }
+//
+// function son() {
+//
+// }
+//
+// function brother() {
+//
+// }
+//
+// function husband() {
+//
+// }
+//
+// function father() {
+//
+// }
+//
+// function grandfather() {
+//
+// }
+//
+// function family() {
+//
+// }
+//
+// function memvideo() {
+//
+// }
 
 // function that switches whole website to Hmong
 function switch_to_hmong() {
