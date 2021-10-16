@@ -18,7 +18,9 @@ var navbar_sticky_Y = window.scrollY + window.innerHeight;
 
 // defines the current day that people are looking at on the program
 var program_day = 0 // 0 = Saturday, 1 = Sunday, 2 = Monday
-// Saturday events and times
+check_today_date(); // change program_day if necessary
+// set the program to be the day
+
 var events = [
     ["Saturday Event 1", "Saturday Event 2", "Saturday Event 3",
         "Saturday Event 4", "Saturday Event 5", "Saturday Event 6", "Saturday Event 7",
@@ -29,7 +31,7 @@ var events = [
     ["Monday Event 1", "Monday Event 2", "Monday Event 3",
         "Monday Event 4", "Monday Event 5", "Monday Event 6", "Monday Event 7",
         "Monday Event 8"]
-];
+]; // events for days 0, 1, 2, respectively
 var times = [
     ["1:00pm", "2:00pm", "3:00pm", "4:00pm", "5:00pm", "6:00pm",
         "7:00pm", "8:00pm"],
@@ -37,24 +39,7 @@ var times = [
         "7:00pm", "8:00pm"],
     ["1:00pm", "2:00pm", "3:00pm", "4:00pm", "5:00pm", "6:00pm",
         "7:00pm", "8:00pm"]
-];
-// var day0events = ["Saturday Event 1", "Saturday Event 2", "Saturday Event 3",
-//     "Saturday Event 4", "Saturday Event 5", "Saturday Event 6", "Saturday Event 7",
-//     "Saturday Event 8"];
-// var day0times = ["1:00pm", "2:00pm", "3:00pm", "4:00pm", "5:00pm", "6:00pm",
-//     "7:00pm", "8:00pm"];
-// // Sunday events and times
-// var day1events = ["Sunday Event 1", "Sunday Event 2", "Sunday Event 3",
-//     "Sunday Event 4", "Sunday Event 5", "Sunday Event 6", "Sunday Event 7",
-//     "Sunday Event 8"];
-// var day1times = ["1:00pm", "2:00pm", "3:00pm", "4:00pm", "5:00pm", "6:00pm",
-//     "7:00pm", "8:00pm"];
-// // Monday events and times
-// var day2events = ["Monday Event 1", "Monday Event 2", "Monday Event 3",
-//     "Monday Event 4", "Monday Event 5", "Monday Event 6", "Monday Event 7",
-//     "Monday Event 8"];
-// var day2times = ["1:00pm", "2:00pm", "3:00pm", "4:00pm", "5:00pm", "6:00pm",
-//     "7:00pm", "8:00pm"];
+]; // times for events on days 0, 1, 2, respectively
 
 // defines where the Son portion starts
 
@@ -153,6 +138,32 @@ function family() {
 
 function memvideo() {
 
+}
+
+// function that changes program_day to today's date if applicable,
+// or the first day of the funeral
+function check_today_date() {
+    // console.log("Checking today's date");
+    let today_date = new Date();
+    if (today_date.getFullYear() == 2021) {
+        // console.log("We are in the year 2021");
+        if (today_date.getMonth() == 10) { // change this to 10 for final
+            // console.log("We are in the month October");
+            let date = today_date.getDate();
+            if (date > 12 && date < 16) {
+                if (date == 13) {
+                    // console.log("day 13");
+                    program_day = 0;
+                } else if (date == 14) {
+                    // console.log("day 14");
+                    program_day = 1;
+                } else {
+                    // console.log("day 15");
+                    program_day = 2;
+                }
+            }
+        }
+    }
 }
 
 // function that switches whole website to Hmong

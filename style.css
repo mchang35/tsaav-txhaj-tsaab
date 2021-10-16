@@ -9,6 +9,8 @@ body {
     /*display: inline-block;*/
     list-style-type: none;
     text-align: center;
+    z-index: 5;
+    /*position: relative;*/
 }
 .nav-link,
 .navbar-brand {
@@ -28,8 +30,6 @@ body {
 
 .content {
     padding: 16px;
-    z-index: -1;
-    position: relative;
 }
 
 .sticky {
@@ -50,25 +50,28 @@ body {
     text-align: center;
 }
 
-/*.program_days {*/
-/*    !*width: 300%;*!*/
-/*    overflow: auto;*/
-/*    white-space: nowrap;*/
-/*}*/
+.program_days {
+    /*width: 300%;*/
+    overflow: auto;
+    white-space: nowrap;
+}
 
-/*.program_days .saturday {*/
-/*    width: 100%;*/
-/*    float: left;*/
-/*}*/
+.program_days .saturday {
+    width: 100%;
+    float: left;
+    display: inline-block;
+}
 
-/*.program_days .sunday {*/
-/*    width: 100%;*/
-/*    margin-left: 100%;*/
-/*}*/
+.program_days .sunday {
+    /*width: 100%;*/
+    margin-left: 100%;
+    display: inline-block;
+}
 
-/*.program_days .monday {*/
-/*    width: 100%;*/
+.program_days .monday {
+    /*width: 100%;*/
     margin-left: 200%;
+    display: inline-block;
 }
 
 .program_arrows .row {
