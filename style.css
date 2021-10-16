@@ -50,34 +50,34 @@ body {
     text-align: center;
 }
 
-.program_days {
-    /*width: 300%;*/
-    overflow: auto;
-    white-space: nowrap;
-}
+/*.program_days {*/
+/*    !*width: 300%;*!*/
+/*    overflow: auto;*/
+/*    white-space: nowrap;*/
+/*}*/
 
-.program_days .saturday {
-    width: 100%;
-    float: left;
-    display: inline-block;
-}
+/*.program_days .saturday {*/
+/*    width: 100%;*/
+/*    float: left;*/
+/*    display: inline-block;*/
+/*}*/
 
-.program_days .sunday {
-    /*width: 100%;*/
-    margin-left: 100%;
-    display: inline-block;
-}
+/*.program_days .sunday {*/
+/*    !*width: 100%;*!*/
+/*    margin-left: 100%;*/
+/*    display: inline-block;*/
+/*}*/
 
-.program_days .monday {
-    /*width: 100%;*/
-    margin-left: 200%;
-    display: inline-block;
-}
+/*.program_days .monday {*/
+/*    !*width: 100%;*!*/
+/*    margin-left: 200%;*/
+/*    display: inline-block;*/
+/*}*/
 
-.program_arrows .row {
-    overflow: auto;
-    white-space: nowrap;
-}
+/*.program_arrows .row {*/
+/*    overflow: auto;*/
+/*    white-space: nowrap;*/
+/*}*/
 
 .program_item_name {
     text-align: left;
