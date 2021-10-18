@@ -11,8 +11,6 @@ var eng_lang = true; // boolean for whether we are currently in English Language
 // defines where the navigation bar will be FIXED!
 var navbar_sticky_Y = window.scrollY + window.innerHeight;
 
-// defines where the program starts
-
 // defines the current day that people are looking at on the program
 var program_day = 0 // 0 = Saturday, 1 = Sunday, 2 = Monday
 check_today_date(); // change program_day if necessary
@@ -39,56 +37,8 @@ var times = [
         "7:00pm", "8:00pm"]
 ]; // times for events on days 0, 1, 2, respectively
 
-// defines where the Son portion starts
-
-// defines where the Brother portion starts
-
-// defines where the Husband portion starts
-
-// defines where the Father portion starts
-
-// defines where the Grandfather portion starts
-
-// defines where the Family Tree/Memories portion starts
-
-// defines where the Memorial Video portion starts
-
 ////////////////////////////////////////////////////////////////////////////
 // SCROLLING TAKEN CARE OF HERE //
-// const scrollOffset = 100;
-//
-// const scrollElement = document.querySelectorAll(".js-scroll");
-// // problem: only selects the FIRST element with this ^^
-//
-// const elementInView = (el, dividend = 1) => {
-//     const elementTop = el.getBoundingClientRect().top;
-//
-//     return (
-//         elementTop <=
-//         ((window.innerHeight || document.documentElement.clientHeight) / dividend)
-//     );
-// };
-//
-// const displayScrollElement = () => {
-//     scrollElement.classList.add('scrolled');
-// }
-//
-// const hideScrollElement = () => {
-//     scrollElement.classList.remove('scrolled');
-// }
-//
-// const handleScrollAnimation = () => {
-//     if (elementInView(scrollElement, scrollOffset)) {
-//         displayScrollElement();
-//     } else {
-//         hideScrollElement();
-//     }
-// }
-//
-// window.addEventListener('scroll', () => {
-//     handleScrollAnimation();
-// })
-
 const scrollElements = document.querySelectorAll(".js-scroll");
 
 const elementInView = (el, dividend = 1) => {
@@ -137,7 +87,7 @@ window.onscroll = function() {sticky_nav()};
 
 // define a function that goes to diff days when user scrolls LEFT or RIGHT
 
-function get_events_and_times(day) {
+function display_events_and_times(day) {
     if (day != program_day) { // only change things if we're changing the day
         program_day = day; // update the program day
         let day_events = events[program_day]; // collect all event names
@@ -195,9 +145,6 @@ function sticky_nav() {
         navbar.classList.remove("sticky");
     }
 }
-
-// define a function that makes things appear as you scroll
-// make things VISIBLE vs NOT (they're always there though)
 
 // define a function for when they click on each button in the navigation
 function top_of_page() {
