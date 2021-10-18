@@ -50,35 +50,6 @@ body {
     text-align: center;
 }
 
-/*.program_days {*/
-/*    !*width: 300%;*!*/
-/*    overflow: auto;*/
-/*    white-space: nowrap;*/
-/*}*/
-
-/*.program_days .saturday {*/
-/*    width: 100%;*/
-/*    float: left;*/
-/*    display: inline-block;*/
-/*}*/
-
-/*.program_days .sunday {*/
-/*    !*width: 100%;*!*/
-/*    margin-left: 100%;*/
-/*    display: inline-block;*/
-/*}*/
-
-/*.program_days .monday {*/
-/*    !*width: 100%;*!*/
-/*    margin-left: 200%;*/
-/*    display: inline-block;*/
-/*}*/
-
-/*.program_arrows .row {*/
-/*    overflow: auto;*/
-/*    white-space: nowrap;*/
-/*}*/
-
 .program_item_name {
     text-align: left;
 }
@@ -91,32 +62,6 @@ body {
     width: 100%;
     height: auto;
 }
-
-/*.left-arrow {*/
-/*    margin: 0;*/
-/*    position: absolute;*/
-/*    top: 50%;*/
-/*    -ms-transform: translateY(-50%);*/
-/*    transform: translateY(-50%);*/
-/*}*/
-
-/*.right-arrow {*/
-/*    margin: 0;*/
-/*    position: absolute;*/
-/*    top: 50%;*/
-/*    -ms-transform: translateY(-50%);*/
-/*    transform: translateY(-50%);*/
-/*}*/
-
-/*.header {*/
-/*    !*background-image: url('FB_Cover_Photo.jpeg');*!*/
-/*    -webkit-background-size: cover;*/
-/*    -moz-background-size: cover;*/
-/*    -o-background-size: cover;*/
-/*    background-size: cover;*/
-/*    background-position: center;*/
-/*    position: relative;*/
-/*}*/
 
 h1 {
     text-align: center;
@@ -134,92 +79,58 @@ h4 {
     text-align: center;
 }
 
-/*.topnav {*/
-/*    text-align: center;*/
-/*    overflow: hidden;*/
-/*    align-self: center;*/
-/*    alignment: center;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*    child-align: middle;*/
-/*    horiz-align: center;*/
-/*}*/
+/*all of scrolling stuff*/
 
-/*p {*/
-/*    text-align: center;*/
-/*    width: 300px;*/
-/*    align-items: center;*/
-/*    margin-left: auto;*/
-/*    margin-right: auto;*/
-/*}*/
+.js-scroll {
+    opacity: 0;
+    transition: opacity 500ms;
+}
 
-/*form {*/
-/*    margin-left: auto;*/
-/*    margin-right: auto;*/
-/*    text-align: left;*/
-/*    alignment: left;*/
-/*}*/
+.js-scroll.scrolled {
+    opacity: 1;
+}
 
-/*.topnav {*/
-/*    !*margin-left: auto;*!*/
-/*    !*margin-right: auto;*!*/
-/*    !*alignment: center;*!*/
-/*    !*align-self: center;*!*/
-/*    !*float: none;*!*/
-/*    !*position: absolute;*!*/
-/*    top: 50%;*/
-/*    left: 50%;*/
-/*    transform: translate(-50%, -50%);*/
-/*}*/
+.scrolled.fade-in {
+    animation: fade-in 1s ease-in-out both;
+}
 
-/*!*Style the links inside the navigation bar *!*/
-/*.topnav a {*/
-/*    float: left;*/
-/*    color: black;*/
-/*    text-align: center;*/
-/*    padding: 14px 16px;*/
-/*    text-decoration: none;*/
-/*    font-size: 17px;*/
-/*}*/
+.scrolled.slide-left {
+    animation: slide-in-left 1s ease-in-out both;
+}
 
-/*!* Change the color of links on hover *!*/
-/*.topnav a:hover {*/
-/*    background-color: #aeddfc;*/
-/*    color: white;*/
-/*}*/
+.scrolled.slide-right {
+    animation: slide-in-right 1s ease-in-out both;
+}
 
-/*!* Add a color to the active/current link *!*/
-/*.topnav a.active {*/
-/*    !*background-color: #04AA6D;*!*/
-/*    background-color: #78C5F9;*/
-/*    background-image: #78C5F9;*/
-/*    color: black;*/
-/*}*/
+@keyframes slide-in-left {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
 
-/*.home {*/
-/*    background-color: #78C5F9;*/
-/*}*/
+@keyframes slide-in-right {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
 
-/*.son {*/
-/*    background-color: #78C5F9;*/
-/*}*/
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
-/*.brother {*/
-/*    background-color: #78C5F9;*/
-/*}*/
-
-/*.husband {*/
-/*    background-color: #78C5F9;*/
-/*}*/
-
-/*.father {*/
-/*    background-color: #78C5F9;*/
-/*}*/
-
-/*.grandfather {*/
-/*    background-color: #78C5F9;*/
-/*}*/
-
-/*.memvideo {*/
-/*    background-color: #78c5f9;*/
-/*}*/
+/*end of scrolling stuff*/

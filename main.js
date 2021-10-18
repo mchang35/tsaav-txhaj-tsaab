@@ -6,11 +6,8 @@ ready(() => {
     document.querySelector(".header").style.height = window.innerHeight + "px";
 })
 
-// define a function for when they click on Hmong vs English
 var eng_lang = true; // boolean for whether we are currently in English Language
 
-var navbar_list = document.getElementsByClassName("navbar-expand-md");
-var navbar = navbar_list[0]; // gets the navigation bar
 // defines where the navigation bar will be FIXED!
 var navbar_sticky_Y = window.scrollY + window.innerHeight;
 
@@ -20,7 +17,8 @@ var navbar_sticky_Y = window.scrollY + window.innerHeight;
 var program_day = 0 // 0 = Saturday, 1 = Sunday, 2 = Monday
 check_today_date(); // change program_day if necessary
 // set the program to be the day
-
+var day_labels = ["Saturday, November 13, 2021", "Sunday, November 14, 2021",
+    "Monday, November 15, 2021"];
 var events = [
     ["Saturday Event 1", "Saturday Event 2", "Saturday Event 3",
         "Saturday Event 4", "Saturday Event 5", "Saturday Event 6", "Saturday Event 7",
@@ -55,42 +53,100 @@ var times = [
 
 // defines where the Memorial Video portion starts
 
+////////////////////////////////////////////////////////////////////////////
+// SCROLLING TAKEN CARE OF HERE //
+const scrollOffset = 100;
+
+const scrollElement = document.querySelector(".js-scroll");
+
+const elementInView = (el, offset = 0) => {
+    const elementTop = el.getBoundingClientRect().top;
+
+    return (
+        elementTop <=
+        ((window.innerHeight || document.documentElement.clientHeight) - offset)
+    );
+};
+
+const displayScrollElement = () => {
+    scrollElement.classList.add('scrolled');
+}
+
+const hideScrollElement = () => {
+    scrollElement.classList.remove('scrolled');
+}
+
+const handleScrollAnimation = () => {
+    if (elementInView(scrollElement, scrollOffset)) {
+        displayScrollElement();
+    } else {
+        hideScrollElement();
+    }
+}
+
+window.addEventListener('scroll', () => {
+    handleScrollAnimation();
+})
+
+////////////////////////////////////////////////////////////////////////////
+
 // when users scroll on the window, make sure that the navigation is sticky
 window.onscroll = function() {sticky_nav()};
 
 // define a function that goes to diff days when user scrolls LEFT or RIGHT
 
 function get_events_and_times(day) {
-    console.log("we are in the function that we're supposed to be");
-    if (day != program_day) {
-        program_day = day;
-        let day_events = events[program_day];
-        let day_times = times[program_day];
-        console.log(day_events);
-        console.log(day_times);
+    if (day != program_day) { // only change things if we're changing the day
+        program_day = day; // update the program day
+        let day_events = events[program_day]; // collect all event names
+        let day_times = times[program_day]; // collect all event times
         // get rid of everything that's currently in there
+        let day_inner_container = document.getElementById("day-inner-container");
+        let items = day_inner_container.childNodes; // get list of children to remove
+        while (items.length > 0) { // remove all children in the day's inner container
+            day_inner_container.removeChild(items[0]);
+        }
         // add everything new
-    }
-}
-// define a function that goes to diff days when the user presses LEFT or RIGHT
-function switch_program_day(dir) {
-    console.log("we are trying to switch the program day");
-    if (dir > 0 && program_day < 2) { // forward
-        program_day = program_day + 1;
-        get_events_and_times(program_day);
-    } else if (dir < 0 && program_day > 0) { // backward
-        program_day = program_day - 1;
-        get_events_and_times(program_day);
+        document.getElementById("day-label").innerHTML = day_labels[program_day];
+        for (let i = 0; i < day_events.length; i++) { // for each event
+            let program_item = document.createElement("div"); // create the item
+            program_item.classList.add("program-item");
+            program_item.classList.add("row");
+            let program_item_name = document.createElement("div"); // create the name
+            program_item_name.classList.add("program-item-name");
+            program_item_name.classList.add("col");
+            program_item_name.innerHTML = day_events[i];
+            let program_item_time = document.createElement("div"); // create the time
+            program_item_time.classList.add("program-item-time");
+            program_item_time.classList.add("col");
+            program_item_time.innerHTML = day_times[i];
+
+            program_item.appendChild(program_item_name); // add name to item
+            program_item.appendChild(program_item_time); // add time to item
+
+            day_inner_container.appendChild(program_item); // add item to container
+        }
     }
 }
 
-// document.getElementById("right-arrow").addEventListener("click", switch_program_day(1));
-// document.getElementById("left-arrow").addEventListener("click", switch_program_day(-1));
+// define a function that goes to diff days when the user presses LEFT or RIGHT
+// function switch_program_day(dir) {
+//     console.log("we are trying to switch the program day");
+//     if (dir > 0 && program_day < 2) { // forward
+//         program_day = program_day + 1;
+//         get_events_and_times(program_day);
+//     } else if (dir < 0 && program_day > 0) { // backward
+//         program_day = program_day - 1;
+//         get_events_and_times(program_day);
+//     }
+// }
 
 // define a function for hovering over the family tree
 
 // function that makes navigation sticky
 function sticky_nav() {
+    var navbar_list = document.getElementsByClassName("navbar-expand-md");
+    var navbar = navbar_list[0]; // gets the navigation bar
     if (window.pageYOffset >= navbar_sticky_Y) {
         navbar.classList.add("sticky");
     } else {
