@@ -11,9 +11,13 @@ var eng_lang = true; // boolean for whether we are currently in English Language
 // defines where the navigation bar will be FIXED!
 var navbar_sticky_Y = window.scrollY + window.innerHeight;
 
+// defines where the program begins
+// var program_pos = document.getElementById("program-content").getBoundingClientRect();
+
 // defines the current day that people are looking at on the program
 var program_day = 0 // 0 = Saturday, 1 = Sunday, 2 = Monday
 check_today_date(); // change program_day if necessary
+display_events_and_times(program_day);
 // set the program to be the day
 var day_labels = ["Saturday, November 13, 2021", "Sunday, November 14, 2021",
     "Monday, November 15, 2021"];
@@ -148,41 +152,16 @@ function sticky_nav() {
 
 // define a function for when they click on each button in the navigation
 function top_of_page() {
-    console.log("Top of the page");
     document.body.scrollTop = 0; // for Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
-function program() {
-
-}
-
-function son() {
-
-}
-
-function brother() {
-
-}
-
-function husband() {
-
-}
-
-function father() {
-
-}
-
-function grandfather() {
-
-}
-
-function family() {
-
-}
-
-function memvideo() {
-
+// function that scrolls the div into view when user presses on the navigation bar
+function scroll_to_view(to_view) {
+    console.log('we are in the correct function');
+    let element = document.getElementById(to_view);
+    console.log(element);
+    element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
 }
 
 // function that changes program_day to today's date if applicable,

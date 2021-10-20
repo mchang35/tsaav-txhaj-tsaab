@@ -12,23 +12,37 @@
 <body>
 
 <header class="page-header header container-fluid">
+    <div class="overlay"></div>
+
     <div class="container h-100">
         <div class="row h-100 align-items-center justify-content-center text-center">
             <div class="col-lg-10 align-self-end">
-                <h1 class="text-uppercase text-black font-weight-bold" id="celebration-of-life">A Celebration of Life</h1>
+                <h1 class="text-uppercase text-white font-weight-bold" id="celebration-of-life">A Celebration of Life</h1>
                 <br>
-                <h1 class="text-uppercase text-black font-weight-bold">Tsaav Txhaj Tsaab</h1>
+                <h1 class="text-uppercase text-white font-weight-bold">Tsaav Txhaj Tsaab</h1>
                 <br>
-                <h1 class="text-uppercase text-black font-weight-bold">Sia Chang</h1>
+                <h2 class="text-uppercase text-white font-weight-bold">Sia Chang</h2>
                 <br>
-                <h3 class="text-uppercase text-black font-weight-bold">May 15, 1955 - September 16, 2021</h3>
-                <br><br><br><br>
-                <h3 class="text-uppercase text-black font-weight-bold"> </h3>
-            </div>
-            <div class="col-lg-8 align-self-baseline">
-                <a class="btn btn-primary btn-xl js-scroll-trigger" href="#hmong" onclick="switch_to_hmong()">Hmong (Lug Hmoob/Moob)</a>
-                <a class="btn btn-primary btn-xl js-scroll-trigger" href="#english" onclick="switch_to_english()">English (Lug Meskas)</a>
-            </div>
+                <h3 class="text-uppercase text-white font-weight-bold">May 15, 1955 - September 16, 2021</h3>
+                <br><br>
+<!--                <h3 class="text-uppercase text-white font-weight-bold"> </h3>-->
+<!--            </div>-->
+
+<!--            <div class="col-lg-10 align-self-end">-->
+<!--                <h1 class="text-uppercase text-black font-weight-bold" id="celebration-of-life">A Celebration of Life</h2>-->
+<!--                <br>-->
+<!--                <h1 class="text-uppercase text-black font-weight-bold">Tsaav Txhaj Tsaab</h2>-->
+<!--                <br>-->
+<!--                <h2 class="text-uppercase text-black font-weight-bold">Sia Chang</h2>-->
+<!--                <br>-->
+<!--                <h3 class="text-uppercase text-black font-weight-bold">May 15, 1955 - September 16, 2021</h3>-->
+<!--                <br>-->
+<!--                &lt;!&ndash;                <h3 class="text-uppercase text-white font-weight-bold"> </h3>&ndash;&gt;-->
+<!--            </div>-->
+<!--            <div class="col-lg-8 align-self-baseline">-->
+<!--                <a class="btn btn-primary btn-xl js-scroll-trigger" href="#hmong" onclick="switch_to_hmong()">Hmong (Lug Hmoob/Moob)</a>-->
+<!--                <a class="btn btn-primary btn-xl js-scroll-trigger" href="#english" onclick="switch_to_english()">English (Lug Meskas)</a>-->
+<!--            </div>-->
         </div>
     </div>
 </header>
@@ -41,28 +55,28 @@
     <div class="collapse navbar-collapse" id="main-navigation">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" id="program" href="#funeralprogram" onclick="program()">Funeral Program</a>
+                <a class="nav-link" id="program" href="#funeralprogram" onclick="scroll_to_view('program-content')">Funeral Program</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="son" href="#son" onclick="son()">As a Son</a>
+                <a class="nav-link" id="son" href="#son" onclick="scroll_to_view('son-content')">As a Son</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="brother" href="#brother" onclick="brother()">As a Brother</a>
+                <a class="nav-link" id="brother" href="#brother" onclick="scroll_to_view('brother-content')">As a Brother</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="husband" href="#husband" onclick="husband()">As a Husband</a>
+                <a class="nav-link" id="husband" href="#husband" onclick="scroll_to_view('husband-content')">As a Husband</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="father" href="#father" onclick="father()">As a Father</a>
+                <a class="nav-link" id="father" href="#father" onclick="scroll_to_view('father-content')">As a Father</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="grandfather" href="#grandfather" onclick="grandfather()">As a Grandfather</a>
+                <a class="nav-link" id="grandfather" href="#grandfather" onclick="scroll_to_view('grandfather-content')">As a Grandfather</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="family" href="#family" onclick="family()">Family Tree and Memories</a>
+                <a class="nav-link" id="family" href="#family" onclick="scroll_to_view('family-content')">Family Tree and Memories</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="memvideo" href="#memorialvideo" onclick="memvideo()">Memorial Video</a>
+                <a class="nav-link" id="memvideo" href="#memorialvideo" onclick="scroll_to_view('memvideo-content')">Memorial Video</a>
             </li>
         </ul>
     </div>
@@ -70,7 +84,7 @@
 
 <div class="content">
 
-    <div class="program-content center scroll-element js-scroll">
+    <div class="program-content center scroll-element js-scroll" id="program-content">
         <h1 class="text-uppercase text-black font-weight-bold">Program</h1>
         <br>
         <div class="center day_buttons scroll-element js-scroll">
@@ -128,7 +142,7 @@
 
     <br><br><br>
 
-    <div class="son_content center">
+    <div class="son-content center" id="son-content">
 
         <br>
         <div class="container">
@@ -150,7 +164,7 @@
 
     <br><br><br>
 
-    <div class="brother_content center">
+    <div class="brother-content center" id="brother-content">
 
         <br>
         <div class="container">
@@ -171,7 +185,7 @@
 
     <br><br><br>
 
-    <div class="husband_content center">
+    <div class="husband-content center" id="husband-content">
 
         <br>
         <div class="container">
@@ -193,7 +207,7 @@
 
     <br><br><br>
 
-    <div class="father_content center">
+    <div class="father-content center" id="father-content">
 
         <br>
         <div class="container">
@@ -215,7 +229,7 @@
 
     <br><br><br>
 
-    <div class="grandfather_content center">
+    <div class="grandfather-content center" id="grandfather-content">
 
         <br>
         <div class="container">
@@ -236,14 +250,14 @@
 
     <br><br><br>
 
-    <div class="family_content center scroll-element js-scroll">
+    <div class="family-content center scroll-element js-scroll" id="family-content">
         <h1 class="text-uppercase text-black font-weight-bold">Family Tree and Memories</h1>
         <!--        have the full family tree here-->
     </div>
 
     <br><br><br>
 
-    <div class="memvideo_content center scroll-element js-scroll">
+    <div class="memvideo-content center scroll-element js-scroll" id="memvideo-content">
         <h1 class="text-uppercase text-black font-weight-bold">Memorial Video</h1>
         <h3 class="text-uppercase text-black font-weight-bold">Edited by Chase Chang</h3>
 <!--        insert video here-->
