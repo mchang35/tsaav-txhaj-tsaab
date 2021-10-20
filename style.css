@@ -98,6 +98,11 @@ h4 {
     text-align: center;
 }
 
+p {
+    width: 80%;
+    text-align: center;
+    display: inline-block;
+}
 /*all of scrolling stuff*/
 
 .js-scroll {
