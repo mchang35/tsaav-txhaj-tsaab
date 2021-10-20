@@ -160,8 +160,12 @@ function top_of_page() {
 function scroll_to_view(to_view) {
     console.log('we are in the correct function');
     let element = document.getElementById(to_view);
+    // let parent = element.parentNode;
     console.log(element);
-    element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+    // console.log(parent);
+    // parent.scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
+    element.scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
+    // element.scrollIntoView({behavior: "smooth"});
 }
 
 // function that changes program_day to today's date if applicable,
