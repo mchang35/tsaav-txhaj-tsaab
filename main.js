@@ -125,18 +125,6 @@ function display_events_and_times(day) {
     }
 }
 
-// define a function that goes to diff days when the user presses LEFT or RIGHT
-// function switch_program_day(dir) {
-//     console.log("we are trying to switch the program day");
-//     if (dir > 0 && program_day < 2) { // forward
-//         program_day = program_day + 1;
-//         get_events_and_times(program_day);
-//     } else if (dir < 0 && program_day > 0) { // backward
-//         program_day = program_day - 1;
-//         get_events_and_times(program_day);
-//     }
-// }
-
 // define a function for hovering over the family tree
 
 // function that makes navigation sticky
