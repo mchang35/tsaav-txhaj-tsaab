@@ -11,9 +11,6 @@ var eng_lang = true; // boolean for whether we are currently in English Language
 // defines where the navigation bar will be FIXED!
 var navbar_sticky_Y = window.scrollY + window.innerHeight;
 
-// defines where the program begins
-// var program_pos = document.getElementById("program-content").getBoundingClientRect();
-
 // defines the current day that people are looking at on the program
 var program_day = 0 // 0 = Saturday, 1 = Sunday, 2 = Monday
 check_today_date(); // change program_day if necessary
@@ -89,8 +86,7 @@ window.addEventListener("scroll", () => {
 // when users scroll on the window, make sure that the navigation is sticky
 window.onscroll = function() {sticky_nav()};
 
-// define a function that goes to diff days when user scrolls LEFT or RIGHT
-
+// function that switches the program content based on the button day pressed
 function display_events_and_times(day) {
     if (day != program_day) { // only change things if we're changing the day
         program_day = day; // update the program day
@@ -125,8 +121,6 @@ function display_events_and_times(day) {
     }
 }
 
-// define a function for hovering over the family tree
-
 // function that makes navigation sticky
 function sticky_nav() {
     var navbar_list = document.getElementsByClassName("navbar-expand-md");
@@ -148,12 +142,8 @@ function top_of_page() {
 function scroll_to_view(to_view) {
     console.log('we are in the correct function');
     let element = document.getElementById(to_view);
-    // let parent = element.parentNode;
     console.log(element);
-    // console.log(parent);
-    // parent.scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
     element.scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
-    // element.scrollIntoView({behavior: "smooth"});
 }
 
 // function that changes program_day to today's date if applicable,
@@ -180,38 +170,4 @@ function check_today_date() {
             }
         }
     }
-}
-
-// function that switches whole website to Hmong
-function switch_to_hmong() {
-    if (eng_lang == true) {
-        document.getElementById("celebration-of-life").innerHTML = "Kev Ua Koob Tsheej Ntawm Lub Neej"; // translate "A Celebration of Life"
-        document.getElementById("top").text = "Hmong for Top"; // translate "Top"
-        document.getElementById("program").text = "Hmong for Funeral Program"; // translate "Funeral Program"
-        document.getElementById("son").text = "Hmong for As a Son"; // translate "As a Son"
-        document.getElementById("brother").text = "Hmong for As a Brother"; // translate "As a Brother"
-        document.getElementById("husband").text = "Hmong for As a Husband"; // translate "As a Husband"
-        document.getElementById("father").text = "Hmong for As a Father"; // translate "As a Father"
-        document.getElementById("grandfather").text = "Hmong for As a Grandfather"; // translate "As a Grandfather"
-        document.getElementById("family").text = "Hmong for Family Tree and Memories"; // translate "Family Tree and Memories"
-        document.getElementById("memvideo").text = "Hmong for Memorial Video"; // translate "Memorial Video"
-    }
-    eng_lang = false;
-}
-
-// function that switches whole website to English
-function switch_to_english() {
-    if (eng_lang == false) {
-        document.getElementById("celebration-of-life").innerHTML = "A Celebration of Life"; // translate "A Celebration of Life"
-        document.getElementById("top").text = "Top"; // translate "Top"
-        document.getElementById("program").text = "Funeral Program"; // translate "Funeral Program"
-        document.getElementById("son").text = "As a Son"; // translate "As a Son"
-        document.getElementById("brother").text = "As a Brother"; // translate "As a Brother"
-        document.getElementById("husband").text = "As a Husband"; // translate "As a Husband"
-        document.getElementById("father").text = "As a Father"; // translate "As a Father"
-        document.getElementById("grandfather").text = "As a Grandfather"; // translate "As a Grandfather"
-        document.getElementById("family").text = "Family Tree and Memories"; // translate "Family Tree and Memories"
-        document.getElementById("memvideo").text = "Memorial Video"; // translate "Memorial Video"
-    }
-    eng_lang = true;
 }
