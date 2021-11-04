@@ -227,10 +227,60 @@ window.addEventListener("scroll", () => {
 // when users scroll on the window, make sure that the navigation is sticky
 window.onscroll = function() {sticky_nav()};
 
+function change_btn_colors(day_true, val) {
+    let old_btn = null; // to store the old button
+    let new_btn = null; // to store the new button
+    if (day_true) { // if we are changing a DAY button
+        // get the old button first
+        if (program_day == 0) {
+            old_btn = document.getElementById("saturday-btn");
+        } else if (program_day == 1) {
+            old_btn = document.getElementById("sunday-btn");
+        } else {
+            old_btn = document.getElementById("monday-btn");
+        }
+        // get the new button
+        if (val == 0) {
+            new_btn = document.getElementById("saturday-btn");
+        } else if (val == 1) {
+            new_btn = document.getElementById("sunday-btn");
+        } else {
+            new_btn = document.getElementById("monday-btn");
+        }
+    } else { // if we are changing a LANGUAGE button
+        // get the old button
+        if (curr_lang == 0) {
+            old_btn = document.getElementById("en-btn");
+        } else if (curr_lang == 1) {
+            old_btn = document.getElementById("hm-btn");
+        } else {
+            old_btn = document.getElementById("both-lang-btn");
+        }
+        // get the new button
+        if (val == 0) {
+            new_btn = document.getElementById("en-btn");
+        } else if (val == 1) {
+            new_btn = document.getElementById("hm-btn");
+        } else {
+            new_btn = document.getElementById("both-lang-btn");
+        }
+    }
+
+    // change the colors
+    old_btn.style.backgroundColor = "#78C5F9"; // #78C5F9
+    new_btn.style.backgroundColor = "black"; // #aeddfc
+}
+
 // function that switches the program content based on the button day pressed
 function display_events_and_times(day=program_day, lang=curr_lang) {
     console.log('A NEW BUTTON PRESSED! The day is ' + day + ' and the language is ' + lang);
-    if (day != program_day || lang != curr_lang) { // only change things if we're changing the day
+    if (day != program_day || lang != curr_lang) { // only change things if we're changing the day or language
+        // change the color of the buttons
+        if (day != program_day) {
+            change_btn_colors(true, day);
+        } else if (lang != curr_lang) {
+            change_btn_colors(false, lang);
+        }
         program_day = day; // update the program day
         curr_lang = lang; // update the current language
         let day_events = events[program_day]; // default is both languages
@@ -239,36 +289,36 @@ function display_events_and_times(day=program_day, lang=curr_lang) {
         } else if (curr_lang == 1) {
             day_events = hmong_events[program_day]; // collect all event names in Hmong
         }
-        console.log("the day's events are ");
-        for (let i = 0; i < day_events.length; i++) {
-            console.log(day_events[i]);
-        }
+        // console.log("the day's events are ");
+        // for (let i = 0; i < day_events.length; i++) {
+        //     console.log(day_events[i]);
+        // }
         let day_times = times[program_day]; // collect all event times
         // get rid of everything that's currently in there
-        let day_inner_container = document.getElementById("day-inner-container");
+        let day_inner_container = document.getElementById("day-inner-container"); // get the container of the program
         let items = day_inner_container.childNodes; // get list of children to remove
         while (items.length > 0) { // remove all children in the day's inner container
             day_inner_container.removeChild(items[0]);
         }
         // add everything new
-        document.getElementById("day-label").innerHTML = day_labels[program_day];
+        document.getElementById("day-label").innerHTML = day_labels[program_day]; // change the day label
         for (let i = 0; i < day_events.length; i++) { // for each event
-            let all_events = day_events[i];
-            let sub_events = null;
+            let all_events = day_events[i]; // the event or all events for the row
+            let sub_events = null; // to store the sub-events
             // console.log('Sub events: ' + sub_events);
-            let name_event = '';
-            let sub_events_exist = false;
-            if (typeof all_events != 'string') {
-                name_event = all_events[0];
-                sub_events = all_events.slice(2);
-                sub_events_exist = true;
-            } else {
-                name_event = all_events;
+            let name_event = ''; // to get the name of the primary event of the row
+            let sub_events_exist = false; // to store whether there are sub-events
+            if (typeof all_events != 'string') { // if there ARE sub-events
+                name_event = all_events[0]; // the primary event of the row is the first item
+                sub_events = all_events.slice(1); // the sub-events are the rest of the items
+                sub_events_exist = true; // there ARE sub-events
+            } else { // if there are NO sub-events
+                name_event = all_events; // the name of the event is the all_events item
             }
             // console.log('Name of main event: ' + name_event);
             // console.log('Now Sub events: ' + sub_events);
-            let time = day_times[i];
-            let program_item = document.createElement("div"); // create the item
+            let time = day_times[i]; // get the time for the event
+            let program_item = document.createElement("div"); // create the program item
             program_item.classList.add("program-item");
             program_item.classList.add("row");
             program_item.classList.add("my-2");
@@ -276,21 +326,27 @@ function display_events_and_times(day=program_day, lang=curr_lang) {
             program_item_name.classList.add("program-item-name");
             program_item_name.classList.add("col");
             program_item_name.classList.add("text-left");
+            // program_item_name.classList.add("js-scroll");
+            // program_item_name.classList.add("slide-left");
             program_item_name.innerHTML = name_event;
-            if (sub_events_exist) {
-                let ul = document.createElement("ul");
-                ul.style.listStyleType = "none"; // ("list-style-type:none;");
-                for (let j = 0; j < sub_events.length; j++) {
-                    let li = document.createElement("li");
+            if (sub_events_exist) { // if there are sub-events
+                let ul = document.createElement("ul"); // make an unordered list
+                ul.style.listStyleType = "none"; // no bullet points in the list
+                for (let j = 0; j < sub_events.length; j++) { // for each sub-event
+                    let li = document.createElement("li"); // make a list item
                     li.innerHTML = sub_events[j];
-                    ul.appendChild(li);
+                    // li.classList.add("js-scroll");
+                    // li.classList.add("slide-left");
+                    ul.appendChild(li); // add the list item to the unordered list
                 }
-                program_item_name.appendChild(ul);
+                program_item_name.appendChild(ul); // add the unordered list to the item name
             }
             let program_item_time = document.createElement("div"); // create the time
             program_item_time.classList.add("program-item-time");
             program_item_time.classList.add("col");
             program_item_time.classList.add("text-right");
+            // program_item_time.classList.add("js-scroll");
+            // program_item_name.classList.add("slide-right");
             program_item_time.innerHTML = time;
 
             program_item.appendChild(program_item_name); // add name to item

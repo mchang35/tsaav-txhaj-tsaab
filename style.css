@@ -1,6 +1,5 @@
 .header {
     background-image: url('Sia2WithWhite.png');
-    /*background-image: url('Sia2WithBlack.png');*/
     background-size: cover;
     background-position: center;
     position: relative;
@@ -62,6 +61,8 @@ body {
 
 .btn {
     margin: 10px;
+    background-color: #78C5F9;
+    border: none;
 }
 
 .center {
@@ -107,6 +108,7 @@ p {
     text-align: center;
     display: inline-block;
 }
+
 /*all of scrolling stuff*/
 
 .js-scroll {

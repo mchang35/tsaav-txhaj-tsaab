@@ -57,7 +57,7 @@
 
     <div class="bio-content center" id="bio-content">
         <h1 class="text-uppercase text-black font-weight-bold js-scroll slide-left">Biography</h1>
-        <p class="center js-scroll slide-right">Biographcal Information Biographcal Information Biographcal Information Biographcal Information
+        <p class="center js-scroll slide-right">
             Biographcal Information Biographcal Information Biographcal Information Biographcal Information
             Biographcal Information Biographcal Information Biographcal Information Biographcal Information
             Biographcal Information Biographcal Information Biographcal Information Biographcal Information
@@ -67,7 +67,9 @@
             Biographcal Information Biographcal Information Biographcal Information Biographcal Information
             Biographcal Information Biographcal Information Biographcal Information Biographcal Information
             Biographcal Information Biographcal Information Biographcal Information Biographcal Information
-            Biographcal Information Biographcal Information Biographcal Information Biographcal Information </p>
+            Biographcal Information Biographcal Information Biographcal Information Biographcal Information
+            Biographcal Information Biographcal Information Biographcal Information Biographcal Information
+        </p>
     </div>
 
     <br><br><br>
@@ -78,9 +80,9 @@
         <p class="center text-uppercase text-black font-weight-bold">Legacy Funeral Home - West Chapel</p>
         <p class="center text-uppercase text-black font-weight-bold">255 Eaton Street, St. Paul, MN 55107</p>
         <div class="center day_buttons scroll-element js-scroll">
-            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#saturday" onclick="display_events_and_times(day=0, undefined)">Saturday</a>
-            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#sunday" onclick="display_events_and_times(day=1, undefined)">Sunday</a>
-            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#monday" onclick="display_events_and_times(day=2, undefined)">Monday</a>
+            <a class="btn btn-primary btn-xl js-scroll-trigger" style="background-color:black;" id="saturday-btn" href="#saturday" onclick="display_events_and_times(day=0, undefined)">Saturday</a>
+            <a class="btn btn-primary btn-xl js-scroll-trigger" id="sunday-btn" href="#sunday" onclick="display_events_and_times(day=1, undefined)">Sunday</a>
+            <a class="btn btn-primary btn-xl js-scroll-trigger" id="monday-btn" href="#monday" onclick="display_events_and_times(day=2, undefined)">Monday</a>
         </div>
         <br>
         <div class="container day-outer-container center">
@@ -89,50 +91,53 @@
                     <h2 class="day-label scroll-element js-scroll slide-left" id="day-label">Saturday, November 13, 2021</h2>
                     <br>
                     <div class="center lang_buttons scroll-element js-scroll">
-                        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#english" onclick="display_events_and_times(undefined, lang=0)">English</a>
-                        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#bothlanguages" onclick="display_events_and_times(undefined, lang=2)">Both Languages</a>
-                        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#hmong" onclick="display_events_and_times(undefined, lang=1)">Hmong</a>
+                        <a class="btn btn-primary btn-xl js-scroll-trigger" id="en-btn" href="#english" onclick="display_events_and_times(undefined, lang=0)">English</a>
+
+                        <a class="btn btn-primary btn-xl js-scroll-trigger" id="hm-btn" href="#hmong" onclick="display_events_and_times(undefined, lang=1)">Hmong</a>
+                    </div>
+                    <div class="center lang_buttons scroll-element js-scroll">
+                        <a class="btn btn-primary btn-xl js-scroll-trigger" style="background-color:black;" id="both-lang-btn" href="#bothlanguages" onclick="display_events_and_times(undefined, lang=2)">Both Languages</a>
                     </div>
                     <br>
                     <div class="container day-inner-container center scroll-element js-scroll slide-right" id="day-inner-container">
                         <div class="row program-item my-2">
-                            <div class="col program-item-name center text-left">Arrival</div>
-                            <div class="col program-item-time center text-right">8:00am</div>
+                            <div class="col program-item-name center text-left js-scroll slide-left">Arrival</div>
+                            <div class="col program-item-time center text-right js-scroll slide-right">8:00am</div>
                         </div>
                         <div class="row program-item my-2">
-                            <div class="col program-item-name text-left">Guide The Way Ceremony (Taw Kev)</div>
-                            <div class="col program-item-time text-right">9:00am</div>
+                            <div class="col program-item-name text-left js-scroll slide-left">Guide The Way Ceremony (Taw Kev)</div>
+                            <div class="col program-item-time text-right js-scroll slide-right">9:00am</div>
                         </div>
                         <div class="row program-item my-2">
-                            <div class="col program-item-name text-left">Life Transition Song (Qeej Tu Sav)
+                            <div class="col program-item-name text-left js-scroll slide-left">Life Transition Song (Qeej Tu Sav)
                                 <ul style="list-style-type:none;">
-                                    <li class="text-left">
-                                        The Mountain Song (Qeej Nce Neeg)
+                                    <li class="text-left js-scroll slide-left">
+                                        The Mounting Song (Qeej Nce Neeg)
                                     </li>
-                                    <li class="text-left">
+                                    <li class="text-left js-scroll slide-left">
                                         The Breakfast Song (Qeej Tshais)
                                     </li>
-                                    <li class="text-left">
+                                    <li class="text-left js-scroll slide-left">
                                         The Lunch Song (Qeej Su)
                                     </li>
-                                    <li class="text-left">
+                                    <li class="text-left js-scroll slide-left">
                                         The Dinner Song (Qeej Mo)
                                     </li>
                                 </ul>
                             </div>
-                            <div class="col program-item-time text-right">12:00pm</div>
+                            <div class="col program-item-time text-right js-scroll slide-right">12:00pm</div>
                         </div>
                         <div class="row program-item my-2">
-                            <div class="col program-item-name text-left">Lunch Provided (Noj Su)</div>
-                            <div class="col program-item-time text-right">1:00pm</div>
+                            <div class="col program-item-name text-left js-scroll slide-left">Lunch Provided (Noj Su)</div>
+                            <div class="col program-item-time text-right js-scroll slide-right">1:00pm</div>
                         </div>
                         <div class="row program-item my-2">
-                            <div class="col program-item-name text-left">Council of Funeral Rights Ceremony (Rooj Tam Thawj Lwm Tub Ncig)</div>
-                            <div class="col program-item-time text-right">3:00pm</div>
+                            <div class="col program-item-name text-left js-scroll slide-left">Council of Funeral Rights Ceremony (Rooj Tam Thawj Lwm Tub Ncig)</div>
+                            <div class="col program-item-time text-right js-scroll slide-right">3:00pm</div>
                         </div>
                         <div class="row program-item my-2">
-                            <div class="col program-item-name text-left">Dinner (Noj Mo)</div>
-                            <div class="col program-item-time text-right">7:00pm</div>
+                            <div class="col program-item-name text-left js-scroll slide-left">Dinner (Noj Mo)</div>
+                            <div class="col program-item-time text-right js-scroll slide-right">7:00pm</div>
                         </div>
                     </div>
                 </div>
@@ -159,7 +164,7 @@
 <!--    <br><br><br>-->
 
     <div class="thank-you-content center scroll-element js-scroll" id="thank-you-content">
-        <h1 class="text-uppercase text-black font-weight-bold js-scroll slide-left">Acknowledgements and Thank You</h1>
+        <h2 class="text-uppercase text-black font-weight-bold js-scroll slide-left">Acknowledgements and Thank You</h2>
         <p class="center js-scroll slide-right">
             The family of Tsaav Txhaj Tsaab - Sia Chang would like to thank
             and acknowledge the following for your service, generosity,
@@ -168,7 +173,7 @@
             without whom this life celebration would not be possible.
         </p>
         <ul>
-            <li class="text-left">
+            <li class="text-left js-scroll slide-left">
                 Council of Funeral Rites (Cov Thawj Lwm Tub Ncig): Txiv Coj Xai
                 Vaam Rwg Tsaab, Thawj Xyom Cuab Num Khais Tsaab, Thawj Xyom Cuab
                 Yeej Koob Tsaab, Taw Kev Nom Tub Xyooj, Cuab Tsaav Ntxhoo Vwg Tsaab,
@@ -183,16 +188,16 @@
                 Txoov Tsaab, Tub Sau Ntawv Vaam Tuam Tsaab, Tub Thauj Nyuj Koob Tsaab, Tub
                 Thauj Nyuj Nkaag Ceeb Tsaab.
             </li>
-            <li class="text-left">
+            <li class="text-left js-scroll slide-right">
                 Blessing Papers (Tub Txaug Ntawv): Xeev Fuas Tsaab, Nkaag Ceeb Tsaab
             </li>
-            <li class="text-left">
+            <li class="text-left js-scroll slide-left">
                 Ceremonial Guests (Cov Qhua Txooj): Cuab Tsaav Ntxhoo Vwg Tsaab, Muam
                 Phauj _____Thoj, Nam Txiv Dlaab Nas Tsum Npuag Leej Haam, Xov Txiv
                 Dlaab Hlub Nom Loob Yaaj, Xov Txiv Dlaab Yau Tuam Xyooj, Ntxhais Qhe
                 Nyiaj Vaj.
             </li>
-            <li class="text-left">
+            <li class="text-left js-scroll slide-right">
                 Decorations Provided by ____________.
             </li>
         </ul>
