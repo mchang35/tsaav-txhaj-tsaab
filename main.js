@@ -14,8 +14,9 @@ var navbar_sticky_Y = window.scrollY + window.innerHeight;
 // defines the current day that people are looking at on the program
 var program_day = 0; // 0 = Saturday, 1 = Sunday, 2 = Monday
 var curr_lang = 2; // 0 = English, 1 = Hmong, 2 = both
-check_today_date(); // change program_day if necessary
-display_events_and_times(day=0, lang=2); // set the program to be the day
+// check_today_date(); // change program_day if necessary
+// start_btn_colors();
+// display_events_and_times(day=0, lang=2); // set the program to be the day
 
 var day_labels = ["Saturday, November 13, 2021", "Sunday, November 14, 2021",
     "Monday, November 15, 2021"];
@@ -30,7 +31,7 @@ var events = [
             "The Dinner Song (Qeej Mo)"
         ],
         "Lunch Provided (Noj Su)",
-        "Councel of Funeral Rites Ceremony (Rooj Tam Thawj Lwm Tub Ncig)",
+        "Council of Funeral Rites Ceremony (Rooj Tam Thawj Lwm Tub Ncig)",
         "Dinner (Noj Mo)"
     ],
     [
@@ -271,6 +272,16 @@ function change_btn_colors(day_true, val) {
     new_btn.style.backgroundColor = "black"; // #aeddfc
 }
 
+function start_btn_colors() {
+    if (program_day == 0) {
+        document.getElementById("saturday-btn").style.backgroundColor = "black";
+    } else if (program_day == 1) {
+        document.getElementById("sunday-btn").style.backgroundColor = "black";
+    } else {
+        document.getElementById("monday-btn").style.backgroundColor = "black";
+    }
+}
+
 // function that switches the program content based on the button day pressed
 function display_events_and_times(day=program_day, lang=curr_lang) {
     console.log('A NEW BUTTON PRESSED! The day is ' + day + ' and the language is ' + lang);
@@ -326,6 +337,7 @@ function display_events_and_times(day=program_day, lang=curr_lang) {
             program_item_name.classList.add("program-item-name");
             program_item_name.classList.add("col");
             program_item_name.classList.add("text-left");
+            // program_item_name.classList.add("scroll-element");
             // program_item_name.classList.add("js-scroll");
             // program_item_name.classList.add("slide-left");
             program_item_name.innerHTML = name_event;
@@ -335,6 +347,7 @@ function display_events_and_times(day=program_day, lang=curr_lang) {
                 for (let j = 0; j < sub_events.length; j++) { // for each sub-event
                     let li = document.createElement("li"); // make a list item
                     li.innerHTML = sub_events[j];
+                    // li.classList.add("scroll-element");
                     // li.classList.add("js-scroll");
                     // li.classList.add("slide-left");
                     ul.appendChild(li); // add the list item to the unordered list
@@ -345,8 +358,9 @@ function display_events_and_times(day=program_day, lang=curr_lang) {
             program_item_time.classList.add("program-item-time");
             program_item_time.classList.add("col");
             program_item_time.classList.add("text-right");
+            // program_item_time.classList.add("scroll-element");
             // program_item_time.classList.add("js-scroll");
-            // program_item_name.classList.add("slide-right");
+            // program_item_time.classList.add("slide-right");
             program_item_time.innerHTML = time;
 
             program_item.appendChild(program_item_name); // add name to item
