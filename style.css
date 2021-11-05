@@ -1,5 +1,5 @@
 .header {
-    background-image: url('Sia2WithWhite.png');
+    /*background-image: url('Sia2WithWhite.png');*/
     background-size: cover;
     background-position: center;
     position: relative;
@@ -12,17 +12,20 @@
     left: 0;
     top: 0;
     /*background: rgba(207, 236, 245, 0.26);*/
-    background: rgba(0, 0, 0, 0.3)
+    background: rgba(0, 0, 0, 0.3);
 }
 
 body {
     padding: 0;
     margin: 0;
-    background: white;
+    background: #aeddfc;
+    /*white*/
+    font-family: "Le Jour Serif Personal Use";
 }
 
 .navbar {
-    background:#78C5F9;
+    /*background:#78C5F9;*/
+    background: white;
     /*display: inline-block;*/
     list-style-type: none;
     text-align: center;
@@ -39,7 +42,8 @@ body {
 }
 .nav-link:hover {
     color: white;
-    background-color: #aeddfc;
+    /*background-color: #aeddfc;*/
+    background-color: #78C5F9;
 }
 .navbar-collapse {
     justify-content: flex-end;
@@ -89,24 +93,29 @@ body {
 
 h1 {
     text-align: center;
+    font-family: "Le Jour Serif Personal Use";
 }
 
 h2 {
     text-align: center;
+    font-family: "Le Jour Serif Personal Use";
 }
 
 h3 {
     text-align: center;
+    font-family: "Le Jour Serif Personal Use";
 }
 
 h4 {
     text-align: center;
+    font-family: "Le Jour Serif Personal Use";
 }
 
 p {
     width: 80%;
     text-align: center;
     display: inline-block;
+    font-family: "Le Jour Serif Personal Use";
 }
 
 /*all of scrolling stuff*/
