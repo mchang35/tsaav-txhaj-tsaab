@@ -60,6 +60,21 @@ body {
     padding-top: 60px;
 }
 
+#sia-image img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    height: auto;
+    /*background-size: contain;*/
+}
+
+video {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    height: auto;
+}
+
 .btn {
     margin: 10px;
     background-color: white;
