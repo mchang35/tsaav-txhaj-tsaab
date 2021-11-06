@@ -26,11 +26,9 @@ body {
 .navbar {
     /*background:#78C5F9;*/
     background: white;
-    /*display: inline-block;*/
     list-style-type: none;
     text-align: center;
     z-index: 5;
-    /*position: relative;*/
 }
 .nav-link,
 .navbar-brand {
@@ -42,7 +40,6 @@ body {
 }
 .nav-link:hover {
     color: white;
-    /*background-color: #aeddfc;*/
     background-color: #78C5F9;
 }
 .navbar-collapse {
@@ -65,8 +62,9 @@ body {
 
 .btn {
     margin: 10px;
-    background-color: #78C5F9;
+    background-color: white;
     border: none;
+    color: black;
 }
 
 .center {

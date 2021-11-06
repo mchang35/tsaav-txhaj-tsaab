@@ -268,8 +268,10 @@ function change_btn_colors(day_true, val) {
     }
 
     // change the colors
-    old_btn.style.backgroundColor = "#78C5F9"; // #78C5F9
+    old_btn.style.backgroundColor = "white"; // #78C5F9
     new_btn.style.backgroundColor = "black"; // #aeddfc
+    old_btn.style.color = "black";
+    new_btn.style.color = "white";
 }
 
 function start_btn_colors() {
