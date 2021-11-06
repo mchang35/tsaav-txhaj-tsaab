@@ -22,7 +22,7 @@ var day_labels = ["Saturday, November 13, 2021", "Sunday, November 14, 2021",
     "Monday, November 15, 2021"];
 var events = [
     [
-        "Arrival",
+        "Arrival (Tuaj Txug)",
         "Guide The Way Ceremony (Taw Kev)",
         ["Life Transition Song (Qeej Tu Sav)",
             "The Mounting Song (Qeej Nce Neeg)",
@@ -72,7 +72,7 @@ var events = [
 ]; // events for days 0, 1, 2, respectively
 var hmong_events = [
     [
-        "Arrival",
+        "Tuaj Txug",
         "Taw Kev",
         ["Qeej Tu Sav",
             "Qeej Nce Neeg",
