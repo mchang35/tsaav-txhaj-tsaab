@@ -125,10 +125,14 @@ h4 {
 }
 
 p {
-    width: 80%;
+    width: 90%;
     text-align: center;
     display: inline-block;
     /*font-family: "Le Jour Serif Personal Use";*/
+}
+
+li {
+    width: 90%;
 }
 
 /*all of scrolling stuff*/
