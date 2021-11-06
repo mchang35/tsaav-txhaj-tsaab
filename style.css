@@ -37,6 +37,8 @@ body {
 }
 .nav-link {
     margin-right: 1em !important;
+    overflow: hidden;
+    white-space: nowrap;
 }
 .nav-link:hover {
     color: white;
@@ -106,29 +108,24 @@ video {
 
 h1 {
     text-align: center;
-    /*font-family: "Le Jour Serif Personal Use";*/
 }
 
 h2 {
     text-align: center;
-    /*font-family: "Le Jour Serif Personal Use";*/
 }
 
 h3 {
     text-align: center;
-    /*font-family: "Le Jour Serif Personal Use";*/
 }
 
 h4 {
     text-align: center;
-    /*font-family: "Le Jour Serif Personal Use";*/
 }
 
 p {
     width: 90%;
     text-align: center;
     display: inline-block;
-    /*font-family: "Le Jour Serif Personal Use";*/
 }
 
 li {
