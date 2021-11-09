@@ -268,7 +268,7 @@ function change_btn_colors(day_true, val) {
     }
 
     // change the colors
-    old_btn.style.backgroundColor = "white"; // #78C5F9
+    old_btn.style.backgroundColor = "#78C5F9";
     new_btn.style.backgroundColor = "black"; // #aeddfc
     old_btn.style.color = "black";
     new_btn.style.color = "white";
@@ -286,7 +286,6 @@ function start_btn_colors() {
 
 // function that switches the program content based on the button day pressed
 function display_events_and_times(day=program_day, lang=curr_lang) {
-    console.log('A NEW BUTTON PRESSED! The day is ' + day + ' and the language is ' + lang);
     if (day != program_day || lang != curr_lang) { // only change things if we're changing the day or language
         // change the color of the buttons
         if (day != program_day) {
@@ -337,7 +336,7 @@ function display_events_and_times(day=program_day, lang=curr_lang) {
             program_item.classList.add("my-2");
             let program_item_name = document.createElement("div"); // create the name
             program_item_name.classList.add("program-item-name");
-            program_item_name.classList.add("col");
+            program_item_name.classList.add("col-8");
             program_item_name.classList.add("text-left");
             // program_item_name.classList.add("scroll-element");
             // program_item_name.classList.add("js-scroll");
