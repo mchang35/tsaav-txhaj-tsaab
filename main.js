@@ -6,8 +6,6 @@ ready(() => {
     document.querySelector(".header").style.height = window.innerHeight + "px";
 })
 
-// var eng_lang = true; // boolean for whether we are currently in English Language
-
 // defines where the navigation bar will be FIXED!
 var navbar_sticky_Y = window.scrollY + window.innerHeight;
 
@@ -20,164 +18,232 @@ var curr_lang = 2; // 0 = English, 1 = Hmong, 2 = both
 
 var day_labels = ["Saturday, November 13, 2021", "Sunday, November 14, 2021",
     "Monday, November 15, 2021"];
+
 var events = [
     [
         "Arrival (Tuaj Txug)",
-        "Guide The Way Ceremony (Taw Kev)",
-        ["Life Transition Song (Qeej Tu Sav)",
+        "Ceremony: Guide The Way (Taw Kev)",
+        "Breakfast Provided (Noj Tshais)",
+        ["Ceremony: Mid Morning Rituals, Mid Afternoon Rituals",
+            "Life Transition Song (Qeej Tu Sav)",
             "The Mounting Song (Qeej Nce Neeg)",
-            "The Breakfast Song (Qeej Tshais)",
+            "Animal Offering Song (Qeej Cob Tsag)",
             "The Lunch Song (Qeej Su)",
             "The Dinner Song (Qeej Mo)"
         ],
-        "Lunch Provided (Noj Su)",
-        "Council of Funeral Rites Ceremony (Rooj Tam Thawj Lwm Tub Ncig)",
-        "Dinner (Noj Mo)"
+        "Lunch Provided (Noj Sus)",
+        "Ceremony: Council of Rites Ceremony (Lub Rooj Txhij Thawj Lwm Tub Ncig)",
+        "Dinner Provided (Noj Mo)",
+        ["Ceremony: Qeej Poets Night (Txiv Qeej Mo)",
+            "Qeej Foom Kom"
+        ]
     ],
     [
-        "Special Invited Guests Rituals (Hauv Qhua)",
+        "Ceremony: Ceremonial Guests Rituals (Hauv Qhua)",
         "Breakfast Provided (Noj Tshais)",
-        "Lunch Provided (Noj Su)",
-        ["Guest Speakers (Qhua Tshwj Xeeb Has Lug)",
-            "Cousin Toua Yang, France (Npawg Tuam Yaaj, Faabkis Teb)",
-            "Xyooj, College Classmate, need to verify full name",
-            "College de Samthong Group Presentation (Need name of speaker)",
-            "Minnesota Representatives Jay Xiong, Tou Xiong, and Elected Officials Presentation"
+        ["Ceremony: Qeej Songs",
+            "The Breakfast Song (Qeej Tshais)",
+            "The Lunch Song (Qeej Su)"
+        ],
+       "Lunch Provided (Noj Sus)",
+        ["Guest Speakers Program (Qhua Tshwj Xeeb Has Lug)",
+           "Yee Chang, Program MC (Nyaj Yig Tsaab, Tug Cev Lug)",
+            "Tsav Yeej Tsab, Chang Association of Minnesota " +
+                "Presentation (Has Lug Sawv Cev Koomhum Kwv Tij Moob " +
+                "Tsaab Minnesota)",
+            "Minnesota State Representatives Jay Xiong and Tou Xiong, " +
+                "and Elected Officials Presentation (Phub Thee Ntses Xyooj " +
+                "hab Tub Xyooj, Has Lug Sawv Cev Cov Num Tswv Lub Xeev Minnesota)",
+            "Nao Houa Moua, Hmong 18 Council Presentation (Pabthaa Nom Huas Muas " +
+                "Has Lug Sawv Cev Koomhum 18 Xeem)",
+            "Toua Yang, Personal Remark, France (Npawg Vaam Tuam Yaaj Tuaj " +
+                "Faabkis Teb Tuaj Has Lug)",
+            "Txooj Hawj Xyoo, Personal Remark (Phooj Ywg Txooj Hawj Xyooj Has Lus)",
+            "Kong Xiong, College de Samthong Group Presentation (Koo Xyoo, Has " +
+                "Lug Sawv Cev Rua Paab Pawg Tub Kawm Ntawv College de Samthong)",
+            "La Pao Chang, Chang Family Remark (Laj Pov Tsaab, Has Lug Sawv " +
+                "Cev Tsev Tuab Neeg)"
         ],
         ["Family Program (Tsev Tuab Neeg Has Lug)",
-            "Yee Chang, Narrator for Video Presentation (Nyaj Yig Tsaab, Tug Cev Lug Rua Kev Tso Video Saib)",
-            "Sia Chang's Life Story Video Presentation (Tso Video Txug Tsaav Txhaj Tsaab Lub Neej)",
-            "Mai Hang, A Personal Tribute (Maim Haam, Txuj Kev Ncu hab Tshua)"
+            "Sia Chang’s Life Story Video Presentation (Tso Video Txug Tsaav " +
+                "Txhaj Tsaab Lub Neej)",
+            "Mai Hang, A Personal Tribute (Maim Haam, Txuj Kev Ncu hab Tshua)",
+            "Boua Leng Hang, Hang Family Remark (Npuag Leej Haam, Has Lug Sawv " +
+                "Cev Tsev Xeem Haam)",
+            "Yee Chang, Closing Remark (Nyaj Yig Tsaab, Cev Lug Xaus)"
+        ],
+        ["Ceremony: Ceremonial Guests Gratitude Ritual (Ncej Xub Qeeg)",
+            "The Dinner Song (Qeej Mo)",
+            "The Offer Making Song for Ceremonial Guests (Qeej Hlawv Ntawv)"
         ],
         "Sia Chang Dinner (Tsaav Txhaj Tsaab Pluag Mo)",
-        "Setup Table of Blessings and Bequests (Tsaa Rooj Xais Rooj Xwm)",
-        "Table of Blessings and Bequests Ceremony (Rooj Xai Rooj Xwm)",
-        ["Blessing Ceremony (Has Xwm)",
-            "Wang True Chang, Master of Blessing Ceremony (Vaam Rwg Tsaab, Txiv Coj Xai)",
-            "Family Blessings Request Ritual (Tsev Tuab Neeg Xyom)"]
+        "Ceremony: Setup Council of Elders Table (Pib Rooj Xai Rooj Xim)",
+        ["Ceremony: Blessing Ceremony (Pib Has Xim)",
+            "Wung True Chang, Master of Blessing Ceremony (Vaam Rwg Tsaab, " +
+                "Txiv Coj Xai)",
+            "Family Blessings Request Ritual (Tsev Tuab Neeg Xyom)"
+        ]
     ],
     [
-        ["The Blessing Bows Song (Qeej Xyom)",
-            "Blessings Received Ritual (Txais Koob Txais Moov)"
+        ["Ceremony: Early Morning Rituals",
+            "Offer Making Song (Qeej Hlawv Ntawv)",
+            "Offer Making Bowing Ritual (Xyom Txais Koob Txais Moov)"
         ],
-        "The Offer Making (Hlawv Ntawv)",
-        "The Breakfast Song (Qeej Tshais)",
         "Breakfast Provided (Noj Tshais)",
-        "The Lunch Song (Qeej Su)",
-        "The Departure Song (Qeej Sawv Kev)",
-        "Procession to Lakewood Cemetery (Moog Chaw Zais Lakewood Cemetery)",
-        "Internment Services",
-        "Guest Dinner at House (Qhua Lug Noj Mo Tom Tsev)"
+        ["Ceremony: Mid Morning Rituals",
+            "The Breakfast Song (Qeej Tshais)",
+            "The Departure Song (Qeej Sawv Kev)"
+        ],
+        "Procession to Lakewood Cemetery, Minneapolis",
+        "Interment Services"
     ]
 ]; // events for days 0, 1, 2, respectively
 var hmong_events = [
     [
         "Tuaj Txug",
         "Taw Kev",
-        ["Qeej Tu Sav",
+        "Noj Tshais",
+        ["Ceremony: Mid Morning Rituals, Mid Afternoon Rituals",
+            "Qeej Tu Sav",
             "Qeej Nce Neeg",
-            "Qeej Tshais",
+            "Qeej Cob Tsag",
             "Qeej Su",
             "Qeej Mo"
         ],
-        "Noj Su",
-        "Rooj Tam Thawj Lwm Tub Ncig",
-        "Noj Mo"
+        "Noj Sus",
+        "Lub Rooj Txhij Thawj Lwm Tub Ncig",
+        "Noj Mo",
+        ["Txiv Qeej Mo",
+            "Qeej Foom Kom"
+        ]
     ],
     [
         "Hauv Qhua",
         "Noj Tshais",
-        "Noj Su",
-        [
-            "Qhua Tshwj Xeeb Has Lug",
-            "Npawg Tuam Yaaj, Faabkis Teb",
-            "Xyooj, College Classmate, need to verify full name",
-            "College de Samthong Group Presentation (Need name of speaker)",
-            "Minnesota Representatives Jay Xiong, Tou Xiong, and Elected Officials Presentation"
+        ["Ceremony: Qeej Songs",
+            "Qeej Tshais",
+            "Qeej Su"
         ],
-        [
-            "Tsev Tuab Neeg Has Lug",
-            "Nyaj Yig Tsaab, Tug Cev Lug Rua Kev Tso Video Saib",
+        "Noj Sus",
+        ["Qhua Tshwj Xeeb Has Lug",
+            "Nyaj Yig Tsaab, Tug Cev Lug",
+            "Has Lug Sawv Cev Koomhum Kwv Tij Moob Tsaab Minnesota",
+            "Phub Thee Ntses Xyooj hab Tub Xyooj, Has Lug Sawv Cev " +
+                "Cov Num Tswv Lub Xeev Minnesota",
+            "Pabthaa Nom Huas Muas Has Lug Sawv Cev Koomhum 18 Xeem",
+            "Npawg Vaam Tuam Yaaj Tuaj Faabkis Teb Tuaj Has Lug",
+            "Phooj Ywg Txooj Hawj Xyooj Has Lus",
+            "Koo Xyoo, Has Lug Sawv Cev Rua Paab Pawg Tub Kawm Ntawv College de Samthong",
+            "Laj Pov Tsaab, Has Lug Sawv Cev Tsev Tuab Neeg"
+        ],
+        ["Tsev Tuab Neeg Has Lug",
             "Tso Video Txug Tsaav Txhaj Tsaab Lub Neej",
-            "Maim Haam, Txuj Kev Ncu hab Tshua"
+            "Maim Haam, Txuj Kev Ncu hab Tshua",
+            "Npuag Leej Haam, Has Lug Sawv Cev Tsev Xeem Haam",
+            "Nyaj Yig Tsaab, Cev Lug Xaus"
+        ],
+        ["Ncej Xub Qeeg",
+            "Qeej Mo",
+            "Qeej Hlawv Ntawv"
         ],
         "Tsaav Txhaj Tsaab Pluag Mo",
-        "Tsaa Rooj Xais Rooj Xwm",
-        "Rooj Xai Rooj Xwm",
-            ["Has Xwm",
+        "Pib Rooj Xai Rooj Xim",
+        ["Pib Has Xim",
             "Vaam Rwg Tsaab, Txiv Coj Xai",
-            "Tsev Tuab Neeg Xyom"]
+            "Tsev Tuab Neeg Xyom"
+        ]
     ],
     [
-        ["Qeej Xyom",
-            "Txais Koob Txais Moov"
+        ["Ceremony: Early Morning Rituals",
+            "Qeej Hlawv Ntawv",
+            "Xyom Txais Koob Txais Moov"
         ],
-        "Hlawv Ntawv",
-        "Qeej Tshais",
         "Noj Tshais",
-        "Qeej Su",
-        "Qeej Sawv Kev",
-        "Moog Chaw Zais Lakewood Cemetery",
-        "Internment Services",
-        "Qhua Lug Noj Mo Tom Tsev"
+        ["Ceremony: Mid Morning Rituals",
+            "Qeej Tshais",
+            "Qeej Sawv Kev"
+        ],
+        "Procession to Lakewood Cemetery, Minneapolis",
+        "Interment Services"
     ]
 ]; // events for days 0, 1, 2, respectively (IN HMONG)
 var eng_events = [
     [
         "Arrival",
-        "Guide The Way Ceremony",
-        ["Life Transition Song",
+        "Ceremony: Guide The Way",
+        "Breakfast Provided",
+        ["Ceremony: Mid Morning Rituals, Mid Afternoon Rituals",
+            "Life Transition Song",
             "The Mounting Song",
-            "The Breakfast Song",
+            "Animal Offering Song",
             "The Lunch Song",
             "The Dinner Song"
         ],
         "Lunch Provided",
-        "Council of Funeral Rites Ceremony",
-        "Dinner"
+        "Ceremony: Council of Rites Ceremony",
+        "Dinner Provided",
+        ["Ceremony: Qeej Poets Night",
+            "Qeej Foom Kom"
+        ]
     ],
     [
-        "Special Invited Guests Rituals",
+        "Ceremony: Ceremonial Guests Rituals",
         "Breakfast Provided",
+        ["Ceremony: Qeej Songs",
+            "The Breakfast Song",
+            "The Lunch Song"
+        ],
         "Lunch Provided",
-        ["Guest Speakers",
-            "Cousin Toua Yang, France",
-            "Xyooj, College Classmate, need to verify full name",
-            "College de Samthong Group Presentation (Need name of speaker)",
-            "Minnesota Representatives Jay Xiong, Tou Xiong, and Elected Officials Presentation"
+            ["Guest Speakers Program",
+            "Yee Chang, Program MC",
+                "Tsav Yeej Tsab, Chang Association of Minnesota " +
+                "Presentation",
+            "Minnesota State Representatives Jay Xiong and Tou Xiong, " +
+                "and Elected Officials Presentation",
+            "Nao Houa Moua, Hmong 18 Council Presentation",
+            "Toua Yang, Personal Remark, France",
+            "Txooj Hawj Xyoo, Personal Remark",
+            "Kong Xiong, College de Samthong Group Presentation",
+            "La Pao Chang, Chang Family Remark"
         ],
         ["Family Program",
-            "Yee Chang, Narrator for Video Presentation",
-            "Sia Chang's Life Story Video Presentation",
-            "Mai Hang, A Personal Tribute"
+            "Sia Chang’s Life Story Video Presentation",
+            "Mai Hang, A Personal Tribute",
+            "Boua Leng Hang, Hang Family Remark",
+            "Yee Chang, Closing Remark"
+        ],
+        ["Ceremony: Ceremonial Guests Gratitude Ritual",
+            "The Dinner Song",
+            "The Offer Making Song for Ceremonial Guests"
         ],
         "Sia Chang Dinner",
-        "Setup Table of Blessings and Bequests",
-        "Table of Blessings and Bequests Ceremony",
-            ["Blessing Ceremony",
-            "Wang True Chang, Master of Blessing Ceremony",
-            "Family Blessings Request Ritual"]
+        "Ceremony: Setup Council of Elders Table",
+        ["Ceremony: Blessing Ceremony",
+            "Wung True Chang, Master of Blessing Ceremony",
+            "Family Blessings Request Ritual"
+        ]
     ],
     [
-        ["The Blessing Bows Song",
-            "Blessings Received Ritual"
+        ["Ceremony: Early Morning Rituals",
+            "Offer Making Song",
+            "Offer Making Bowing Ritual"
         ],
-        "The Offer Making",
-        "The Breakfast Song",
         "Breakfast Provided",
-        "The Lunch Song",
-        "The Departure Song",
-        "Procession to Lakewood Cemetery",
-        "Internment Services",
-        "Guest Dinner at House"
+        ["Ceremony: Mid Morning Rituals",
+            "The Breakfast Song",
+            "The Departure Song"
+        ],
+        "Procession to Lakewood Cemetery, Minneapolis",
+        "Interment Services"
     ]
 ]; // events for days 0, 1, 2, respectively (in ENGLISH)
+
 var times = [
-    ["8:00am", "9:00am", "12:00pm", "1:00pm", "3:00pm", "7:00pm"],
-    ["8:00am", "8:30am", "12:00pm", "2:00pm", "4:00pm", "6:00pm",
-        "7:00pm", "8:00pm", "12:00am"],
-    ["4:00am", "5:00am", "6:00am", "8:30am", "10:00am", "11:00am",
-        "12:15pm", "1:00pm", "5:00pm"]
+    ["7:00 AM", "8:00 AM*", "9:00 AM", "11:00 AM*", "1:00 PM", "3:00 PM*",
+        "7:00 PM", "9:00 PM*"],
+    ["8:00 AM*", "9:00 AM", "10:00 AM*", "12:00 PM", "2:00 PM", "3:30 PM",
+        "5:00 PM*", "7:00 PM", "8:00 PM*", "12:00 AM*"],
+    ["5:00 AM*", "8:30 AM", "10:00 AM*", "12:15 PM*", "10:00am", "1:00 PM"]
 ]; // times for events on days 0, 1, 2, respectively
 
 ////////////////////////////////////////////////////////////////////////////
@@ -274,15 +340,15 @@ function change_btn_colors(day_true, val) {
     new_btn.style.color = "white";
 }
 
-function start_btn_colors() {
-    if (program_day == 0) {
-        document.getElementById("saturday-btn").style.backgroundColor = "black";
-    } else if (program_day == 1) {
-        document.getElementById("sunday-btn").style.backgroundColor = "black";
-    } else {
-        document.getElementById("monday-btn").style.backgroundColor = "black";
-    }
-}
+// function start_btn_colors() {
+//     if (program_day == 0) {
+//         document.getElementById("saturday-btn").style.backgroundColor = "black";
+//     } else if (program_day == 1) {
+//         document.getElementById("sunday-btn").style.backgroundColor = "black";
+//     } else {
+//         document.getElementById("monday-btn").style.backgroundColor = "black";
+//     }
+// }
 
 // function that switches the program content based on the button day pressed
 function display_events_and_times(day=program_day, lang=curr_lang) {
@@ -334,6 +400,17 @@ function display_events_and_times(day=program_day, lang=curr_lang) {
             program_item.classList.add("program-item");
             program_item.classList.add("row");
             program_item.classList.add("my-2");
+
+            let program_item_time = document.createElement("div"); // create the time
+            program_item_time.classList.add("program-item-time");
+            program_item_time.classList.add("text-right")
+            program_item_time.classList.add("col");
+            program_item_time.classList.add("text-left");
+            // program_item_time.classList.add("scroll-element");
+            // program_item_time.classList.add("js-scroll");
+            // program_item_time.classList.add("slide-right");
+            program_item_time.innerHTML = time;
+
             let program_item_name = document.createElement("div"); // create the name
             program_item_name.classList.add("program-item-name");
             program_item_name.classList.add("col-8");
@@ -344,7 +421,7 @@ function display_events_and_times(day=program_day, lang=curr_lang) {
             program_item_name.innerHTML = name_event;
             if (sub_events_exist) { // if there are sub-events
                 let ul = document.createElement("ul"); // make an unordered list
-                ul.style.listStyleType = "none"; // no bullet points in the list
+                // ul.style.listStyleType = "none"; // no bullet points in the list
                 for (let j = 0; j < sub_events.length; j++) { // for each sub-event
                     let li = document.createElement("li"); // make a list item
                     li.innerHTML = sub_events[j];
@@ -355,17 +432,9 @@ function display_events_and_times(day=program_day, lang=curr_lang) {
                 }
                 program_item_name.appendChild(ul); // add the unordered list to the item name
             }
-            let program_item_time = document.createElement("div"); // create the time
-            program_item_time.classList.add("program-item-time");
-            program_item_time.classList.add("col");
-            program_item_time.classList.add("text-right");
-            // program_item_time.classList.add("scroll-element");
-            // program_item_time.classList.add("js-scroll");
-            // program_item_time.classList.add("slide-right");
-            program_item_time.innerHTML = time;
 
-            program_item.appendChild(program_item_name); // add name to item
             program_item.appendChild(program_item_time); // add time to item
+            program_item.appendChild(program_item_name); // add name to item
 
             day_inner_container.appendChild(program_item); // add item to container
         }
@@ -391,34 +460,32 @@ function top_of_page() {
 
 // function that scrolls the div into view when user presses on the navigation bar
 function scroll_to_view(to_view) {
-    console.log('we are in the correct function');
     let element = document.getElementById(to_view);
-    console.log(element);
     element.scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
 }
 
 // function that changes program_day to today's date if applicable,
 // or the first day of the funeral
-function check_today_date() {
-    // console.log("Checking today's date");
-    let today_date = new Date();
-    if (today_date.getFullYear() == 2021) {
-        // console.log("We are in the year 2021");
-        if (today_date.getMonth() == 10) { // change this to 10 for final
-            // console.log("We are in the month October");
-            let date = today_date.getDate();
-            if (date > 12 && date < 16) {
-                if (date == 13) {
-                    // console.log("day 13");
-                    program_day = 0;
-                } else if (date == 14) {
-                    // console.log("day 14");
-                    program_day = 1;
-                } else {
-                    // console.log("day 15");
-                    program_day = 2;
-                }
-            }
-        }
-    }
-}
+// function check_today_date() {
+//     // console.log("Checking today's date");
+//     let today_date = new Date();
+//     if (today_date.getFullYear() == 2021) {
+//         // console.log("We are in the year 2021");
+//         if (today_date.getMonth() == 10) { // change this to 10 for final
+//             // console.log("We are in the month October");
+//             let date = today_date.getDate();
+//             if (date > 12 && date < 16) {
+//                 if (date == 13) {
+//                     // console.log("day 13");
+//                     program_day = 0;
+//                 } else if (date == 14) {
+//                     // console.log("day 14");
+//                     program_day = 1;
+//                 } else {
+//                     // console.log("day 15");
+//                     program_day = 2;
+//                 }
+//             }
+//         }
+//     }
+// }
