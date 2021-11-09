@@ -334,7 +334,7 @@ function change_btn_colors(day_true, val) {
     }
 
     // change the colors
-    old_btn.style.backgroundColor = "#78C5F9";
+    old_btn.style.backgroundColor = "#aeddfc";
     new_btn.style.backgroundColor = "black"; // #aeddfc
     old_btn.style.color = "black";
     new_btn.style.color = "white";
@@ -403,9 +403,9 @@ function display_events_and_times(day=program_day, lang=curr_lang) {
 
             let program_item_time = document.createElement("div"); // create the time
             program_item_time.classList.add("program-item-time");
-            program_item_time.classList.add("text-right")
+            program_item_time.classList.add("text-right");
             program_item_time.classList.add("col");
-            program_item_time.classList.add("text-left");
+            // program_item_time.classList.add("text-left");
             // program_item_time.classList.add("scroll-element");
             // program_item_time.classList.add("js-scroll");
             // program_item_time.classList.add("slide-right");
@@ -424,6 +424,7 @@ function display_events_and_times(day=program_day, lang=curr_lang) {
                 // ul.style.listStyleType = "none"; // no bullet points in the list
                 for (let j = 0; j < sub_events.length; j++) { // for each sub-event
                     let li = document.createElement("li"); // make a list item
+                    li.classList.add("text-left");
                     li.innerHTML = sub_events[j];
                     // li.classList.add("scroll-element");
                     // li.classList.add("js-scroll");

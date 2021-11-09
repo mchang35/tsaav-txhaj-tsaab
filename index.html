@@ -42,16 +42,16 @@
     <div class="collapse navbar-collapse" id="main-navigation">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" id="bio" href="#bio" onclick="scroll_to_view('bio-content')">Biography</a>
+                <a class="nav-link" id="bio" onclick="scroll_to_view('bio-content')">Biography</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="program" href="#funeralprogram" onclick="scroll_to_view('program-content')">Agenda</a>
+                <a class="nav-link" id="program" onclick="scroll_to_view('program-content')">Agenda</a>
             </li>
 <!--            <li class="nav-item">-->
-<!--                <a class="nav-link" id="memvideo" href="#memorialvideo" onclick="scroll_to_view('memvideo-content')">Memorial Video</a>-->
+<!--                <a class="nav-link" id="memvideo" onclick="scroll_to_view('memvideo-content')">Memorial Video</a>-->
 <!--            </li>-->
             <li class="nav-item">
-                <a class="nav-link" id="thank-you" href="#thankyou" onclick="scroll_to_view('thank-you-content')">Thank You</a>
+                <a class="nav-link" id="thank-you" onclick="scroll_to_view('thank-you-content')">Thank You</a>
             </li>
         </ul>
     </div>
@@ -102,40 +102,40 @@
         <p class="center text-uppercase text-black font-weight-bold">Legacy Funeral Home - West Chapel</p>
         <p class="center text-uppercase text-black font-weight-bold">255 Eaton Street, St. Paul, MN 55107</p>
         <div class="center day_buttons scroll-element js-scroll">
-            <a class="btn btn-primary btn-xl js-scroll-trigger" style="background-color:black; color: white;" id="saturday-btn" href="#saturday" onclick="display_events_and_times(day=0, undefined)">Saturday</a>
-            <a class="btn btn-primary btn-xl js-scroll-trigger" id="sunday-btn" href="#sunday" onclick="display_events_and_times(day=1, undefined)">Sunday</a>
-            <a class="btn btn-primary btn-xl js-scroll-trigger" id="monday-btn" href="#monday" onclick="display_events_and_times(day=2, undefined)">Monday</a>
+            <a class="btn btn-primary btn-xl js-scroll-trigger" style="background-color:black; color: white;" id="saturday-btn" onclick="display_events_and_times(day=0, undefined)">Saturday</a>
+            <a class="btn btn-primary btn-xl js-scroll-trigger" id="sunday-btn" onclick="display_events_and_times(day=1, undefined)">Sunday</a>
+            <a class="btn btn-primary btn-xl js-scroll-trigger" id="monday-btn" onclick="display_events_and_times(day=2, undefined)">Monday</a>
         </div>
         <br>
         <div class="container day-outer-container center">
-            <div class="row">
-                <div class="col">
+<!--            <div class="row">-->
+<!--                <div class="col">-->
                     <h2 class="day-label scroll-element js-scroll slide-left" id="day-label">Saturday, November 13, 2021</h2>
                     <br>
                     <div class="center lang_buttons scroll-element js-scroll">
-                        <a class="btn btn-primary btn-xl js-scroll-trigger" id="en-btn" href="#english" onclick="display_events_and_times(undefined, lang=0)">English</a>
-                        <a class="btn btn-primary btn-xl js-scroll-trigger" id="hm-btn" href="#hmong" onclick="display_events_and_times(undefined, lang=1)">Hmong</a>
+                        <a class="btn btn-primary btn-xl js-scroll-trigger" id="en-btn" onclick="display_events_and_times(undefined, lang=0)">English</a>
+                        <a class="btn btn-primary btn-xl js-scroll-trigger" id="hm-btn" onclick="display_events_and_times(undefined, lang=1)">Hmong</a>
                     </div>
                     <div class="center lang_buttons scroll-element js-scroll">
-                        <a class="btn btn-primary btn-xl js-scroll-trigger" style="background-color:black; color: white;" id="both-lang-btn" href="#bothlanguages" onclick="display_events_and_times(undefined, lang=2)">Both Languages</a>
+                        <a class="btn btn-primary btn-xl js-scroll-trigger" style="background-color:black; color: white;" id="both-lang-btn" onclick="display_events_and_times(undefined, lang=2)">Both Languages</a>
                     </div>
                     <br>
                     <div class="container day-inner-container center scroll-element js-scroll slide-right" id="day-inner-container">
                         <div class="row program-item my-2">
-                            <div class="col program-item-time center text-right js-scroll slide-left">7:00 AM</div>
-                            <div class="col-9 program-item-name center text-left js-scroll slide-right">Arrival (Tuaj Txug)</div>
+                            <div class="col program-item-time text-right js-scroll slide-left">7:00 AM</div>
+                            <div class="col-8 program-item-name text-left js-scroll slide-right">Arrival (Tuaj Txug)</div>
                         </div>
                         <div class="row program-item my-2">
                             <div class="col program-item-time text-right js-scroll slide-left">8:00 AM*</div>
-                            <div class="col-9 program-item-name text-left js-scroll slide-right">Ceremony: Guide The Way (Taw Kev)</div>
+                            <div class="col-8 program-item-name text-left js-scroll slide-right">Ceremony: Guide The Way (Taw Kev)</div>
                         </div>
                         <div class="row program-item my-2">
                             <div class="col program-item-time text-right js-scroll slide-left">9:00 AM</div>
-                            <div class="col-9 program-item-name text-left js-scroll slide-right">Breakfast Provided (Noj Tshais)</div>
+                            <div class="col-8 program-item-name text-left js-scroll slide-right">Breakfast Provided (Noj Tshais)</div>
                         </div>
                         <div class="row program-item my-2">
                             <div class="col program-item-time text-right js-scroll slide-left">11:00 AM*</div>
-                            <div class="col-9 program-item-name text-left js-scroll slide-right">
+                            <div class="col-8 program-item-name text-left js-scroll slide-right">
                                 Ceremony: Mid Morning Rituals, Mid Afternoon Rituals
                                 <ul>
                                     <li class="text-left js-scroll slide-right">
@@ -158,19 +158,19 @@
                         </div>
                         <div class="row program-item my-2">
                             <div class="col program-item-time text-right js-scroll slide-left">1:00 PM</div>
-                            <div class="col-9 program-item-name text-left js-scroll slide-right">Lunch Provided (Noj Sus)</div>
+                            <div class="col-8 program-item-name text-left js-scroll slide-right">Lunch Provided (Noj Sus)</div>
                         </div>
                         <div class="row program-item my-2">
                             <div class="col program-item-time text-right js-scroll slide-left">3:00 PM*</div>
-                            <div class="col-9 program-item-name text-left js-scroll slide-right">Ceremony: Council of Rights Ceremony (Rooj Tam Thawj Lwm Tub Ncig)</div>
+                            <div class="col-8 program-item-name text-left js-scroll slide-right">Ceremony: Council of Rights Ceremony (Rooj Tam Thawj Lwm Tub Ncig)</div>
                         </div>
                         <div class="row program-item my-2">
                             <div class="col program-item-time text-right js-scroll slide-left">7:00 PM</div>
-                            <div class="col-9 program-item-name text-left js-scroll slide-right">Dinner Provided (Noj Mo)</div>
+                            <div class="col-8 program-item-name text-left js-scroll slide-right">Dinner Provided (Noj Mo)</div>
                         </div>
                         <div class="row program-item my-2">
                             <div class="col program-item-time text-right js-scroll slide-left">9:00 PM*</div>
-                            <div class="col-9 program-item-name text-left js-scroll slide-right">Ceremony: Qeej Poets Night (Txiv Qeej Mo)
+                            <div class="col-8 program-item-name text-left js-scroll slide-right">Ceremony: Qeej Poets Night (Txiv Qeej Mo)
                                 <ul>
                                     <li class="text-left js-scroll slide-right">
                                         Qeej Foom Kom
@@ -179,8 +179,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+<!--                </div>-->
+<!--            </div>-->
         </div>
 
     <p class="js-scroll slide-left">
