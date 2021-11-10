@@ -174,7 +174,7 @@ li {
 }
 
 @media screen
-and (min-device-width : 320px)
+/*and (min-device-width : 320px)*/
 and (max-device-width : 540px) {
     .vertically-horizontally-centered {
         bottom: 0%;
