@@ -12,25 +12,28 @@
 <body>
 
 <header class="page-header header container-fluid">
-<!--    <div class="overlay"></div>-->
     <div class="container h-100">
-        <div class="vertically-horizontally-centered">
-            <br>
-            <div class="row align-items-center justify-content-center text-center">
-                <div class="col-md-9 align-self-start" id="sia-image">
-                    <img src="Sia2.png" alt="SiaChang" width="328" height="410">
-                </div>
+<!--        <div class="vertically-horizontally-centered">-->
+<!--            <br>-->
+<!--            <div class="row align-items-center justify-content-center text-center">-->
+<!--                <div class="col-md-9 align-self-start" id="sia-image">-->
+<!--                    <img src="Sia2.png" alt="SiaChang" width="328" height="410">-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <br>-->
+            <div class="align-bottom align-items-center justify-content-center text-center vertically-horizontally-centered">
+                <div class="overlay"></div>
+<!--                <div class="col-lg-10 align-self-end">-->
+                <h2 class="font-weight-bold mt-1 mb-1 bring-front">A Celebration of Life</h2>
+                <h2 class="font-weight-bold mb-0 bring-front">Tsaav Txhaj Tsaab</h2>
+                <h3 class="font-weight-bold mb-2 bring-front">Sia Chang</h3>
+                <h4 class="bring-front">May 15, 1955 - September 16, 2021</h4>
+<!--                </div>-->
             </div>
-            <br>
-            <div class="row align-items-center justify-content-center text-center">
-                <div class="col-lg-10 align-self-end">
-                    <h2 class="text-uppercase text-black font-weight-bold mt-1 mb-1" id="celebration-of-life">A Celebration of Life</h2>
-                    <h2 class="text-uppercase text-black font-weight-bold mb-0">Tsaav Txhaj Tsaab</h2>
-                    <h3 class="text-uppercase text-black font-weight-bold mb-2">Sia Chang</h3>
-                    <h4 class="text-uppercase text-black font-weight-bold">May 15, 1955 - September 16, 2021</h4>
-                </div>
-            </div>
-        </div>
+<!--            <div class="row align-items-center justify-content-center text-center vertically-horizontally-centered">-->
+<!--                -->
+<!--            </div>-->
+<!--        </div>-->
     </div>
 </header>
 
@@ -42,10 +45,10 @@
     <div class="collapse navbar-collapse" id="main-navigation">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" id="bio" onclick="scroll_to_view('bio-content')">Biography</a>
+                <a class="nav-link" id="bio" onclick="scroll_to_view('bio-content')">Obituary</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="program" onclick="scroll_to_view('program-content')">Agenda</a>
+                <a class="nav-link" id="program" onclick="scroll_to_view('program-content')">Order of Service</a>
             </li>
 <!--            <li class="nav-item">-->
 <!--                <a class="nav-link" id="memvideo" onclick="scroll_to_view('memvideo-content')">Memorial Video</a>-->
@@ -60,7 +63,7 @@
 <div class="content">
     <br>
     <div class="bio-content center" id="bio-content">
-        <h1 class="text-uppercase text-black font-weight-bold js-scroll slide-left">Biography</h1>
+        <h1 class="js-scroll slide-left">Obituary</h1>
         <p class="center js-scroll slide-right">
             Sia Chang - Txaav Txhaj Tsaab was born on May 15, 1955, in the village of
             Taj Nyom near Naaj Xaj, Xiengkhouang Province, Laos to You Mai Chang (Nai
@@ -96,91 +99,81 @@
 
     <br><br><br>
 
-    <div class="program-content center scroll-element js-scroll" id="program-content">
-        <h1 class="text-uppercase text-black font-weight-bold">Agenda</h1>
+    <div class="program-content center" id="program-content">
+        <h1 class="js-scroll fade-in">Order of Service</h1>
         <br>
-        <p class="center text-uppercase text-black font-weight-bold">Legacy Funeral Home - West Chapel</p>
-        <p class="center text-uppercase text-black font-weight-bold">255 Eaton Street, St. Paul, MN 55107</p>
-        <div class="center day_buttons scroll-element js-scroll">
+        <p class="center font-weight-bold js-scroll fade-in">Legacy Funeral Home - West Chapel</p>
+        <p class="center font-weight-bold js-scroll fade-in">255 Eaton Street, St. Paul, MN 55107</p>
+        <div class="center day_buttons scroll-element js-scroll fade-in">
             <a class="btn btn-primary btn-xl js-scroll-trigger" style="background-color:black; color: white;" id="saturday-btn" onclick="display_events_and_times(day=0, undefined)">Saturday</a>
             <a class="btn btn-primary btn-xl js-scroll-trigger" id="sunday-btn" onclick="display_events_and_times(day=1, undefined)">Sunday</a>
             <a class="btn btn-primary btn-xl js-scroll-trigger" id="monday-btn" onclick="display_events_and_times(day=2, undefined)">Monday</a>
         </div>
         <br>
         <div class="container day-outer-container center">
-<!--            <div class="row">-->
-<!--                <div class="col">-->
-                    <h2 class="day-label scroll-element js-scroll slide-left" id="day-label">Saturday, November 13, 2021</h2>
-                    <br>
-                    <div class="center lang_buttons scroll-element js-scroll">
-                        <a class="btn btn-primary btn-xl js-scroll-trigger" id="en-btn" onclick="display_events_and_times(undefined, lang=0)">English</a>
-                        <a class="btn btn-primary btn-xl js-scroll-trigger" id="hm-btn" onclick="display_events_and_times(undefined, lang=1)">Hmong</a>
+            <h2 class="day-label scroll-element js-scroll slide-left" id="day-label">Saturday, November 13, 2021</h2>
+            <br>
+            <div class="center lang_buttons scroll-element js-scroll">
+                <a class="btn btn-primary btn-xl js-scroll-trigger" id="en-btn" onclick="display_events_and_times(undefined, lang=0)">English</a>
+                <a class="btn btn-primary btn-xl js-scroll-trigger" id="hm-btn" onclick="display_events_and_times(undefined, lang=1)">Moob</a>
+            </div>
+            <div class="center lang_buttons scroll-element js-scroll">
+                <a class="btn btn-primary btn-xl js-scroll-trigger" style="background-color:black; color: white;" id="both-lang-btn" onclick="display_events_and_times(undefined, lang=2)">Both Languages</a>
+            </div>
+            <br>
+            <div class="container day-inner-container center scroll-element js-scroll slide-right" id="day-inner-container">
+                <div class="row program-item my-2">
+                    <div class="col program-item-time text-right js-scroll slide-left">7:00 AM</div>
+                    <div class="col-8 program-item-name text-left js-scroll slide-right">Arrival (Tuaj Txug)</div>
+                </div>
+                <div class="row program-item my-2">
+                    <div class="col program-item-time text-right js-scroll slide-left">8:00 AM*</div>
+                    <div class="col-8 program-item-name text-left js-scroll slide-right">Ceremony: Guide The Way (Taw Kev)</div>
+                </div>
+                <div class="row program-item my-2">
+                    <div class="col program-item-time text-right js-scroll slide-left">9:00 AM</div>
+                    <div class="col-8 program-item-name text-left js-scroll slide-right">Breakfast Provided (Noj Tshais)</div>
+                </div>
+                <div class="row program-item my-2">
+                    <div class="col program-item-time text-right js-scroll slide-left">11:00 AM*</div>
+                    <div class="col-8 program-item-name text-left js-scroll slide-right">
+                        Opening Ceremonial Rituals
+                        <ul>
+                            <li class="text-left js-scroll slide-right">
+                                Life Transition Song (Qeej Tu Sav)
+                            </li>
+                            <li class="text-left js-scroll slide-right">
+                                The Mounting Song (Qeej Nce Neeg)
+                            </li>
+                            <li class="text-left js-scroll slide-right">
+                                Animal Offering Song (Qeej Cob Tsag)
+                            </li>
+                            <li class="text-left js-scroll slide-right">
+                                The Lunch Song (Qeej Su)
+                            </li>
+                            <li class="text-left js-scroll slide-right">
+                                The Dinner Song (Qeej Mo)
+                            </li>
+                        </ul>
                     </div>
-                    <div class="center lang_buttons scroll-element js-scroll">
-                        <a class="btn btn-primary btn-xl js-scroll-trigger" style="background-color:black; color: white;" id="both-lang-btn" onclick="display_events_and_times(undefined, lang=2)">Both Languages</a>
-                    </div>
-                    <br>
-                    <div class="container day-inner-container center scroll-element js-scroll slide-right" id="day-inner-container">
-                        <div class="row program-item my-2">
-                            <div class="col program-item-time text-right js-scroll slide-left">7:00 AM</div>
-                            <div class="col-8 program-item-name text-left js-scroll slide-right">Arrival (Tuaj Txug)</div>
-                        </div>
-                        <div class="row program-item my-2">
-                            <div class="col program-item-time text-right js-scroll slide-left">8:00 AM*</div>
-                            <div class="col-8 program-item-name text-left js-scroll slide-right">Ceremony: Guide The Way (Taw Kev)</div>
-                        </div>
-                        <div class="row program-item my-2">
-                            <div class="col program-item-time text-right js-scroll slide-left">9:00 AM</div>
-                            <div class="col-8 program-item-name text-left js-scroll slide-right">Breakfast Provided (Noj Tshais)</div>
-                        </div>
-                        <div class="row program-item my-2">
-                            <div class="col program-item-time text-right js-scroll slide-left">11:00 AM*</div>
-                            <div class="col-8 program-item-name text-left js-scroll slide-right">
-                                Ceremony: Mid Morning Rituals, Mid Afternoon Rituals
-                                <ul>
-                                    <li class="text-left js-scroll slide-right">
-                                        Life Transition Song (Qeej Tu Sav)
-                                    </li>
-                                    <li class="text-left js-scroll slide-right">
-                                        The Mounting Song (Qeej Nce Neeg)
-                                    </li>
-                                    <li class="text-left js-scroll slide-right">
-                                        Animal Offering Song (Qeej Cob Tsag)
-                                    </li>
-                                    <li class="text-left js-scroll slide-right">
-                                        The Lunch Song (Qeej Su)
-                                    </li>
-                                    <li class="text-left js-scroll slide-right">
-                                        The Dinner Song (Qeej Mo)
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="row program-item my-2">
-                            <div class="col program-item-time text-right js-scroll slide-left">1:00 PM</div>
-                            <div class="col-8 program-item-name text-left js-scroll slide-right">Lunch Provided (Noj Sus)</div>
-                        </div>
-                        <div class="row program-item my-2">
-                            <div class="col program-item-time text-right js-scroll slide-left">3:00 PM*</div>
-                            <div class="col-8 program-item-name text-left js-scroll slide-right">Ceremony: Council of Rights Ceremony (Rooj Tam Thawj Lwm Tub Ncig)</div>
-                        </div>
-                        <div class="row program-item my-2">
-                            <div class="col program-item-time text-right js-scroll slide-left">7:00 PM</div>
-                            <div class="col-8 program-item-name text-left js-scroll slide-right">Dinner Provided (Noj Mo)</div>
-                        </div>
-                        <div class="row program-item my-2">
-                            <div class="col program-item-time text-right js-scroll slide-left">9:00 PM*</div>
-                            <div class="col-8 program-item-name text-left js-scroll slide-right">Ceremony: Qeej Poets Night (Txiv Qeej Mo)
-                                <ul>
-                                    <li class="text-left js-scroll slide-right">
-                                        Qeej Foom Kom
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-<!--                </div>-->
-<!--            </div>-->
+                </div>
+                <div class="row program-item my-2">
+                    <div class="col program-item-time text-right js-scroll slide-left">1:00 PM</div>
+                    <div class="col-8 program-item-name text-left js-scroll slide-right">Lunch Provided (Noj Sus)</div>
+                </div>
+                <div class="row program-item my-2">
+                    <div class="col program-item-time text-right js-scroll slide-left">3:00 PM*</div>
+                    <div class="col-8 program-item-name text-left js-scroll slide-right">Ceremony: Council of Rights Ceremony (Rooj Tam Thawj Lwm Tub Ncig)</div>
+                </div>
+                <div class="row program-item my-2">
+                    <div class="col program-item-time text-right js-scroll slide-left">7:00 PM</div>
+                    <div class="col-8 program-item-name text-left js-scroll slide-right">Dinner Provided (Noj Mo)</div>
+                </div>
+                <div class="row program-item my-2">
+                    <div class="col program-item-time text-right js-scroll slide-left">9:00 PM*</div>
+                    <div class="col-8 program-item-name text-left js-scroll slide-right">Ceremony: Qeej Poets Night (Txiv Qeej Mo)</div>
+                </div>
+            </div>
         </div>
 
     <p class="js-scroll slide-left">
@@ -192,20 +185,25 @@
     <br><br><br>
 
     <div class="memvideo-content center scroll-element js-scroll" id="memvideo-content">
-        <h1 class="text-uppercase text-black font-weight-bold">Memorial Video</h1>
-<!--        <h3 class="text-uppercase text-black font-weight-bold">Edited by Chase Chang</h3>-->
-        <video width="500" height="300" controls>
-            <source src="example_video.mp4" type="video/mp4">
-            <source src="example_video.ogg" type="video/ogg">
-        </video>
+        <h1>Memorial Video</h1>
+<!--        <video width="500" height="300" controls>-->
+<!--            <source src="example_video.mp4" type="video/mp4">-->
+<!--            <source src="example_video.ogg" type="video/ogg">-->
+<!--        </video>-->
+<!--        <iframe width="500" height="300" src="https://www.youtube.com/embed/OOy764mDtiA">-->
+<!--        </iframe>-->
+
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/OOy764mDtiA" allowfullscreen></iframe>
+        </div>
     </div>
 
     <br><br><br>
 
     <div class="thank-you-content center scroll-element js-scroll" id="thank-you-content">
-        <h4 class="text-uppercase text-black font-weight-bold js-scroll slide-left mb-0">Acknowledgements</h4>
-        <p class="text-uppercase text-black font-weight-bold js-scroll slide-right my-0">and</p>
-        <h2 class="text-uppercase text-black font-weight-bold js-scroll slide-left mt-0">Thank You</h2>
+        <h3 class="js-scroll slide-left mb-0">Acknowledgements</h3>
+        <p class="js-scroll slide-right my-0">and</p>
+        <h2 class="js-scroll slide-left mt-0">Thank You</h2>
         <p class="center js-scroll slide-right">
             The family of Tsaav Txhaj Tsaab - Sia Chang would like to thank and acknowledge
             the following for your service, generosity, love and compassion for our father,
@@ -220,16 +218,6 @@
                 <div class="col role-name text-right js-scroll slide-left">
                     Thawj Xyom Cuab
                 </div>
-<!--                <div class="col person-name">-->
-<!--                    <ul style="list-style-type:none;">-->
-<!--                        <li class="text-left js-scroll slide-right">-->
-<!--                            Num Khais Tsaab-->
-<!--                        </li>-->
-<!--                        <li class="text-left js-scroll slide-right">-->
-<!--                            Yeej Koob Tsaab-->
-<!--                        </li>-->
-<!--                    </ul>-->
-<!--                </div>-->
                 <div class="col-8 person-name text-left js-scroll slide-right">
                     Num Khais Tsaab, Yeej Koob Tsaab
                 </div>
@@ -238,13 +226,6 @@
                 <div class="col role-name text-right js-scroll slide-left">
                     Txiv Taw Kev
                 </div>
-<!--                <div class="col person-name">-->
-<!--                    <ul style="list-style-type: none;">-->
-<!--                        <li class="text-left js-scroll scroll-right">-->
-<!--                            Nom Tub Xyooj-->
-<!--                        </li>-->
-<!--                    </ul>-->
-<!--                </div>-->
                 <div class="col-8 person-name text-left js-scroll slide-right">
                     Nom Tub Xyooj
                 </div>
@@ -253,13 +234,6 @@
                 <div class="col role-name text-right js-scroll slide-left">
                     Txiv Cuab Tsaav
                 </div>
-<!--                <div class="col person-name">-->
-<!--                    <ul style="list-style-type: none;">-->
-<!--                        <li class="text-left js-scroll scroll-right">-->
-<!--                            Ntxhoo Vwg Tsaab-->
-<!--                        </li>-->
-<!--                    </ul>-->
-<!--                </div>-->
                 <div class="col-8 person-name text-left js-scroll slide-right">
                     Ntxhoo Vwg Tsaab
                 </div>
@@ -268,22 +242,6 @@
                 <div class="col role-name text-right js-scroll slide-left">
                     Kaav Xwm
                 </div>
-<!--                <div class="col person-name">-->
-<!--                    <ul style="list-style-type:none;">-->
-<!--                        <li class="text-left js-scroll scroll-right">-->
-<!--                            Vaam Thoj Tsaab-->
-<!--                        </li>-->
-<!--                        <li class="text-left js-scroll scroll-right">-->
-<!--                            Txaj Tuam Haam-->
-<!--                        </li>-->
-<!--                        <li class="text-left js-scroll scroll-right">-->
-<!--                            Txawj Tooj Thoj-->
-<!--                        </li>-->
-<!--                        <li class="text-left js-scroll scroll-right">-->
-<!--                            Nyaj Ku Xyooj-->
-<!--                        </li>-->
-<!--                    </ul>-->
-<!--                </div>-->
                 <div class="col-8 person-name text-left js-scroll slide-right">
                     Vaam Thoj Tsaab, Txaj Tuam Haam, Txawj Tooj Thoj, Nyaj Ku Xyooj
                 </div>
@@ -292,22 +250,6 @@
                 <div class="col role-name text-right js-scroll slide-left">
                     Txiv Qeej
                 </div>
-<!--                <div class="col person-name">-->
-<!--                    <ul style="list-style-type:none;">-->
-<!--                        <li class="text-left js-scroll scroll-right">-->
-<!--                            Txawj Lwm Tsaab-->
-<!--                        </li>-->
-<!--                        <li class="text-left js-scroll scroll-right">-->
-<!--                            Txooj Cawv Tsaab-->
-<!--                        </li>-->
-<!--                        <li class="text-left js-scroll scroll-right">-->
-<!--                            Ntxoov Leej Vaaj-->
-<!--                        </li>-->
-<!--                        <li class="text-left js-scroll scroll-right">-->
-<!--                            Vaam Lauj Xyooj-->
-<!--                        </li>-->
-<!--                    </ul>-->
-<!--                </div>-->
                 <div class="col-8 person-name text-left js-scroll slide-right">
                     Txawj Lwm Tsaab, Txooj Cawv Tsaab, Ntxoov Leej Vaaj, Vaam Lauj Xyooj
                 </div>
@@ -316,22 +258,6 @@
                 <div class="col role-name text-right js-scroll slide-left">
                     Tshwj Kaab
                 </div>
-<!--                <div class="col person-name">-->
-<!--                    <ul style="list-style-type:none;">-->
-<!--                        <li class="text-left js-scroll scroll-right">-->
-<!--                            Nkag Tooj Tsaab-->
-<!--                        </li>-->
-<!--                        <li class="text-left js-scroll scroll-right">-->
-<!--                            Ntsum Maiv Yaaj-->
-<!--                        </li>-->
-<!--                        <li class="text-left js-scroll scroll-right">-->
-<!--                            Yim Leej Tsaab-->
-<!--                        </li>-->
-<!--                        <li class="text-left js-scroll scroll-right">-->
-<!--                            Nchaiv Huaj Vaj-->
-<!--                        </li>-->
-<!--                    </ul>-->
-<!--                </div>-->
                 <div class="col-8 person-name text-left js-scroll slide-right">
                     Nkag Tooj Tsaab, Ntsum Maiv Yaaj, Yim Leej Tsaab, Nchaiv Huaj Vaj
                 </div>
@@ -340,22 +266,6 @@
                 <div class="col role-name text-right js-scroll slide-left">
                     Nam Ua Mov
                 </div>
-<!--                <div class="col person-name">-->
-<!--                    <ul style="list-style-type:none;">-->
-<!--                        <li class="text-left js-scroll scroll-right">-->
-<!--                            Nam Txooj Neeb Tsaab-->
-<!--                        </li>-->
-<!--                        <li class="text-left js-scroll scroll-right">-->
-<!--                            Maiv Xis Tsaab-->
-<!--                        </li>-->
-<!--                        <li class="text-left js-scroll scroll-right">-->
-<!--                            Nam Tswj Fwm Tsaab-->
-<!--                        </li>-->
-<!--                        <li class="text-left js-scroll scroll-right">-->
-<!--                            Nam Vaam Xeeb Tsaab-->
-<!--                        </li>-->
-<!--                    </ul>-->
-<!--                </div>-->
                 <div class="col-8 person-name text-left js-scroll slide-right">
                     Nam Txooj Neeb Tsaab, Maiv Xis Tsaab, Nam Tswj Fwm Tsaab,
                     Nam Vaam Xeeb Tsaab
@@ -365,22 +275,6 @@
                 <div class="col role-name text-right js-scroll slide-left">
                     Tub Sau Ntawv
                 </div>
-<!--                <div class="col person-name">-->
-<!--                    <ul style="list-style-type:none;">-->
-<!--                        <li class="text-left js-scroll scroll-right">-->
-<!--                            Nplhaib Txoov Tsaab-->
-<!--                        </li>-->
-<!--                        <li class="text-left js-scroll scroll-right">-->
-<!--                            Xeev Ntxaij Tsaab-->
-<!--                        </li>-->
-<!--                        <li class="text-left js-scroll scroll-right">-->
-<!--                            Txooj Kaus Tsaab-->
-<!--                        </li>-->
-<!--                        <li class="text-left js-scroll scroll-right">-->
-<!--                            Vaam Tuam Tsaab-->
-<!--                        </li>-->
-<!--                    </ul>-->
-<!--                </div>-->
                 <div class="col-8 person-name text-left js-scroll slide-right">
                     Nplhaib Txoov Tsaab, Xeev Ntxaij Tsaab, Txooj Kaus Tsaab,
                     Vaam Tuam Tsaab
@@ -390,16 +284,6 @@
                 <div class="col role-name text-right js-scroll slide-left">
                     Tub Thauj Nyuj
                 </div>
-<!--                <div class="col person-name">-->
-<!--                    <ul style="list-style-type:none;">-->
-<!--                        <li class="text-left js-scroll scroll-right">-->
-<!--                            Nkaaj Ceeb Tsaab-->
-<!--                        </li>-->
-<!--                        <li class="text-left js-scroll scroll-right">-->
-<!--                            Koob Tsaab-->
-<!--                        </li>-->
-<!--                    </ul>-->
-<!--                </div>-->
                 <div class="col-8 person-name text-left js-scroll slide-right">
                     Nkaaj Ceeb Tsaab, Koob Tsaab
                 </div>
@@ -503,57 +387,32 @@
                 </div>
             </div>
         </div>
-        <ul>
-<!--            <li class="text-left js-scroll slide-left">-->
-<!--                Council of Funeral Rites (Cov Thawj Lwm Tub Ncig): Txiv Coj Xai Vaam Rwg-->
-<!--                Tsaab, Thawj Xyom Cuab Num Khais Tsaab, Thawj Xyom Cuab Yeej Koob Tsaab,-->
-<!--                Txiv Taw Kev Nom Tub Xyooj, Txiv Cuab Tsaav Ntxhoo Vwg Tsaab, Kaav Xwm Vaam-->
-<!--                Thoj Tsaab, Kaav Xwm Nyaj Ku Xyooj, Kaav Xwm Txawj Tooj Thoj, Kaav Xwm Npuag-->
-<!--                Leej Haam, Txiv Qeej Txawj Lwm Tsaab, Txiv Qeej Txooj Cawv Tsaab, Txiv Qeej-->
-<!--                Vaam Lauj Xyooj, Txiv Qeej Ntxoov Leej Vaaj, Tshwj Kaab Yim Leej Tsaab, Tshwj-->
-<!--                Kaab Nkag Tooj Tsaab, Tshwj Kaab Ntsum Maiv Yaaj, Tshwj Kaab Huaj Vaaj, Nam Ua-->
-<!--                Mov Nam Txooj Neeb Tsaab, Nam Ua Mov Nam Tswj Fwm Tsaab, Nam Ua Mov Nam Vaam-->
-<!--                Xeeb Tsaab, Nam Ua Mov Maiv See Tsaab (Nam Txawj Ntxheb Xyooj), Tub Sau Ntawv-->
-<!--                Xeev Ntxaij Tsaab, Tub Sau Ntawv Txooj Kaus Tsaab, Tub Sau Ntawv Nplhaib Txoov-->
-<!--                Tsaab, Tub Sau Ntawv Vaam Tuam Tsaab, Tub Thauj Nyuj Koob Tsaab, Tub Thauj Nyuj-->
-<!--                Nkaag Ceeb Tsaab-->
-<!--            </li>-->
-<!--            <li class="text-left js-scroll slide-right">-->
-<!--                Blessing Papers (Tub Txaug Ntawv): <b>Xeev Fuas Tsaab, Nkaag Ceeb Tsaab</b>-->
-<!--            </li>-->
-<!--            <li class="text-left js-scroll slide-left">-->
-<!--                Ceremonial Guests (Cov Qhua Txooj): Txiv Cuab Tsaav Ntxhoo Vwg Tsaab, Xeev-->
-<!--                Txwj Laug Nyaj Thaiv Vaaj, Muam Phauj Ntxoov Tsu Thoj hab Rhav Tsaab (tug-->
-<!--                sawv cev yog tug tub Suav Lwm Thoj), Nam Txiv Dlaab Nas Tsum Npuag Leej Haam,-->
-<!--                Cuag Ntxhais/Ntxhais Nqe Nyiaj Vaj, Xov Txiv Dlaab Hlub Nom Loob Yaj, Xov Txiv-->
-<!--                Dlaab Yau Tuam Xyooj, Xov Txiv Dlaab Xyom Cuab Hlub Xeev Fuas Tsaab, Xov Txiv-->
-<!--                Dlaab Xyom Cuab Yau Vaam Tooj Tsaab-->
-<!--            </li>-->
-            <li class="text-left js-scroll slide-right">
-                Decorations provided by <b>ABC Decor, Shye Kong</b>
-            </li>
-            <li class="text-left js-scroll slide-left">
-                Friends and families near and far who contributed money (Nyaj Tshaav Ntuj),
-                roasted and whole pigs, rice, food trays and snacks, soft drinks, water, beer,
-                liquor, flowers, cards, social media postings and shares, effort, love, care,
-                and time to help us in our 2-month long wake (Zuv Mo) and throughout this life
-                celebration event. No words are ever enough to fully express our deep
-                appreciation for all that you have blessed us with, and which we will cherish
-                until time’s end. May you all be blessed by the spirit of love and family for
-                which we have celebrated in honor of our father, grandfather, and brother.
-<!--                <h3>-->
-                    Thank you from the bottom of our hearts.
-<!--                </h3>-->
-            </li>
-        </ul>
+
+        <p class="center js-scroll slide-left">
+            Decorations provided by <b>ABC Decor, Shye Kong</b>
+        </p>
+        <br>
+        <p class="center js-scroll fade-in">
+            Friends and families near and far who contributed money (Nyaj Tshaav Ntuj),
+            roasted and whole pigs, rice, food trays and snacks, soft drinks, water, beer,
+            liquor, flowers, cards, social media postings and shares, effort, love, care,
+            and time to help us in our 2-month long wake (Zuv Mo) and throughout this life
+            celebration event. No words are ever enough to fully express our deep
+            appreciation for all that you have blessed us with, and which we will cherish
+            until time’s end. May you all be blessed by the spirit of love and family for
+            which we have celebrated in honor of our father, grandfather, and brother.
+            <!--                <h3>-->
+            Thank you from the bottom of our hearts.
+            <!--                </h3>-->
+        </p>
     </div>
-    <h1 class="text-white"> test </h1>
-    <h1 class="text-white"> test </h1>
+    <h4 class="text-white"> test </h4>
+    <h4 class="text-white"> test </h4>
 </div>
 
 <div class="end center">
     The memorial video was edited by Chase Chang. This website was created by Mandy Chang with the
-    artistic help of Alex Chang.
+    artistic help of Alex Chang and Yeng Lor.
 </div>
 
 <!--<script src="jquery-3.5.1.min.js"></script>-->

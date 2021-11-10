@@ -24,7 +24,7 @@ var events = [
         "Arrival (Tuaj Txug)",
         "Ceremony: Guide The Way (Taw Kev)",
         "Breakfast Provided (Noj Tshais)",
-        ["Ceremony: Mid Morning Rituals, Mid Afternoon Rituals",
+        ["Opening Ceremonial Rituals",
             "Life Transition Song (Qeej Tu Sav)",
             "The Mounting Song (Qeej Nce Neeg)",
             "Animal Offering Song (Qeej Cob Tsag)",
@@ -32,11 +32,9 @@ var events = [
             "The Dinner Song (Qeej Mo)"
         ],
         "Lunch Provided (Noj Sus)",
-        "Ceremony: Council of Rites Ceremony (Lub Rooj Txhij Thawj Lwm Tub Ncig)",
+        "Ceremony: Council of Rites (Lub Rooj Txhij Thawj Lwm Tub Ncig)",
         "Dinner Provided (Noj Mo)",
-        ["Ceremony: Qeej Poets Night (Txiv Qeej Mo)",
-            "Qeej Foom Kom"
-        ]
+        "Ceremony: Qeej Poets Night (Txiv Qeej Mo)"
     ],
     [
         "Ceremony: Ceremonial Guests Rituals (Hauv Qhua)",
@@ -113,9 +111,7 @@ var hmong_events = [
         "Noj Sus",
         "Lub Rooj Txhij Thawj Lwm Tub Ncig",
         "Noj Mo",
-        ["Txiv Qeej Mo",
-            "Qeej Foom Kom"
-        ]
+        "Txiv Qeej Mo"
     ],
     [
         "Hauv Qhua",
@@ -172,7 +168,7 @@ var eng_events = [
         "Arrival",
         "Ceremony: Guide The Way",
         "Breakfast Provided",
-        ["Ceremony: Mid Morning Rituals, Mid Afternoon Rituals",
+        ["Opening Ceremonial Rituals",
             "Life Transition Song",
             "The Mounting Song",
             "Animal Offering Song",
@@ -180,11 +176,9 @@ var eng_events = [
             "The Dinner Song"
         ],
         "Lunch Provided",
-        "Ceremony: Council of Rites Ceremony",
+        "Ceremony: Council of Rites",
         "Dinner Provided",
-        ["Ceremony: Qeej Poets Night",
-            "Qeej Foom Kom"
-        ]
+        "Ceremony: Qeej Poets Night"
     ],
     [
         "Ceremony: Ceremonial Guests Rituals",
