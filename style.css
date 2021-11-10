@@ -34,7 +34,13 @@ and (max-device-width : 480px) {
     /*background: #aeddfc;*/
     /*padding-left: 10%;*/
     /*padding-right: 10%;*/
+    width: 100%;
 }
+
+/*#dates {*/
+/*    margin-left: 10%;*/
+/*    margin-right: 10%;*/
+/*}*/
 
 .bring-front {
     z-index: 100;
