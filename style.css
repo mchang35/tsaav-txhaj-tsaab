@@ -1,17 +1,23 @@
-@media only screen
-and (min-device-width : 320px)
-and (max-device-width : 480px) {
-    .overlay {
-        position: absolute;
-        min-height: 100%;
-        min-width: 100%;
+/*@media only screen*/
+/*and (min-device-width : 320px)*/
+/*and (max-device-width : 480px) {*/
+/*    .overlay {*/
+/*        position: absolute;*/
+/*        min-height: 100%;*/
+/*        min-width: 100%;*/
+/*        width: 100%;*/
+/*        left: 0;*/
+/*        top: 0;*/
+/*        !*background: rgba(207, 236, 245, 0.26);*!*/
+/*        background: rgba(0, 0, 0, 0.3);*/
+/*        !*background: #a1d0ff;*!*/
+/*        !*opacity: 50%;*!*/
+/*    }*/
+/*}*/
+
+@media (max-width: 768px){
+    vertically-horizontally-centered {
         width: 100%;
-        left: 0;
-        top: 0;
-        /*background: rgba(207, 236, 245, 0.26);*/
-        background: rgba(0, 0, 0, 0.3);
-        /*background: #a1d0ff;*/
-        /*opacity: 50%;*/
     }
 }
 
@@ -34,7 +40,7 @@ and (max-device-width : 480px) {
     /*background: #aeddfc;*/
     /*padding-left: 10%;*/
     /*padding-right: 10%;*/
-    width: 100%;
+    width: 33%;
 }
 
 /*#dates {*/
