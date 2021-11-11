@@ -382,7 +382,7 @@ function display_events_and_times(day=program_day, lang=curr_lang) {
 
             let program_item_time = document.createElement("div"); // create the time
             program_item_time.classList.add("program-item-time");
-            program_item_time.classList.add("text-right");
+            program_item_time.classList.add("text-left");
             program_item_time.classList.add("col");
             program_item_time.innerHTML = time;
 
