@@ -21,6 +21,7 @@ var events = [
         "Arrival (Tuaj Txug)",
         "Ceremony: Guide The Way (Taw Kev)",
         "Breakfast Provided (Noj Tshais)",
+        "Ceremony: Council of Rites (Lub Rooj Txhij Thawj Lwm Tub Ncig)",
         ["Opening Ceremonial Rituals",
             "Life Transition Song (Qeej Tu Sav)",
             "The Mounting Song (Qeej Nce Neeg)",
@@ -29,7 +30,7 @@ var events = [
             "The Dinner Song (Qeej Mo)"
         ],
         "Lunch Provided (Noj Sus)",
-        "Ceremony: Council of Rites (Lub Rooj Txhij Thawj Lwm Tub Ncig)",
+        // "Ceremony: Council of Rites (Lub Rooj Txhij Thawj Lwm Tub Ncig)",
         "Dinner Provided (Noj Mo)",
         "Ceremony: Qeej Poets Night (Txiv Qeej Mo)"
     ],
@@ -41,11 +42,11 @@ var events = [
             "The Lunch Song (Qeej Su)"
         ],
        "Lunch Provided (Noj Sus)",
-        ["Guest Speakers Program (Qhua Tshwj Xeeb Has Lug)",
-           "Yee Chang, Program MC (Nyaj Yig Tsaab, Tug Cev Lug)",
-            "Tsav Yeej Tsab, Chang Association of Minnesota " +
-                "Presentation (Has Lug Sawv Cev Koomhum Kwv Tij Moob " +
-                "Tsaab Minnesota)",
+        "Guest Speakers Program (Qhua Tshwj Xeeb Has Lug)",
+        ["Yee Chang, Program MC (Nyaj Yig Tsaab, Tug Cev Lug)",
+            "Num Fwv Tsaab, Chang Association of Minnesota Presentation " +
+                "(Pabthaa Num Fwv Tsaab Has Lug Sawv Cev Koomhum Kwv Tij " +
+                "Moob Tsaab Minnesota)",
             "Minnesota State Representatives Jay Xiong and Tou Xiong, " +
                 "and Elected Officials Presentation (Phub Thee Ntses Xyooj " +
                 "hab Tub Xyooj, Has Lug Sawv Cev Cov Num Tswv Lub Xeev Minnesota)",
@@ -56,7 +57,7 @@ var events = [
             "Txooj Hawj Xyoo, Personal Remark (Phooj Ywg Txooj Hawj Xyooj Has Lus)",
             "Kong Xiong, College de Samthong Group Presentation (Koo Xyoo, Has " +
                 "Lug Sawv Cev Rua Paab Pawg Tub Kawm Ntawv College de Samthong)",
-            "La Pao Chang, Chang Family Remark (Laj Pov Tsaab, Has Lug Sawv " +
+            "La Pao Chang, Family Remark (Laj Pov Tsaab, Has Lug Sawv " +
                 "Cev Tsev Tuab Neeg)"
         ],
         ["Family Program (Tsev Tuab Neeg Has Lug)",
@@ -98,7 +99,8 @@ var hmong_events = [
         "Tuaj Txug",
         "Taw Kev",
         "Noj Tshais",
-        ["Ceremony: Mid Morning Rituals, Mid Afternoon Rituals",
+        "Lub Rooj Txhij Thawj Lwm Tub Ncig",
+        ["Opening Ceremonial Rituals",
             "Qeej Tu Sav",
             "Qeej Nce Neeg",
             "Qeej Cob Tsag",
@@ -106,7 +108,6 @@ var hmong_events = [
             "Qeej Mo"
         ],
         "Noj Sus",
-        "Lub Rooj Txhij Thawj Lwm Tub Ncig",
         "Noj Mo",
         "Txiv Qeej Mo"
     ],
@@ -118,9 +119,10 @@ var hmong_events = [
             "Qeej Su"
         ],
         "Noj Sus",
-        ["Qhua Tshwj Xeeb Has Lug",
-            "Nyaj Yig Tsaab, Tug Cev Lug",
-            "Has Lug Sawv Cev Koomhum Kwv Tij Moob Tsaab Minnesota",
+        "Qhua Tshwj Xeeb Has Lug",
+        ["Nyaj Yig Tsaab, Tug Cev Lug",
+            "Pabthaa Num Fwv Tsaab Has Lug Sawv Cev Koomhum Kwv Tij" +
+                "Moob Tsaab Minnesota",
             "Phub Thee Ntses Xyooj hab Tub Xyooj, Has Lug Sawv Cev " +
                 "Cov Num Tswv Lub Xeev Minnesota",
             "Pabthaa Nom Huas Muas Has Lug Sawv Cev Koomhum 18 Xeem",
@@ -165,6 +167,7 @@ var eng_events = [
         "Arrival",
         "Ceremony: Guide The Way",
         "Breakfast Provided",
+        "Ceremony: Council of Rites",
         ["Opening Ceremonial Rituals",
             "Life Transition Song",
             "The Mounting Song",
@@ -173,7 +176,6 @@ var eng_events = [
             "The Dinner Song"
         ],
         "Lunch Provided",
-        "Ceremony: Council of Rites",
         "Dinner Provided",
         "Ceremony: Qeej Poets Night"
     ],
@@ -185,17 +187,16 @@ var eng_events = [
             "The Lunch Song"
         ],
         "Lunch Provided",
-            ["Guest Speakers Program",
-            "Yee Chang, Program MC",
-                "Tsav Yeej Tsab, Chang Association of Minnesota " +
-                "Presentation",
+        "Guest Speakers Program",
+        ["Yee Chang, Program MC",
+            "Num Fwv Tsaab, Chang Association of Minnesota Presentation",
             "Minnesota State Representatives Jay Xiong and Tou Xiong, " +
                 "and Elected Officials Presentation",
             "Nao Houa Moua, Hmong 18 Council Presentation",
             "Toua Yang, Personal Remark, France",
             "Txooj Hawj Xyoo, Personal Remark",
             "Kong Xiong, College de Samthong Group Presentation",
-            "La Pao Chang, Chang Family Remark"
+            "La Pao Chang, Family Remark"
         ],
         ["Family Program",
             "Sia Chang’s Life Story Video Presentation",
@@ -230,9 +231,9 @@ var eng_events = [
 ]; // events for days 0, 1, 2, respectively (in ENGLISH)
 
 var times = [
-    ["7:00 AM", "8:00 AM*", "9:00 AM", "11:00 AM*", "1:00 PM", "3:00 PM*",
+    ["7:00 AM", "8:00 AM*", "9:00 AM", " ", "11:00 AM*", "1:00 PM",
         "7:00 PM", "9:00 PM*"],
-    ["8:00 AM*", "9:00 AM", "10:00 AM*", "12:00 PM", "2:00 PM", "3:30 PM",
+    ["8:00 AM*", "9:00 AM", "10:00 AM*", "12:00 PM", "2:00 PM", " ", "3:30 PM",
         "5:00 PM*", "7:00 PM", "8:00 PM*", "12:00 AM*"],
     ["5:00 AM*", "8:30 AM", "10:00 AM*", "12:15 PM*", "1:00 PM"]
 ]; // times for events on days 0, 1, 2, respectively
