@@ -43,39 +43,39 @@ var events = [
         ],
        "Lunch Provided (Noj Sus)",
         "Guest Speakers Program (Qhua Tshwj Xeeb Has Lug)",
-        ["Yee Chang, Program MC (Nyaj Yig Tsaab, Tug Cev Lug)",
-            "Num Fwv Tsaab, Chang Association of Minnesota Presentation " +
-                "(Pabthaa Num Fwv Tsaab Has Lug Sawv Cev Koomhum Kwv Tij " +
+        ["<b>Yee Chang</b>, Program MC (<b>Nyaj Yig Tsaab</b>, Tug Cev Lug)",
+            "<b>Num Fwv Tsaab</b>, Chang Association of Minnesota Presentation " +
+                "(<b>Pabthaa Num Fwv Tsaab</b> Has Lug Sawv Cev Koomhum Kwv Tij " +
                 "Moob Tsaab Minnesota)",
-            "Minnesota State Representatives Jay Xiong and Tou Xiong, " +
-                "and Elected Officials Presentation (Phub Thee Ntses Xyooj " +
-                "hab Tub Xyooj, Has Lug Sawv Cev Cov Num Tswv Lub Xeev Minnesota)",
-            "Nao Houa Moua, Hmong 18 Council Presentation (Pabthaa Nom Huas Muas " +
+            "Minnesota State Representatives <b>Jay Xiong</b> and <b>Tou Xiong</b>, " +
+                "and Elected Officials Presentation (<b>Phub Thee Ntses Xyooj " +
+                "</b>hab<b> Tub Xyooj</b>, Has Lug Sawv Cev Cov Num Tswv Lub Xeev Minnesota)",
+            "<b>Nao Houa Moua</b>, Hmong 18 Council Presentation (<b>Pabthaa Nom Huas Muas</b> " +
                 "Has Lug Sawv Cev Koomhum 18 Xeem)",
-            "Toua Yang, Personal Remark, France (Npawg Vaam Tuam Yaaj Tuaj " +
+            "<b>Toua Yang</b>, Personal Remark, France (<b>Npawg Vaam Tuam Yaaj</b> Tuaj " +
                 "Faabkis Teb Tuaj Has Lug)",
-            "Txooj Hawj Xyoo, Personal Remark (Phooj Ywg Txooj Hawj Xyooj Has Lus)",
-            "Kong Xiong, College de Samthong Group Presentation (Koo Xyoo, Has " +
+            "<b>Txooj Hawj Xyoo</b>, Personal Remark (<b>Phooj Ywg Txooj Hawj Xyooj</b> Has Lus)",
+            "<b>Kong Xiong</b>, College de Samthong Group Presentation (<b>Koo Xyoo</b>, Has " +
                 "Lug Sawv Cev Rua Paab Pawg Tub Kawm Ntawv College de Samthong)",
-            "La Pao Chang, Family Remark (Laj Pov Tsaab, Has Lug Sawv " +
+            "<b>La Pao Chang</b>, Family Remark (<b>Laj Pov Tsaab</b>, Has Lug Sawv " +
                 "Cev Tsev Tuab Neeg)"
         ],
         ["Family Program (Tsev Tuab Neeg Has Lug)",
-            "Sia Chang’s Life Story Video Presentation (Tso Video Txug Tsaav " +
-                "Txhaj Tsaab Lub Neej)",
-            "Mai Hang, A Personal Tribute (Maim Haam, Txuj Kev Ncu hab Tshua)",
-            "Boua Leng Hang, Hang Family Remark (Npuag Leej Haam, Has Lug Sawv " +
+            "<b>Sia Chang</b>’s Life Story Video Presentation (Tso Video Txug <b>Tsaav " +
+                "Txhaj Tsaab</b> Lub Neej)",
+            "<b>Mai Hang</b>, A Personal Tribute (<b>Maim Haam</b>, Txuj Kev Ncu hab Tshua)",
+            "<b>Boua Leng Hang</b>, Hang Family Remark (<b>Npuag Leej Haam</b>, Has Lug Sawv " +
                 "Cev Tsev Xeem Haam)",
-            "Yee Chang, Closing Remark (Nyaj Yig Tsaab, Cev Lug Xaus)"
+            "<b>Yee Chang</b>, Closing Remark (<b>Nyaj Yig Tsaab</b>, Cev Lug Xaus)"
         ],
         ["Ceremony: Ceremonial Guests Gratitude Ritual (Ncej Xub Qeeg)",
             "The Dinner Song (Qeej Mo)",
             "The Offer Making Song for Ceremonial Guests (Qeej Hlawv Ntawv)"
         ],
-        "Sia Chang Dinner (Tsaav Txhaj Tsaab Pluag Mo)",
+        "<b>Sia Chang Dinner</b> (<b>Tsaav Txhaj Tsaab</b> Pluag Mo)",
         "Ceremony: Setup Council of Elders Table (Pib Rooj Xai Rooj Xim)",
         ["Ceremony: Blessing Ceremony (Pib Has Xim)",
-            "Wung True Chang, Master of Blessing Ceremony (Vaam Rwg Tsaab, " +
+            "Wung True Chang, Master of Blessing Ceremony (<b>Vaam Rwg Tsaab</b>, " +
                 "Txiv Coj Xai)",
             "Family Blessings Request Ritual (Tsev Tuab Neeg Xyom)"
         ]
@@ -120,22 +120,22 @@ var hmong_events = [
         ],
         "Noj Sus",
         "Qhua Tshwj Xeeb Has Lug",
-        ["Nyaj Yig Tsaab, Tug Cev Lug",
-            "Pabthaa Num Fwv Tsaab Has Lug Sawv Cev Koomhum Kwv Tij" +
+        ["<b>Nyaj Yig Tsaab</b>, Tug Cev Lug",
+            "<b>Pabthaa Num Fwv Tsaab</b> Has Lug Sawv Cev Koomhum Kwv Tij" +
                 "Moob Tsaab Minnesota",
-            "Phub Thee Ntses Xyooj hab Tub Xyooj, Has Lug Sawv Cev " +
+            "<b>Phub Thee Ntses Xyooj</b> hab <b>Tub Xyooj</b>, Has Lug Sawv Cev " +
                 "Cov Num Tswv Lub Xeev Minnesota",
-            "Pabthaa Nom Huas Muas Has Lug Sawv Cev Koomhum 18 Xeem",
-            "Npawg Vaam Tuam Yaaj Tuaj Faabkis Teb Tuaj Has Lug",
-            "Phooj Ywg Txooj Hawj Xyooj Has Lus",
-            "Koo Xyoo, Has Lug Sawv Cev Rua Paab Pawg Tub Kawm Ntawv College de Samthong",
-            "Laj Pov Tsaab, Has Lug Sawv Cev Tsev Tuab Neeg"
+            "<b>Pabthaa Nom Huas Muas</b> Has Lug Sawv Cev Koomhum 18 Xeem",
+            "<b>Npawg Vaam Tuam Yaaj</b> Tuaj Faabkis Teb Tuaj Has Lug",
+            "<b>Phooj Ywg Txooj Hawj Xyooj</b> Has Lus",
+            "<b>Koo Xyoo</b>, Has Lug Sawv Cev Rua Paab Pawg Tub Kawm Ntawv College de Samthong",
+            "<b>Laj Pov Tsaab</b>, Has Lug Sawv Cev Tsev Tuab Neeg"
         ],
         ["Tsev Tuab Neeg Has Lug",
-            "Tso Video Txug Tsaav Txhaj Tsaab Lub Neej",
-            "Maim Haam, Txuj Kev Ncu hab Tshua",
-            "Npuag Leej Haam, Has Lug Sawv Cev Tsev Xeem Haam",
-            "Nyaj Yig Tsaab, Cev Lug Xaus"
+            "Tso Video Txug <b>Tsaav Txhaj Tsaab</b> Lub Neej",
+            "<b>Maim Haam</b>, Txuj Kev Ncu hab Tshua",
+            "<b>Npuag Leej Haam</b>, Has Lug Sawv Cev Tsev Xeem Haam",
+            "<b>Nyaj Yig Tsaab</b>, Cev Lug Xaus"
         ],
         ["Ncej Xub Qeeg",
             "Qeej Mo",
@@ -144,7 +144,7 @@ var hmong_events = [
         "Tsaav Txhaj Tsaab Pluag Mo",
         "Pib Rooj Xai Rooj Xim",
         ["Pib Has Xim",
-            "Vaam Rwg Tsaab, Txiv Coj Xai",
+            "<b>Vaam Rwg Tsaab</b>, Txiv Coj Xai",
             "Tsev Tuab Neeg Xyom"
         ]
     ],
