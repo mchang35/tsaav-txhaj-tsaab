@@ -75,7 +75,7 @@ var events = [
         "<b>Sia Chang Dinner</b> (<b>Tsaav Txhaj Tsaab</b> Pluag Mo)",
         "Ceremony: Setup Council of Elders Table (Pib Rooj Xai Rooj Xim)",
         ["Ceremony: Blessing Ceremony (Pib Has Xim)",
-            "Wung True Chang, Master of Blessing Ceremony (<b>Vaam Rwg Tsaab</b>, " +
+            "<b>Wung True Chang</b>, Master of Blessing Ceremony (<b>Vaam Rwg Tsaab</b>, " +
                 "Txiv Coj Xai)",
             "Family Blessings Request Ritual (Tsev Tuab Neeg Xyom)"
         ]
@@ -211,7 +211,7 @@ var eng_events = [
         "Sia Chang Dinner",
         "Ceremony: Setup Council of Elders Table",
         ["Ceremony: Blessing Ceremony",
-            "Wung True Chang, Master of Blessing Ceremony",
+            "<b>Wung True Chang</b>, Master of Blessing Ceremony",
             "Family Blessings Request Ritual"
         ]
     ],
