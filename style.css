@@ -7,24 +7,14 @@
 }
 
 .vertically-horizontally-centered {
-    /*margin: 0;*/
     bottom: 0%;
     margin-bottom: 0%;
     position: absolute;
-    /*top: 65%;*/
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    /*background: #aeddfc;*/
-    /*padding-left: 10%;*/
-    /*padding-right: 10%;*/
     width: 33%;
 }
-
-/*#dates {*/
-/*    margin-left: 10%;*/
-/*    margin-right: 10%;*/
-/*}*/
 
 .bring-front {
     z-index: 100;
@@ -36,10 +26,6 @@
     min-height: 100%;
     min-width: 100%;
     bottom: 0%;
-    /*left: 0;*/
-    /*top: 0;*/
-    /*background: rgba(207, 236, 245, 0.26);*/
-    /*background: rgba(0, 0, 0, 0.3);*/
     background: #a1d0ff;
     opacity: 75%;
 }
@@ -48,13 +34,11 @@ body {
     padding: 0;
     margin: 0;
     background: white;
-    /*#89cff0*/
     font-family: "Le Jour Serif";
 }
 
 .navbar {
     background: #aeddfc;
-    /*background: white;*/
     list-style-type: none;
     text-align: center;
     z-index: 5;
@@ -91,20 +75,12 @@ body {
     padding-top: 60px;
 }
 
-#sia-image img {
-    display: block;
-    margin: auto;
-    max-width: 100%;
-    height: auto;
-    /*background-size: contain;*/
-}
-
-video {
-    display: block;
-    margin: auto;
-    max-width: 100%;
-    height: auto;
-}
+/*video {*/
+/*    display: block;*/
+/*    margin: auto;*/
+/*    max-width: 100%;*/
+/*    height: auto;*/
+/*}*/
 
 .btn {
     margin: 10px;
@@ -130,10 +106,10 @@ video {
     height: auto;
 }
 
-.left-align {
-    text-align: left;
-    margin-left: 20%;
-}
+/*.left-align {*/
+/*    text-align: left;*/
+/*    margin-left: 20%;*/
+/*}*/
 
 h1 {
     text-align: center;
@@ -186,18 +162,6 @@ and (max-device-width : 540px) {
         width: 100%;
     }
 }
-
-/*@media (max-width: 768px){*/
-/*    .vertically-horizontally-centered {*/
-/*        bottom: 0%;*/
-/*        margin-bottom: 0%;*/
-/*        position: absolute;*/
-/*        left: 50%;*/
-/*        -ms-transform: translate(-50%, -50%);*/
-/*        transform: translate(-50%, -50%);*/
-/*        width: 100%;*/
-/*    }*/
-/*}*/
 
 /*all of scrolling stuff*/
 

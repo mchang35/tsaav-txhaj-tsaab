@@ -12,9 +12,6 @@ var navbar_sticky_Y = window.scrollY + window.innerHeight;
 // defines the current day that people are looking at on the program
 var program_day = 0; // 0 = Saturday, 1 = Sunday, 2 = Monday
 var curr_lang = 2; // 0 = English, 1 = Hmong, 2 = both
-// check_today_date(); // change program_day if necessary
-// start_btn_colors();
-// display_events_and_times(day=0, lang=2); // set the program to be the day
 
 var day_labels = ["Saturday, November 13, 2021", "Sunday, November 14, 2021",
     "Monday, November 15, 2021"];
@@ -237,7 +234,7 @@ var times = [
         "7:00 PM", "9:00 PM*"],
     ["8:00 AM*", "9:00 AM", "10:00 AM*", "12:00 PM", "2:00 PM", "3:30 PM",
         "5:00 PM*", "7:00 PM", "8:00 PM*", "12:00 AM*"],
-    ["5:00 AM*", "8:30 AM", "10:00 AM*", "12:15 PM*", "10:00am", "1:00 PM"]
+    ["5:00 AM*", "8:30 AM", "10:00 AM*", "12:15 PM*", "1:00 PM"]
 ]; // times for events on days 0, 1, 2, respectively
 
 ////////////////////////////////////////////////////////////////////////////
@@ -334,16 +331,6 @@ function change_btn_colors(day_true, val) {
     new_btn.style.color = "white";
 }
 
-// function start_btn_colors() {
-//     if (program_day == 0) {
-//         document.getElementById("saturday-btn").style.backgroundColor = "black";
-//     } else if (program_day == 1) {
-//         document.getElementById("sunday-btn").style.backgroundColor = "black";
-//     } else {
-//         document.getElementById("monday-btn").style.backgroundColor = "black";
-//     }
-// }
-
 // function that switches the program content based on the button day pressed
 function display_events_and_times(day=program_day, lang=curr_lang) {
     if (day != program_day || lang != curr_lang) { // only change things if we're changing the day or language
@@ -361,10 +348,7 @@ function display_events_and_times(day=program_day, lang=curr_lang) {
         } else if (curr_lang == 1) {
             day_events = hmong_events[program_day]; // collect all event names in Hmong
         }
-        // console.log("the day's events are ");
-        // for (let i = 0; i < day_events.length; i++) {
-        //     console.log(day_events[i]);
-        // }
+
         let day_times = times[program_day]; // collect all event times
         // get rid of everything that's currently in there
         let day_inner_container = document.getElementById("day-inner-container"); // get the container of the program
@@ -372,6 +356,7 @@ function display_events_and_times(day=program_day, lang=curr_lang) {
         while (items.length > 0) { // remove all children in the day's inner container
             day_inner_container.removeChild(items[0]);
         }
+
         // add everything new
         document.getElementById("day-label").innerHTML = day_labels[program_day]; // change the day label
         for (let i = 0; i < day_events.length; i++) { // for each event
@@ -387,8 +372,7 @@ function display_events_and_times(day=program_day, lang=curr_lang) {
             } else { // if there are NO sub-events
                 name_event = all_events; // the name of the event is the all_events item
             }
-            // console.log('Name of main event: ' + name_event);
-            // console.log('Now Sub events: ' + sub_events);
+
             let time = day_times[i]; // get the time for the event
             let program_item = document.createElement("div"); // create the program item
             program_item.classList.add("program-item");
@@ -399,19 +383,12 @@ function display_events_and_times(day=program_day, lang=curr_lang) {
             program_item_time.classList.add("program-item-time");
             program_item_time.classList.add("text-right");
             program_item_time.classList.add("col");
-            // program_item_time.classList.add("text-left");
-            // program_item_time.classList.add("scroll-element");
-            // program_item_time.classList.add("js-scroll");
-            // program_item_time.classList.add("slide-right");
             program_item_time.innerHTML = time;
 
             let program_item_name = document.createElement("div"); // create the name
             program_item_name.classList.add("program-item-name");
             program_item_name.classList.add("col-8");
             program_item_name.classList.add("text-left");
-            // program_item_name.classList.add("scroll-element");
-            // program_item_name.classList.add("js-scroll");
-            // program_item_name.classList.add("slide-left");
             program_item_name.innerHTML = name_event;
             if (sub_events_exist) { // if there are sub-events
                 let ul = document.createElement("ul"); // make an unordered list
@@ -420,9 +397,6 @@ function display_events_and_times(day=program_day, lang=curr_lang) {
                     let li = document.createElement("li"); // make a list item
                     li.classList.add("text-left");
                     li.innerHTML = sub_events[j];
-                    // li.classList.add("scroll-element");
-                    // li.classList.add("js-scroll");
-                    // li.classList.add("slide-left");
                     ul.appendChild(li); // add the list item to the unordered list
                 }
                 program_item_name.appendChild(ul); // add the unordered list to the item name
@@ -458,29 +432,3 @@ function scroll_to_view(to_view) {
     let element = document.getElementById(to_view);
     element.scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
 }
-
-// function that changes program_day to today's date if applicable,
-// or the first day of the funeral
-// function check_today_date() {
-//     // console.log("Checking today's date");
-//     let today_date = new Date();
-//     if (today_date.getFullYear() == 2021) {
-//         // console.log("We are in the year 2021");
-//         if (today_date.getMonth() == 10) { // change this to 10 for final
-//             // console.log("We are in the month October");
-//             let date = today_date.getDate();
-//             if (date > 12 && date < 16) {
-//                 if (date == 13) {
-//                     // console.log("day 13");
-//                     program_day = 0;
-//                 } else if (date == 14) {
-//                     // console.log("day 14");
-//                     program_day = 1;
-//                 } else {
-//                     // console.log("day 15");
-//                     program_day = 2;
-//                 }
-//             }
-//         }
-//     }
-// }
