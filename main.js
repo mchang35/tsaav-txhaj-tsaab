@@ -433,3 +433,11 @@ function scroll_to_view(to_view) {
     let element = document.getElementById(to_view);
     element.scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
 }
+
+function youtube_parser(url){
+    var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
+    var match = url.match(regExp);
+    result = "https://www.youtub.com/embed/" + (match&&match[7].length==11)? match[7] : false;
+    print(result)
+    return result;
+}
